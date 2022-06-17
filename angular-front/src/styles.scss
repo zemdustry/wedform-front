@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+// $primary-color: #FAF9F8;
+// $secondary-color: #2F2A2E;
+// $tertiary-color: #231D21;
+
+$primary-color: #48D1CD;
+$secondary-color: #FFF8E5;
+$tertiary-color: #231D21;
+
+
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    background-color: $primary-color;
+  }
+
+  @font-face {
+    font-family: "Bricktown";
+    src: local("Bricktown"), url(./assets/fonts/Bricktown.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Caviar";
+    src: local("CaviarDreams"), url(./assets/fonts/CaviarDreams.ttf) format("truetype");
+}
+
+.main-container {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.header-container {
+    // height: 1.5rem;
+    height: 3rem;
+    width: 100%;
+    background-color: $secondary-color;
+    box-shadow: 0 1px 1px $tertiary-color;
+
+    font-family: "Bricktown";
+    font-size: 1.5rem;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-content {
+        padding-left:3rem;
+        padding-right:3rem;
+    }
+
+    .header-submenu {
+        width:12%;
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        .link-submenu {
+            font-family: "Caviar";
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #FFFFFF;
+        }
+    } 
+}
+
+
+
+
+
+.form-container {
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+    justify-content:left;
+}
