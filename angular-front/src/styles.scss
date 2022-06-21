@@ -35,37 +35,41 @@ body {
 
 .header-container {
     // height: 1.5rem;
-    height: 3rem;
+    height: 12rem;
     width: 100%;
     background-color: $secondary-color;
     box-shadow: 0 1px 1px $tertiary-color;
 
     font-family: "Bricktown";
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: $tertiary-color;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
-    .header-content {
-        padding-left:3rem;
-        padding-right:3rem;
-    }
+    .header-illustration {
+        display: flex;
+        justify-content: center;
+        width:40%;
+    } 
 
     .header-submenu {
-        width:12%;
-        margin-right: 2rem;
+        width:16%;
+        margin-left: 6rem;
+        margin-right: 6rem;
+        margin-bottom: 2rem;
         display: flex;
         flex-direction: row;
+
         justify-content: space-between;
     
         .link-submenu {
             font-family: "Caviar";
             text-decoration: none;
             font-size: 1.2rem;
-            color: #FFFFFF;
+            color: $tertiary-color;
         }
     } 
 }
