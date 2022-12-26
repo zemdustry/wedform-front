@@ -42,27 +42,25 @@ $secondary-color:#EDB24C;
 $tertiary-color: #231D21;
 $fourth-color:#FFF8E5;
 $white-color:#FFFFFF;
+$blue-color:#122274;
+$red-color:#CF081F;
 
-
-
-.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-  background-color: #49c5b6;
-}
-
-.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-  background-color: #49c5b6;
+.mat-slide-toggle .mat-slide-toggle-bar {
+  background-color: $blue-color;
 }
 
 .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-  background-color: rgb(128, 203, 196);
+  background-color: $red-color;
 }
 
 .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-  background-color: rgb(29, 135, 229);
+  background-image: url('./assets/images/english-flag.png');
+  background-size: 100% 100%;
 }
 
-.mat-slide-toggle.mat-checked .mat-slide-toggle-ripple .mat-ripple-element {
-  background-color: rgba(29, 135, 229, .2);
+.mat-slide-toggle-thumb {
+  background-image: url('./assets/images/french-flag.png');
+  background-size: 100% 100%;
 }
 
 body {
@@ -79,11 +77,14 @@ body {
     src: local("Saudagar"), url(./assets/fonts/Saudagar.ttf) format("truetype");
 }
 
+.minibar {
+  background-color:#EDB24C;
+}
 
 
 .main-navbar {
   //box-shadow: 0 2px 5px #0000004d;
-  box-shadow: 0 2px 5px #EDB24C;
+  box-shadow: 0 1px 2.5px #EDB24C;
 }
 
 .navbar-container {
