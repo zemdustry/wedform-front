@@ -5,8 +5,41 @@
 
 html, body { padding: 0; margin: 0;}
 
+
+.main-container {
+  //TODO min height to fix
+  min-height: 90rem;
+}
+
 .subline-active {
   visibility: visible;
+}
+
+.heading-line {
+  width: 100%;
+  font-family: 'ade';
+  color: $white-color;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0 !important;
+  padding: 2rem 2rem 2.5rem 2rem;
+  &:before, &:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 0.18rem solid $white-color;
+    margin: auto;
+  }
+  &:before {
+    margin-right: 2rem;
+  }
+  &:after {
+    margin-left: 2rem;
+  }
+}
+
+.heading-sub {
+  color: $white-color;
+  font-size: 6vh;
 }
 
 .unselectable-content {
@@ -33,4 +66,102 @@ background: radial-gradient(circle, rgba(237,178,76,1) 16%,
 rgba(237,178,76,0.8001401244091386) 39%,
 rgba(237,178,76,0.9037815809917717) 60%,
 rgba(237,178,76,1) 95%);
+}
+
+
+.turquoise-radiant {
+  background: rgb(125,192,182);
+  background: linear-gradient(0deg, rgba(125,192,182,1) 0%, rgba(143,217,206,1) 25%, rgba(141,240,229,1) 49%, rgba(100,221,192,1) 82%, rgba(87,215,180,1) 92%, rgba(67,206,162,1) 100%); }
+
+.turquoise-radiant-reverse {
+ background: rgb(67,206,162);
+background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
+}
+
+/// Button
+.button-glow {
+  --glow-length: 20px;
+  --glow-inner-thickness: 2px;
+  --glow-outer-size: 0.4rem;
+  --glow-offset: 0px;
+  --animation-speed: 1200ms;
+  --svg-offset: 100px;
+
+  cursor: pointer;
+  font-size: 4.2vh;
+  font-family: 'saudagar';
+  color: $secondary-gold-color;
+  background-color: $white-color;
+  padding: 1rem 2.2rem 1rem 2.2rem;
+  border: 0;
+  border-radius: $borderRadius;
+
+  position: relative;
+}
+
+.button-glow svg {
+  position: absolute;
+  inset: calc(var(--svg-offset) / -2);
+  width: calc(100% + var(--svg-offset) + var(--glow-offset));
+  height: calc(100% + var(--svg-offset) + var(--glow-offset));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glow,
+.border {
+  width: calc(100% - var(--svg-offset) + var(--glow-offset));
+  height: calc(100% - var(--svg-offset) + var(--glow-offset));
+
+  x: calc(var(--svg-offset) / 2 - (var(--glow-offset) / 2));
+  y: calc(var(--svg-offset) / 2 - (var(--glow-offset) / 2));
+  fill: transparent;
+
+  rx: $borderRadius;
+  stroke-dasharray: var(--glow-length) calc(50px - var(--glow-length));
+  stroke-dashoffset: 0;
+}
+
+.border {
+  stroke-width: var(--glow-inner-thickness);
+  stroke: $white-color;
+}
+
+.glow {
+  stroke-width: var(--glow-outer-size);
+  stroke: $white-color;
+  filter: blur(var(--glow-outer-size));
+}
+
+.button-glow:is(:hover, :focus) svg {
+  animation: glow-visibility var(--animation-speed) ease-in-out forwards;
+}
+
+.button-glow:is(:hover, :focus) :is(.glow, .border) {
+  animation: glow-movement var(--animation-speed) ease-in forwards;
+}
+
+@keyframes glow-visibility {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow-movement {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    stroke-dashoffset: -120px;
+  }
+}
+
+.button-glow[data-style="offset"] :is(.border, .glow) {
+  --glow-offset: 10px;
+}
+
+.button-glow[data-style="no-move"] :is(.border, .glow) {
+  --glow-length: 50px;
 }

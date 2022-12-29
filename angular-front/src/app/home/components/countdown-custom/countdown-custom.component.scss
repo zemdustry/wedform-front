@@ -1,0 +1,91 @@
+@import "variables.scss";
+@import "../../../node_modules/rfs/scss";
+
+.flip-clock {
+  text-align: center;
+  perspective: 400px;
+
+  *,
+  *:before,
+  *:after { box-sizing: border-box; }
+}
+
+.flip-clock-element {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.palette {
+  display: block;
+  position: relative;
+  padding-bottom: $halfPaletteHeight;
+  font-size: 6vw;
+  line-height: 0.95;
+}
+
+.palette-top,
+.palette-bottom,
+.palette-back::before,
+.palette-back::after {
+  display: block;
+  height: $halfPaletteHeight;
+  color: $secondary-gold-color;
+  font-family: 'fenomen';
+  background: $dark-secondary-blue-color;
+  padding: 0.25em 0.25em;
+  border-radius: $borderRadius $borderRadius 0 0;
+  backface-visiblity: hidden;
+  transform-style: preserve-3d;
+  width: $paletteWidth;
+  transform: translateZ(0);
+}
+
+.palette-bottom {
+  color: $primary-gold-color;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: solid 1.8px #8DF0E5;
+  background: $secondary-blue-color;
+  border-radius: 0 0 $borderRadius $borderRadius;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.palette-bottom::after {
+  display: block;
+  margin-top: -$halfPaletteHeight;
+}
+
+.palette-back::before,
+.palette-bottom::after {
+  content: attr(data);
+}
+
+.palette-back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+}
+
+.palette-back::before {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+.clock-unit {
+  font-family: 'saudagar';
+  font-size: 4vh;
+  color:$white-color;
+}
+
+
+
+.flip-element {
+  border-radius: $borderRadius;
+  box-shadow: -3vh 3vh 17px #6ba197, 20px -20px 35px #9FF1EC
+}
