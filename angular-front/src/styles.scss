@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -40,10 +39,11 @@ $webForm-theme: mat.define-light-theme((
 $primary-color: #8DF0E5;
 $secondary-color:#EDB24C;
 $tertiary-color: #231D21;
-$fourth-color:#FFF8E5;
+$fourth-color:#F0EBE5;
 $white-color:#FFFFFF;
 $blue-color:#122274;
 $red-color:#CF081F;
+
 
 .mat-slide-toggle .mat-slide-toggle-bar {
   background-color: $blue-color;
@@ -63,59 +63,42 @@ $red-color:#CF081F;
   background-size: 100% 100%;
 }
 
-body {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
-    background-color: $primary-color;
+@font-face {
+    font-family: "Norma-Bold";
+    src: local("Norma-Bold"), url(./assets/fonts/Norma-Bold.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "Saudagar";
-    src: local("Saudagar"), url(./assets/fonts/Saudagar.ttf) format("truetype");
-}
-
-.minibar {
-  background-color:#EDB24C;
-}
-
-
-.main-navbar {
-  //box-shadow: 0 2px 5px #0000004d;
-  box-shadow: 0 1px 2.5px #EDB24C;
-}
-
-// .navbar-container {
-//     // height: 1.5rem;
-//     height: 12rem;
-//     width: 100%;
-//     background-color: $white-color;
-//     box-shadow: 0 1px 1px $tertiary-color;
-
-
-//     .navbar-image {
-//       width:50%;
-//     }
-
-//     font-family: "Saudagar";
-//     font-size: 1.5rem;
-//     color: $tertiary-color;
-
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: flex-end;
-// }
-
-.link-submenu {
   font-family: "Saudagar";
-  text-decoration: none;
-  font-size: 2rem;
-  color: $secondary-color ;
+  src: local("Saudagar"), url(./assets/fonts/Saudagar.ttf) format("truetype");
 }
 
+
+.navbar-main {
+  //box-shadow: 0 2px 5px #0000004d;
+  // box-shadow: 0 1px 2.5px #EDB24C;
+}
+
+.navbar-container {
+  background-color: $white-color;
+  // box-shadow: 0 1px 2.5px #EDB24C;
+  .navbar-link {
+    font-family: "Norma-Bold";
+    text-decoration: none;
+    font-size: 1rem;
+    color: $tertiary-color ;
+  }
+}
+
+.navbar-sub {
+  background-color: #E3FFFC;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -127,6 +110,8 @@ body {
     align-items:left;
     justify-content:left;
 }
+
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
