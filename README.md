@@ -6,4 +6,8 @@
 
 ### Stack :
 - Angular 13
-- CSS3 + SCSS
+- CSS3 + SCSS + Bootstrap
+
+<p>
+_Why bootstrap ?_ Bootstrap is used in many realistic projects and it's an occasion to practice. 
+</p>
