@@ -9,13 +9,13 @@
 ## English 🇬🇧
 
 ## Introduction:
-<p>Afin de bien préparer notre mariage nous avons besoin nous avons besoin d'un site web. Ce site composé d'une simple page permettra aux invités de présenter notre union et de leur fournir un formulaire de présence.</p>
 
-## Objectif:
-- Page d'accueil
-- Programme du mariage
-- Formulaire d'inscription des invités
-- Galerie des photos
+
+## Objective:
+- Home page
+- Wedding planning
+- Form to register
+- Galery
 
 
 ### Stack :
@@ -36,7 +36,7 @@ Even if CSS3 can be enough, Bootstrap is really used in many realistic profesion
 ## Objectif:
 - Page d'accueil
 - Programme du mariage
-- Formulaire d'inscription des invités
+- Formulaire d'inscription
 - Galerie des photos
 
 
