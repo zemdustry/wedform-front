@@ -9,4 +9,6 @@
 - CSS3 + SCSS + Bootstrap
 
 
-*Why bootstrap ?* Bootstrap is used in many realistic projects and it's an occasion to practice. 
+*Why bootstrap ?* </br> 
+
+Bootstrap is used in many realistic projects and it's an occasion to practice. 
