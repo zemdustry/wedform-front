@@ -32,45 +32,74 @@ $webForm-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($webForm-theme);
 
-// $primary-color: #FAF9F8;
-// $secondary-color: #2F2A2E;
-// $tertiary-color: #231D21;
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
 
-$primary-color: #8DF0E5;
-$secondary-color:#EDB24C;
-$tertiary-color: #231D21;
-$fourth-color:#F0EBE5;
-$white-color:#FFFFFF;
-$blue-color:#122274;
-$red-color:#CF081F;
+@import "variables.scss";
 
+html, body { padding: 0; margin: 0;} 
 
-.mat-slide-toggle .mat-slide-toggle-bar {
-  background-color: $blue-color;
+app-root {
+  background-color:red;
+  width:100%;
+  height:100%;
 }
 
-.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-  background-color: $red-color;
-}
-
-.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-  background-image: url('./assets/images/english-flag.png');
-  background-size: 100% 100%;
-}
-
-.mat-slide-toggle-thumb {
-  background-image: url('./assets/images/french-flag.png');
-  background-size: 100% 100%;
-}
+// FONTS
 
 @font-face {
     font-family: "Norma-Bold";
-    src: local("Norma-Bold"), url(./assets/fonts/Norma-Bold.ttf) format("truetype");
+    src: local("Norma-Bold"), url(../assets/fonts/Norma-Bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Saudagar";
-  src: local("Saudagar"), url(./assets/fonts/Saudagar.ttf) format("truetype");
+  src: local("Saudagar"), url(../assets/fonts/Saudagar.ttf) format("truetype");
+}
+
+
+.container-background {
+  background-color:$light-blue-color;
+  min-height:100vh;
+}
+
+.container-content {
+  margin-top:120px;
+  width:90%;
+  height:100%;
+  background-color:$white-color;
+}
+
+.navbar-top {
+  border-radius:50%;
+  background-color:$white-color;
+  height:250px;
+  width:90%;
+  position:absolute;
+  border: 1px solid red;
+}
+
+
+.navbar-container {
+  background-color:$light-blue-color;
+  width:90%;
+}
+
+
+.test1{
+  border: 1px solid blue;
+}
+
+.test2{
+  border: 1px solid red;
+}
+
+.top {
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  width:20px;
+  height:20px;
+  background-color:red;
 }
 
 
@@ -79,26 +108,17 @@ $red-color:#CF081F;
   // box-shadow: 0 1px 2.5px #EDB24C;
 }
 
-.navbar-container {
-  background-color: $white-color;
-  // box-shadow: 0 1px 2.5px #EDB24C;
-  .navbar-link {
-    font-family: "Norma-Bold";
-    text-decoration: none;
-    font-size: 1rem;
-    color: $tertiary-color ;
-  }
-}
+
 
 .navbar-sub {
   background-color: #E3FFFC;
 }
 
 
-body {
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
 
 
 
@@ -112,8 +132,22 @@ body {
 }
 
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+// TOGGLE
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-slide-toggle .mat-slide-toggle-bar {
+  background-color: $blue-color;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: $red-color;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-image: url('../assets/images/english-flag.png');
+  background-size: 100% 100%;
+}
+
+.mat-slide-toggle-thumb {
+  background-image: url('../assets/images/french-flag.png');
+  background-size: 100% 100%;
+}
