@@ -8,6 +8,5 @@
 - Angular 13
 - CSS3 + SCSS + Bootstrap
 
-<p>
+
 *Why bootstrap ?* Bootstrap is used in many realistic projects and it's an occasion to practice. 
-</p>
