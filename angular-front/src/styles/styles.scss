@@ -4,7 +4,7 @@
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
+// have to load a single css file for Angular Material in your app.form
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
@@ -57,62 +57,26 @@ app-root {
   src: local("Saudagar"), url(../assets/fonts/Saudagar.ttf) format("truetype");
 }
 
-
-.container-background {
-  background-color:$light-blue-color;
-  min-height:100vh;
+.body-container {
+  // background-color:$light-blue-color;
+  background: rgb(234,190,117);
+  background: radial-gradient(circle, rgba(234,190,117,1) 12%, $light-blue-color 95%); min-height:100vh;
 }
 
-.container-content {
-  margin-top:120px;
-  width:90%;
-  height:100%;
-  background-color:$white-color;
-}
-
-.navbar-top {
-  border-radius:50%;
-  background-color:$white-color;
-  height:250px;
-  width:90%;
-  position:absolute;
-  border: 1px solid red;
-}
-
-
-.navbar-container {
-  background-color:$light-blue-color;
+.body-content {
   width:90%;
 }
 
-
-.test1{
-  border: 1px solid blue;
+.header-container {
+  height:25%;
+  margin-top:5%;
 }
 
-.test2{
-  border: 1px solid red;
-}
-
-.top {
-  border-top-left-radius:50px;
-  border-top-right-radius:50px;
-  width:20px;
-  height:20px;
-  background-color:red;
-}
-
-
-.navbar-main {
-  //box-shadow: 0 2px 5px #0000004d;
-  // box-shadow: 0 1px 2.5px #EDB24C;
-}
-
-
-
-.navbar-sub {
-  background-color: #E3FFFC;
-}
+// .container-content {
+//   margin-top:120px;
+//   width:90%;
+//   height:100%;
+// }
 
 
 // body {
@@ -123,31 +87,11 @@ app-root {
 
 
 
-.form-container {
-    width: 80%;
-    display:flex;
-    flex-direction: column;
-    align-items:left;
-    justify-content:left;
-}
+// .form-container {
+//     width: 80%;
+//     display:flex;
+//     flex-direction: column;
+//     align-items:left;
+//     justify-content:left;
+// }
 
-
-// TOGGLE
-
-.mat-slide-toggle .mat-slide-toggle-bar {
-  background-color: $blue-color;
-}
-
-.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-  background-color: $red-color;
-}
-
-.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-  background-image: url('../assets/images/english-flag.png');
-  background-size: 100% 100%;
-}
-
-.mat-slide-toggle-thumb {
-  background-image: url('../assets/images/french-flag.png');
-  background-size: 100% 100%;
-}
