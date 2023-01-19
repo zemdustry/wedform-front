@@ -38,6 +38,7 @@
             },
             "styles": [
               "src/styles/styles.scss",
+              "src/styles/material.scss",
               "src/styles/fonts.scss"
             ],
             "scripts": []
@@ -107,6 +108,7 @@
             ],
             "styles": [
               "src/styles/styles.scss",
+              "src/styles/material.scss",
               "src/styles/fonts.scss"
             ],
             "scripts": []

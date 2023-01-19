@@ -1,12 +1,12 @@
-// @font-face {
-//   font-family: "Cherolina";
-//   src: local("Cherolina"), url(/assets/fonts/Cherolina.ttf) format("truetype");
-// }
+@font-face {
+  font-family: "saudagar";
+  src: local("saudagar-header"), url(/assets/fonts/Saudagar.ttf) format("truetype");
+}
 
-// @font-face {
-//   font-family: "saudagar";
-//   src: local("saudagar"), url(/assets/fonts/Saudagar.ttf) format("truetype");
-// }
+@font-face {
+  font-family: "cherolina";
+  src: local("cherolina-title"), url(/assets/fonts/Cherolina.ttf) format("truetype");
+}
 
 @font-face {
   font-family: "norma";

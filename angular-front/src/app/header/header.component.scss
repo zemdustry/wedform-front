@@ -1,21 +1,19 @@
 @import "variables.scss";
 
 .crop-logo img {
-  margin-bottom: -100px;
+  margin-bottom: -600px;
 }
 
 .naming-text {
   font-family: 'Cherolina';
+  color: $primary-gold-color;
+  font-size: 10rem;
 }
 
 .navbar-link {
-  font-family:'Saudagar';
+  font-family: 'saudagar';
+  font-size: 2rem;
 }
-
-.test {
-  background-color: red;
-}
-
   // TOGGLE
 
 .mat-slide-toggle .mat-slide-toggle-bar {
