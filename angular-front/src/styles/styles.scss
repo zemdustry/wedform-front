@@ -5,21 +5,14 @@
 
 html, body { padding: 0; margin: 0;}
 
-
-app-header {
-  min-height: 20rem;
-  height: 20rem;
+.unselectable-content {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
-
-.naming-text {
-  font-family: 'saudagar';
-}
-
-
-.font {
-  font: 1.2em "saudagar";
-}
-
 
 .golden-background {
   background: rgb(170,129,83);
@@ -28,4 +21,12 @@ app-header {
    rgba(184,143,91,1) 36%, rgba(192,152,96,1) 46%,
     rgba(208,167,104,1) 60%, rgba(241,198,122,1) 80%,
     rgba(229,184,115,1) 100%);
+}
+
+.yellow-background {
+  background: rgb(237,178,76);
+background: radial-gradient(circle, rgba(237,178,76,1) 16%,
+rgba(237,178,76,0.8001401244091386) 39%,
+rgba(237,178,76,0.9037815809917717) 60%,
+rgba(237,178,76,1) 95%);
 }
