@@ -5,6 +5,10 @@
 
 html, body { padding: 0; margin: 0;}
 
+.subline-active {
+  visibility: visible;
+}
+
 .unselectable-content {
   -webkit-user-select: none;
   -khtml-user-select: none;
