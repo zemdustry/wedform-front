@@ -25,7 +25,7 @@
 
 *Why bootstrap ?* </br> 
 
-Even if CSS3 can be enough, Bootstrap is really used in many realistic profesionnal projects and it's an occasion to practice it.
+Even if CSS3 can be enough, Bootstrap is really useful to build a responsive website and its used in many realistic profesionnal projects so it's an occasion to practice it.
 
 ## Français 🇫🇷
 
@@ -47,4 +47,4 @@ Even if CSS3 can be enough, Bootstrap is really used in many realistic profesion
 
 *Pourquoi Bootstrap ?* </br> 
 
-Même si CSS3 pourrait faire l'affaire, Bootstrap est très utilisé dans de nombreux projets professionnels et c'est l'occasion d'apprendre à l'utiliser.
+Même si CSS3 pourrait faire l'affaire, Bootstrap est très utile pour constuire un site web responsive et il est très utilisé dans de nombreux projets professionnels, c'est donc l'occasion de le pratiquer.
