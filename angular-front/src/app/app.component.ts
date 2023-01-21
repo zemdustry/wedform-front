@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { NavigationEnd, Router } from '@angular/router';
 
 
 @Component({
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'webForm';
+  title = 'home';
+
+  constructor(private router: Router, private titleService: Title) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.title = event.url;
+        this.titleService.setTitle($localize`${this.title}`);
+      }
+    });
+  }
 }

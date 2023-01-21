@@ -7,6 +7,7 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  dDay: Date = new Date("06/17/2023");
   currentRoute: string = '/';
 
   constructor(private router: Router) {
@@ -15,9 +16,5 @@ export class HeaderComponent {
         this.currentRoute = event.url;
       }
     });
-  }
-
-  test() {
-    console.log(this.currentRoute);
   }
 }

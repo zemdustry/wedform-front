@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "webForm": {
+      "i18n": {
+        "sourceLocale": "fr",
+        "locales": {
+          "en": "src/locale/messages.en.xlf",
+          "cs": "src/locale/messages.cs.xlf",
+          "vi": "src/locale/messages.vi.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,6 +28,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["cs"],
             "outputPath": "dist/web-form",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -65,6 +74,26 @@
               ],
               "outputHashing": "all"
             },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/web-form/fr",
+              "i18nMissingTranslation": "error"
+            },
+            "en": {
+              "localize": ["en"],
+              "outputPath": "dist/web-form/en",
+              "i18nMissingTranslation": "error"
+            },
+            "cs": {
+              "localize": ["cs"],
+              "outputPath": "dist/web-form/cs",
+              "i18nMissingTranslation": "error"
+            },
+            "vi": {
+              "localize": ["vi"],
+              "outputPath": "dist/web-form/vi",
+              "i18nMissingTranslation": "error"
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -84,6 +113,18 @@
             },
             "development": {
               "browserTarget": "webForm:build:development"
+            },
+            "fr": {
+              "browserTarget": "webForm:build:fr"
+            },
+            "en": {
+              "browserTarget": "webForm:build:en"
+            },
+            "cs": {
+              "browserTarget": "webForm:build:cs"
+            },
+            "vi": {
+              "browserTarget": "webForm:build:vi"
             }
           },
           "defaultConfiguration": "development"
