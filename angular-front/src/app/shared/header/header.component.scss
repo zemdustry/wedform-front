@@ -1,0 +1,78 @@
+@import "variables.scss";
+@import "../../../node_modules/rfs/scss";
+
+.navbar-title {
+  font-family: 'Cherolina';
+  color: $primary-gold-color;
+  @include font-size(8.5rem);
+}
+
+.navbar-subtitle {
+  font-family: 'saudagar';
+  @include font-size(1.5rem);
+  background: -webkit-linear-gradient($grey-color, $secondary-blue-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-link {
+  text-decoration: none;
+  span {
+    font-family: 'saudagar';
+    @include font-size(2rem);
+    color: $dark-color;
+  }
+
+  &.active-link {
+    span {
+      color: $primary-gold-color;
+    }
+  }
+}
+
+.navbar-line {
+  height: 0.10rem;
+  border:none;
+  background-color: $primary-gold-color;
+  opacity: 100;
+  margin-bottom: 0;
+}
+
+.navbar-subline {
+  height: 0.4rem;
+  visibility: hidden;
+  border:none;
+  background-color: $primary-gold-color;
+  opacity: 100;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+
+
+  // TOGGLE
+
+.mat-slide-toggle  {
+  .lang-toggle-bar {
+
+    background-color: $blue-color;
+  }
+}
+
+//   .mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+//     background-image: url('../../assets/images/english-flag.png');
+//     background-size: 100% 100%;
+// }
+
+// .mat-slide-toggle.mat-checked:not(.mat-disabled) .lang-toggle-bar {
+//   background-color: $red-color;
+// }
+
+// .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+//   background-image: url('../../assets/images/english-flag.png');
+//   background-size: 100% 100%;
+// }
+
+// .mat-slide-toggle-thumb {
+//   background-image: url('../../assets/images/french-flag.png');
+//   background-size: 100% 100%;
+// }

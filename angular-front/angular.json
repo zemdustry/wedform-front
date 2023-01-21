@@ -30,8 +30,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles",
+                "src/assets/*"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/material.scss",
+              "src/styles/fonts.scss"
             ],
             "scripts": []
           },
@@ -99,7 +107,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/material.scss",
+              "src/styles/fonts.scss"
             ],
             "scripts": []
           }
