@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,12 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  dDay: Date = new Date("06/17/2023");
   currentRoute: string = '/';
 
   constructor(private router: Router) {
+    this.currentRoute = router.url;
+
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
@@ -17,7 +20,7 @@ export class HeaderComponent {
     });
   }
 
-  test() {
-    console.log(this.currentRoute);
+  public isActivesRoutes(...routes: string[]): boolean{
+    return routes.some(route => route === this.currentRoute);
   }
 }

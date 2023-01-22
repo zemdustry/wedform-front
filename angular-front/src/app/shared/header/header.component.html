@@ -1,44 +1,40 @@
 <nav class="container-fluid">
-  <div class="d-flex justify-content-end">
-    <mat-slide-toggle class="lang-toggle-bar"></mat-slide-toggle>
-  </div>
   <div class="unselectable-content row justify-content-center">
-    <img class="col-11 col-sm-10 col-md-8 mt-2 mt-md-4" src="/assets/images/logo.png"/>
+    <img alt="image du logo" i18n-alt class="col-11 col-sm-10 col-md-8 mt-2 mt-md-4" src="/assets/images/logo.png"/>
   </div>
   <div class="unselectable-content row">
     <div class="text-center col-12 mt-4 mt-sm-4 mt-md-5">
       <h1 class="navbar-title mt-sm-3 mt-md-3">Huyen & Clément</h1>
       <div class="col-sm-10 col-md-10 col-lg-8 d-flex justify-content-end mt-2">
-        <h3 class="navbar-subtitle">17 JUIN 2023</h3>
+        <p class="navbar-subtitle">{{dDay | date:'longDate'}}</p>
       </div>
     </div>
   </div>
   <div class="container mt-5">
     <div class="row">
-      <a class="col-3 text-center navbar-link" routerLink="/home"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/home"
         routerLinkActive="active-link">
-        <span>ACCUEIL</span>
+        <span i18n>ACCUEIL</span>
       </a>
-      <a class="col-3 text-center navbar-link" routerLink="/information"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/information"
         routerLinkActive="active-link">
-        <span>INFORMATION</span>
+        <span i18n>INFORMATION</span>
       </a>
-      <a class="col-3 text-center navbar-link" routerLink="/register"
-        routerLinkActive="active-link"
-        (click)="test()">
-        <span>INSCRIPTION</span>
-      </a>
-      <a class="col-3 text-center navbar-link" routerLink="/photo"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/register"
         routerLinkActive="active-link">
-        <span>PHOTO</span>
+        <span i18n>INSCRIPTION</span>
+      </a>
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/photo"
+        routerLinkActive="active-link">
+        <span i18n>ALBUM</span>
       </a>
     </div>
     <div class="row mt-3">
       <hr class="navbar-line col-12">
-      <hr class="navbar-subline col-3 subline-active" [ngClass]="{'subline-active': currentRoute === '/home'}">
-      <hr class="navbar-subline col-3" [ngClass]="{'subline-active': currentRoute === '/information'}">
-      <hr class="navbar-subline col-3" [ngClass]="{'subline-active': currentRoute === '/register'}">
-      <hr class="navbar-subline col-3" [ngClass]="{'subline-active': currentRoute === '/photo'}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/', '/home')}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/information')}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/register')}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/photo')}">
     </div>
   </div>
 </nav>
