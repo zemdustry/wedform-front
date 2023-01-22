@@ -12,29 +12,29 @@
   </div>
   <div class="container mt-5">
     <div class="row">
-      <a class="col-3 text-center navbar-link" routerLink="/home"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/home"
         routerLinkActive="active-link">
         <span i18n>ACCUEIL</span>
       </a>
-      <a class="col-3 text-center navbar-link" routerLink="/information"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/information"
         routerLinkActive="active-link">
         <span i18n>INFORMATION</span>
       </a>
-      <a class="col-3 text-center navbar-link" routerLink="/register"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/register"
         routerLinkActive="active-link">
         <span i18n>INSCRIPTION</span>
       </a>
-      <a class="col-3 text-center navbar-link" routerLink="/photo"
+      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/photo"
         routerLinkActive="active-link">
         <span i18n>ALBUM</span>
       </a>
     </div>
     <div class="row mt-3">
       <hr class="navbar-line col-12">
-      <hr class="navbar-subline col-3 subline-active" [ngClass]="{'subline-active': currentRoute === '/home'}">
-      <hr class="navbar-subline col-3" [ngClass]="{'subline-active': currentRoute === '/information'}">
-      <hr class="navbar-subline col-3" [ngClass]="{'subline-active': currentRoute === '/register'}">
-      <hr class="navbar-subline col-3" [ngClass]="{'subline-active': currentRoute === '/photo'}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/', '/home')}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/information')}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/register')}">
+      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/photo')}">
     </div>
   </div>
 </nav>

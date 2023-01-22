@@ -13,9 +13,13 @@ export class AppComponent {
   constructor(private router: Router, private titleService: Title) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.title = event.url;
-        this.titleService.setTitle($localize`${this.title}`);
+        this.updateTitle(event.url);
       }
     });
+  }
+
+  private updateTitle(currentRoute: string) {
+    this.title = currentRoute.substring(1, currentRoute.length);
+    this.titleService.setTitle($localize`${this.title}`);
   }
 }

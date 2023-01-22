@@ -28,7 +28,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["cs"],
+            "localize": ["fr"],
             "outputPath": "dist/web-form",
             "index": "src/index.html",
             "main": "src/main.ts",
