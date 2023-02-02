@@ -1,0 +1,89 @@
+@import "variables.scss";
+footer {
+  //shadow like header
+  box-shadow: 0 0 12px $secondary-gold-color;
+  background-color: $secondary-gold-color ;
+}
+
+.main-footer {
+  min-height: 20rem;
+  background-color: $white-color;
+  box-shadow: 0 0 12px $secondary-gold-color   ;
+
+
+      .email-link {
+        content: url('/assets/icons/email.svg');
+      }
+
+      .twitter-link {
+        content: url('/assets/icons/twitter.svg');
+      }
+
+      .linkedin-link {
+        content: url('/assets/icons/linkedin.svg');
+      }
+
+      .github-link {
+        content: url('/assets/icons/github.svg');
+      }
+
+    .section-footer {
+      width: 35%;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: $footer-link-text-size;
+      color: $dark-color;
+
+      .section {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a:hover {
+        cursor: pointer;
+        color: $secondary-blue-color;
+      }
+    }
+
+    .logo-footer {
+      margin-top: 2.5rem;
+      width: 20%;
+    }
+  }
+
+
+.sub-footer {
+  height: 6rem;
+  background-color: $secondary-blue-color ;
+  color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $footer-text-size;
+}
+
+//TODO MediaQuery
+@media screen and (max-width: 1024px) {
+  .footer-wrapper {
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    height: 20rem;
+  }
+}
+
+/* phone */
+@media screen and (max-width: 480px) {
+
+  .contact button {
+    width: 100%;
+    height: 4rem;
+    border-radius: 6px;
+  }
+}
