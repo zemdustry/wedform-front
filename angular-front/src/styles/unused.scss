@@ -1,0 +1,89 @@
+.light-button {
+  --glow-length: 20px;
+  --glow-inner-thickness: 2px;
+  --glow-outer-size: 8px;
+  --glow-effect-offset: 0px;
+  --animation-speed: 1200ms;
+  --svg-offset: 100px;
+
+  margin: 2vw;
+
+  cursor: pointer;
+  font-size: 4vw;
+  font-family: 'saudagar';
+  color: $secondary-gold-color;
+  background-color: $white-color;
+  padding: 2vw 5vw;
+  border: 0;
+  border-radius: 80px;
+  position: relative;
+
+  &:is(:hover, :focus) svg {
+    animation: glow-visibility var(--animation-speed) ease-in-out forwards;
+  }
+
+  &:is(:hover, :focus) &:is(.glow, .border) {
+    animation: glow-movement var(--animation-speed) ease-in forwards;
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    inset: calc(var(--svg-offset) / -2);
+    width: calc(100% + var(--svg-offset) + var(--glow-effect-offset));
+    height: calc(100% + var(--svg-offset) + var(--glow-effect-offset));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .glow-effect,
+  .border-effect {
+  width: calc(100% - var(--svg-offset) + var(--glow-effect-offset));
+  height: calc(100% - var(--svg-offset) + var(--glow-effect-offset));
+
+  x: calc(var(--svg-offset) / 2 - (var(--glow-effect-offset) / 2));
+  y: calc(var(--svg-offset) / 2 - (var(--glow-effect-offset) / 2));
+  rx: $borderRadius;
+
+  fill: transparent;
+  stroke-dasharray: var(--glow-length) calc(50px - var(--glow-length));
+  stroke-dashoffset: 0;
+}
+
+.border-effect {
+  stroke-width: var(--glow-inner-thickness);
+  stroke: $white-color;
+}
+
+.glow-effect {
+  stroke-width: var(--glow-outer-size);
+  stroke: $white-color;
+  filter: blur(var(--glow-outer-size));
+}
+}
+
+
+@keyframes glow-visibility {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow-movement {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    stroke-dashoffset: -120px;
+  }
+}
+
+.light-button[data-style="offset"] :is(.border-effect, .glow-effect) {
+  --glow-effect-offset: 10px;
+}
+
+.light-button[data-style="no-move"] :is(.border-effect, .glow-effect) {
+  --glow-length: 50px;
+}

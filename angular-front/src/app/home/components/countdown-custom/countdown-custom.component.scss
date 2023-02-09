@@ -1,18 +1,21 @@
 @import "variables.scss";
 @import "../../../node_modules/rfs/scss";
 
+
 .flip-clock {
   text-align: center;
   perspective: 400px;
 
   *,
   *:before,
-  *:after { box-sizing: border-box; }
+  *:after {
+    box-sizing: border-box;
+  }
 }
 
 .flip-clock-element {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .palette {
@@ -31,13 +34,20 @@
   height: $halfPaletteHeight;
   color: $secondary-gold-color;
   font-family: 'fenomen';
-  background: $dark-secondary-blue-color;
   padding: 0.25em 0.25em;
   border-radius: $borderRadius $borderRadius 0 0;
+  // FIXME
   backface-visiblity: hidden;
   transform-style: preserve-3d;
   width: $paletteWidth;
   transform: translateZ(0);
+  background: $third-secondary-blue-color;
+  box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-dark-1,
+    inset -20px -20px 60px $third-secondary-blue-shadow-dark-2;
+}
+
+.palette-top {
+  border-top: solid 0.5px $third-secondary-blue-color;
 }
 
 .palette-bottom {
@@ -45,11 +55,14 @@
   position: absolute;
   top: 50%;
   left: 0;
-  border-top: solid 1.8px #8DF0E5;
-  background: $secondary-blue-color;
+  border-top: solid 1.8px $primary-blue-color;
   border-radius: 0 0 $borderRadius $borderRadius;
   pointer-events: none;
   overflow: hidden;
+  background: $secondary-blue-color;
+  box-shadow: inset 20px 20px 60px $secondary-blue-shadow-1,
+    inset -20px -20px 60px $secondary-blue-shadow-2;
+  border-bottom: solid 3px $third-secondary-blue-color;
 }
 
 .palette-bottom::after {
@@ -76,16 +89,82 @@
   overflow: hidden;
 }
 
-
 .clock-unit {
-  font-family: 'saudagar';
   font-size: 4vh;
-  color:$white-color;
+  color: $white-color;
 }
-
-
 
 .flip-element {
   border-radius: $borderRadius;
-  box-shadow: -3vh 3vh 17px #6ba197, 20px -20px 35px #9FF1EC
+  background: $primary-blue-color;
+  box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-clear-1,
+  inset -20px -20px 60px $third-secondary-blue-shadow-clear-1;
+  padding-bottom: 1px;
+  border-bottom: solid 3px $third-secondary-blue-shadow-dark-1;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .palette-top,
+  .palette-bottom,
+  .palette-back::before,
+  .palette-back::after {
+    height: 8vw;
+    width: 18vw;
+    border-radius: 6vw 6vw 0 0;
+  }
+
+  .palette {
+    padding-bottom: 8vw;
+    font-size: 12vw;
+  }
+
+  .palette-bottom {
+    border-radius: 0 0 6vw 6vw;
+
+    &::after {
+      margin-top: -8vw;
+    }
+  }
+
+  .flip-clock-element {
+    margin: 0 1vw;
+  }
+
+  .flip-element {
+    border-radius: 6vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+  .palette-top,
+  .palette-bottom,
+  .palette-back::before,
+  .palette-back::after {
+    height: 8vw;
+    width: 20vw;
+    border-radius: 6vw 6vw 0 0;
+  }
+
+  .palette {
+    padding-bottom: 8vw;
+    font-size: 12vw;
+  }
+
+  .palette-bottom {
+    border-radius: 0 0 6vw 6vw;
+
+    &::after {
+      margin-top: -8vw;
+    }
+  }
+
+  .flip-clock-element {
+    margin: 0 1vw;
+  }
+
+  .flip-element {
+    border-radius: 6vw;
+  }
 }

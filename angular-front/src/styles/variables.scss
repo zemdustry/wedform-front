@@ -1,7 +1,13 @@
 /* COLORS */
 $primary-blue-color: #8DF0E5;
 $secondary-blue-color: #8FD9CE;
-$dark-secondary-blue-color: #7dc0b6;
+$secondary-blue-shadow-1: #78ccc3;
+$secondary-blue-shadow-2: #a2ffff;
+$third-secondary-blue-color: #7dc0b6;
+$third-secondary-blue-shadow-clear-1: #7ab8af;
+$third-secondary-blue-shadow-clear-2: #a4faed;
+$third-secondary-blue-shadow-dark-1: #6aa39b;
+$third-secondary-blue-shadow-dark-2: #90ddd1;
 $green-blue-color: #43cea2;
 $light-blue-color: #E3FFFC;
 $primary-gold-color: #EDB24C;
@@ -16,8 +22,8 @@ $red-color: #CF081F;
 
 
 /* SIZE */
-$borderRadius: 10px;
+$borderRadius: 2.5vw;
 
 /* COUNTDOWN */
-$halfPaletteHeight: 0.65em;
-$paletteWidth: 1.5em;
+$halfPaletteHeight: 4vw;
+$paletteWidth: 10vw;

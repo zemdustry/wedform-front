@@ -30,10 +30,10 @@ html, body { padding: 0; margin: 0;}
     margin: auto;
   }
   &:before {
-    margin-right: 2rem;
+    margin-right: 1.2rem;
   }
   &:after {
-    margin-left: 2rem;
+    margin-left: 1.2rem;
   }
 }
 
@@ -78,90 +78,58 @@ rgba(237,178,76,1) 95%);
 background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
 }
 
-/// Button
-.button-glow {
-  --glow-length: 20px;
-  --glow-inner-thickness: 2px;
-  --glow-outer-size: 0.4rem;
-  --glow-offset: 0px;
-  --animation-speed: 1200ms;
-  --svg-offset: 100px;
-
+.light-button {
   cursor: pointer;
-  font-size: 4.2vh;
+  font-size: 4vw;
   font-family: 'saudagar';
   color: $secondary-gold-color;
   background-color: $white-color;
-  padding: 1rem 2.2rem 1rem 2.2rem;
+  padding: 2vw 5vw;
   border: 0;
-  border-radius: $borderRadius;
+  border-radius: 80px;
+  margin: 2vw;
+  }
 
-  position: relative;
-}
+@media only screen and (min-width: 768px) {
+  .heading-line {
+    @include font-size(2vw);
+  }
 
-.button-glow svg {
-  position: absolute;
-  inset: calc(var(--svg-offset) / -2);
-  width: calc(100% + var(--svg-offset) + var(--glow-offset));
-  height: calc(100% + var(--svg-offset) + var(--glow-offset));
-  opacity: 0;
-  pointer-events: none;
-}
-
-.glow,
-.border {
-  width: calc(100% - var(--svg-offset) + var(--glow-offset));
-  height: calc(100% - var(--svg-offset) + var(--glow-offset));
-
-  x: calc(var(--svg-offset) / 2 - (var(--glow-offset) / 2));
-  y: calc(var(--svg-offset) / 2 - (var(--glow-offset) / 2));
-  fill: transparent;
-
-  rx: $borderRadius;
-  stroke-dasharray: var(--glow-length) calc(50px - var(--glow-length));
-  stroke-dashoffset: 0;
-}
-
-.border {
-  stroke-width: var(--glow-inner-thickness);
-  stroke: $white-color;
-}
-
-.glow {
-  stroke-width: var(--glow-outer-size);
-  stroke: $white-color;
-  filter: blur(var(--glow-outer-size));
-}
-
-.button-glow:is(:hover, :focus) svg {
-  animation: glow-visibility var(--animation-speed) ease-in-out forwards;
-}
-
-.button-glow:is(:hover, :focus) :is(.glow, .border) {
-  animation: glow-movement var(--animation-speed) ease-in forwards;
-}
-
-@keyframes glow-visibility {
-  0%,
-  100% {
-    opacity: 1;
+  .light-button {
+    font-size: 1.5vw;
+    padding: 0.6vw 2vw;
   }
 }
 
-@keyframes glow-movement {
-  0% {
-    stroke-dashoffset: 0px;
+@media only screen and (max-width: 768px) {
+  .heading-line {
+    @include font-size(2rem);
+    &:before {
+      margin-right: 1rem;
+    }
+    &:after {
+      margin-left: 1rem;
+    }
   }
 
-  100% {
-    stroke-dashoffset: -120px;
+  .light-button {
+    font-size: 3vw;
+    padding: 1.4vw 2.8vw;
   }
 }
 
-.button-glow[data-style="offset"] :is(.border, .glow) {
-  --glow-offset: 10px;
-}
+@media only screen and (max-width: 425px) {
+  .heading-line {
+    @include font-size(6vw);
+    &:before {
+      margin-right: 0.5rem;
+    }
+    &:after {
+      margin-left: 0.5rem;
+    }
+  }
 
-.button-glow[data-style="no-move"] :is(.border, .glow) {
-  --glow-length: 50px;
+  .light-button {
+    font-size: 4vw;
+  }
 }

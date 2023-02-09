@@ -8,17 +8,52 @@
 
 .clock-unit {
   font-family: 'fenomen';
-  font-size: 4.5vh;
-  margin-top: 2rem;
-  color:$white-color;
+  @include font-size(2rem);
+  color:$secondary-gold-color;
 }
 
 .flip-element {
   border-radius: $borderRadius;
-  box-shadow: -3vh 3vh 17px #6ba197, 20px -20px 35px #9FF1EC
+  background: $third-secondary-blue-color;
+  box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-dark-1,
+            inset -20px -20px 60px $third-secondary-blue-shadow-dark-2;
+}
+
+@media only screen and (min-width: 2560px) {
+  .clock-unit {
+    @include font-size(3rem);
+  }
 }
 
 
-.register-button {
-  padding: 2.5rem 1rem 2rem 1rem;
+@media only screen and (min-width: 1440px) {
+  .clock-unit {
+    @include font-size(2.8rem);
+  }
 }
+
+@media only screen and (max-width: 1280px) {
+  .clock-unit {
+    @include font-size(2rem);
+  }
+}
+
+  /* Tablette */
+  @media only screen and (max-width: 1024px) {
+    .clock-unit {
+      @include font-size(3vw);
+    }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .clock-unit {
+      @include font-size(5vw);
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .clock-unit {
+      @include font-size(1.2rem);
+    }
+  }
