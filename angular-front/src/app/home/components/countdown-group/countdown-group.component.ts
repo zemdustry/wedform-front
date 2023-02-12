@@ -48,42 +48,16 @@ export class CountdownGroupComponent implements OnDestroy {
   }
 
   private allocateTimeUnits() {
-    this.secondsToDday =
-      Math.floor(
-        (this.timeDifference / this.milliSecondsInASecond) %
-          this.SecondsInAMinute
-      ).toString();
-    this.minutesToDday =
-      Math.floor(
-        (this.timeDifference /
-          (this.milliSecondsInASecond * this.minutesInAnHour)) %
-          this.SecondsInAMinute
-      ).toString();
-    this.hoursToDday =
-      Math.floor(
-        (this.timeDifference /
-          (this.milliSecondsInASecond *
-            this.minutesInAnHour *
-            this.SecondsInAMinute)) %
-          this.hoursInADay
-      ).toString();
-    this.daysToDday =
-      Math.floor(
-        this.timeDifference /
-          (this.milliSecondsInASecond *
-            this.minutesInAnHour *
-            this.SecondsInAMinute *
-            this.hoursInADay)
-      ).toString();
+    this.secondsToDday = Math.floor((this.timeDifference / this.milliSecondsInASecond) % this.SecondsInAMinute)
+      .toString();
+    this.minutesToDday = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour)) % this.SecondsInAMinute)
+     .toString();
+    this.hoursToDday = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute)) % this.hoursInADay)
+      .toString();
+    this.daysToDday = Math.floor(this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay))
+      .toString();
     //FIXME remove when days used
-    this.monthToDday =
-      Math.floor(
-        this.timeDifference /
-          (this.milliSecondsInASecond *
-            this.minutesInAnHour *
-            this.SecondsInAMinute *
-            this.hoursInADay) /
-          27
-      ).toString();
+    this.monthToDday = Math.floor(this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay) / 27)
+      .toString();
   }
 }

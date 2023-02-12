@@ -19,10 +19,7 @@ import { RegisterModule } from './register/register.module';
     AppRoutingModule,
     CommonModule,
     NgbModule,
-    BrowserAnimationsModule,
-    InformationModule,
-    HomeModule,
-    RegisterModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
