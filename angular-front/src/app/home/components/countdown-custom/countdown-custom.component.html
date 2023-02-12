@@ -1,0 +1,12 @@
+<div class="flip-clock-element">
+  <div class="flip-element">
+    <div class="palette">
+      <b class="palette-top text-center" [@flipTop]="unit">{{unit}}</b>
+      <b class="palette-bottom text-center" [attr.data]="lastUnit"></b>
+      <b class="palette-back text-center" [attr.data]="lastUnit">
+        <b class="palette-bottom text-center" [@flipBottom]="unit" [attr.data]="unit">
+        </b>
+      </b>
+    </div>
+  </div>
+</div>

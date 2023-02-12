@@ -12,3 +12,8 @@
   font-family: "norma";
   src: local("norma-font"), url(/assets/fonts/Norma-Bold.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "fenomen";
+  src: local("fenomen-font"), url(/assets/fonts/Fenomen.otf) format("opentype");
+}

@@ -1,0 +1,40 @@
+<div class="countdown turquoise-radiant-reverse d-flex flex-column align-items-center">
+  <h1 class="heading-line" i18n>TEMPS RESTANT</h1>
+  <div class="unselectable-content d-flex justify-content-center align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <app-countdown-custom [unit]="monthToDday"></app-countdown-custom>
+      <div class="d-flex justify-content-center mt-2">
+        <span class="clock-unit mt-2" i18n>
+          Mois
+        </span>
+      </div>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <app-countdown-custom [unit]="hoursToDday"></app-countdown-custom>
+      <div class="d-flex justify-content-center mt-2">
+        <span class="clock-unit mt-2" i18n>
+          Heures
+        </span>
+      </div>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <app-countdown-custom [unit]="minutesToDday"></app-countdown-custom>
+      <div class="d-flex justify-content-center mt-2">
+        <span class="clock-unit mt-2" i18n>
+          Minutes
+        </span>
+      </div>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <app-countdown-custom [unit]="secondsToDday"></app-countdown-custom>
+      <div class="d-flex justify-content-center mt-2">
+        <span class="clock-unit mt-2" i18n>
+          Secondes
+        </span>
+      </div>
+    </div>
+  </div>
+  <button class="light-button" data-style="no-move" routerLink="/register" routerLinkActive="active-link" i18n>
+    INSCRIPTION
+  </button>
+</div>

@@ -1,0 +1,170 @@
+@import "variables.scss";
+@import "../../../node_modules/rfs/scss";
+
+
+.flip-clock {
+  text-align: center;
+  perspective: 400px;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+}
+
+.flip-clock-element {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.palette {
+  display: block;
+  position: relative;
+  padding-bottom: $halfPaletteHeight;
+  font-size: 6vw;
+  line-height: 0.95;
+}
+
+.palette-top,
+.palette-bottom,
+.palette-back::before,
+.palette-back::after {
+  display: block;
+  height: $halfPaletteHeight;
+  color: $secondary-gold-color;
+  font-family: 'fenomen';
+  padding: 0.25em 0.25em;
+  border-radius: $borderRadius $borderRadius 0 0;
+  // FIXME
+  backface-visiblity: hidden;
+  transform-style: preserve-3d;
+  width: $paletteWidth;
+  transform: translateZ(0);
+  background: $third-secondary-blue-color;
+  box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-dark-1,
+    inset -20px -20px 60px $third-secondary-blue-shadow-dark-2;
+}
+
+.palette-top {
+  border-top: solid 0.5px $third-secondary-blue-color;
+}
+
+.palette-bottom {
+  color: $primary-gold-color;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: solid 1.8px $primary-blue-color;
+  border-radius: 0 0 $borderRadius $borderRadius;
+  pointer-events: none;
+  overflow: hidden;
+  background: $secondary-blue-color;
+  box-shadow: inset 20px 20px 60px $secondary-blue-shadow-1,
+    inset -20px -20px 60px $secondary-blue-shadow-2;
+  border-bottom: solid 3px $third-secondary-blue-color;
+}
+
+.palette-bottom::after {
+  display: block;
+  margin-top: -$halfPaletteHeight;
+}
+
+.palette-back::before,
+.palette-bottom::after {
+  content: attr(data);
+}
+
+.palette-back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+}
+
+.palette-back::before {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.clock-unit {
+  font-size: 4vh;
+  color: $white-color;
+}
+
+.flip-element {
+  border-radius: $borderRadius;
+  background: $primary-blue-color;
+  box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-clear-1,
+  inset -20px -20px 60px $third-secondary-blue-shadow-clear-1;
+  padding-bottom: 1px;
+  border-bottom: solid 3px $third-secondary-blue-shadow-dark-1;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .palette-top,
+  .palette-bottom,
+  .palette-back::before,
+  .palette-back::after {
+    height: 8vw;
+    width: 18vw;
+    border-radius: 6vw 6vw 0 0;
+  }
+
+  .palette {
+    padding-bottom: 8vw;
+    font-size: 12vw;
+  }
+
+  .palette-bottom {
+    border-radius: 0 0 6vw 6vw;
+
+    &::after {
+      margin-top: -8vw;
+    }
+  }
+
+  .flip-clock-element {
+    margin: 0 1vw;
+  }
+
+  .flip-element {
+    border-radius: 6vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+  .palette-top,
+  .palette-bottom,
+  .palette-back::before,
+  .palette-back::after {
+    height: 8vw;
+    width: 20vw;
+    border-radius: 6vw 6vw 0 0;
+  }
+
+  .palette {
+    padding-bottom: 8vw;
+    font-size: 12vw;
+  }
+
+  .palette-bottom {
+    border-radius: 0 0 6vw 6vw;
+
+    &::after {
+      margin-top: -8vw;
+    }
+  }
+
+  .flip-clock-element {
+    margin: 0 1vw;
+  }
+
+  .flip-element {
+    border-radius: 6vw;
+  }
+}

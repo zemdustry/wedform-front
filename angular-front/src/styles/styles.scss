@@ -5,8 +5,41 @@
 
 html, body { padding: 0; margin: 0;}
 
+
+.main-container {
+  //TODO min height to fix
+  min-height: 90rem;
+}
+
 .subline-active {
   visibility: visible;
+}
+
+.heading-line {
+  width: 100%;
+  font-family: 'ade';
+  color: $white-color;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0 !important;
+  padding: 2rem 2rem 2.5rem 2rem;
+  &:before, &:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 0.18rem solid $white-color;
+    margin: auto;
+  }
+  &:before {
+    margin-right: 1.2rem;
+  }
+  &:after {
+    margin-left: 1.2rem;
+  }
+}
+
+.heading-sub {
+  color: $white-color;
+  font-size: 6vh;
 }
 
 .unselectable-content {
@@ -33,4 +66,70 @@ background: radial-gradient(circle, rgba(237,178,76,1) 16%,
 rgba(237,178,76,0.8001401244091386) 39%,
 rgba(237,178,76,0.9037815809917717) 60%,
 rgba(237,178,76,1) 95%);
+}
+
+
+.turquoise-radiant {
+  background: rgb(125,192,182);
+  background: linear-gradient(0deg, rgba(125,192,182,1) 0%, rgba(143,217,206,1) 25%, rgba(141,240,229,1) 49%, rgba(100,221,192,1) 82%, rgba(87,215,180,1) 92%, rgba(67,206,162,1) 100%); }
+
+.turquoise-radiant-reverse {
+ background: rgb(67,206,162);
+background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
+}
+
+.light-button {
+  cursor: pointer;
+  font-size: 4vw;
+  font-family: 'saudagar';
+  color: $secondary-gold-color;
+  background-color: $white-color;
+  padding: 2vw 5vw;
+  border: 0;
+  border-radius: 80px;
+  margin: 2vw;
+  }
+
+@media only screen and (min-width: 768px) {
+  .heading-line {
+    @include font-size(2vw);
+  }
+
+  .light-button {
+    font-size: 1.5vw;
+    padding: 0.6vw 2vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-line {
+    @include font-size(2rem);
+    &:before {
+      margin-right: 1rem;
+    }
+    &:after {
+      margin-left: 1rem;
+    }
+  }
+
+  .light-button {
+    font-size: 3vw;
+    padding: 1.4vw 2.8vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .heading-line {
+    @include font-size(6vw);
+    &:before {
+      margin-right: 0.5rem;
+    }
+    &:after {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .light-button {
+    font-size: 4vw;
+  }
 }

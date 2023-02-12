@@ -25,7 +25,7 @@
 
 *Why bootstrap ?* </br> 
 
-Even if CSS3 can be enough, Bootstrap is really useful to build a responsive website and its used in many realistic profesionnal projects so it's an occasion to practice it.
+Even if CSS3 can be enough, Bootstrap is really useful to build a responsive website and it's used in many realistic profesionnal projects that is an occasion to practice it.
 
 ## Français 🇫🇷
 
