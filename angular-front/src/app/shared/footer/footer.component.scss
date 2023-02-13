@@ -1,89 +1,112 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
 @import "variables.scss";
-footer {
-  //shadow like header
-  box-shadow: 0 0 12px $secondary-gold-color;
-  background-color: $secondary-gold-color ;
+
+.footer-container {
+  background-color: $grey-color;
+  overflow-y: none;
+  padding-left: 0;
+  padding-right: 0;
+
+  .footer-main:after {
+    content: " ";
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    height: 1px;
+    border-bottom: 1.2px solid $secondary-gold-color;
 }
 
-.main-footer {
-  min-height: 20rem;
-  background-color: $white-color;
-  box-shadow: 0 0 12px $secondary-gold-color   ;
-
-
-      .email-link {
-        content: url('/assets/icons/email.svg');
-      }
-
-      .twitter-link {
-        content: url('/assets/icons/twitter.svg');
-      }
-
-      .linkedin-link {
-        content: url('/assets/icons/linkedin.svg');
-      }
-
-      .github-link {
-        content: url('/assets/icons/github.svg');
-      }
-
-    .section-footer {
-      width: 35%;
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      font-size: $footer-link-text-size;
-      color: $dark-color;
-
-      .section {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      a:hover {
-        cursor: pointer;
-        color: $secondary-blue-color;
-      }
-    }
-
-    .logo-footer {
-      margin-top: 2.5rem;
-      width: 20%;
+.footer-sud-menu {
+  ul {
+    padding: 0;
+    margin-left: 12px;
+    list-style-type: none;
+    li {
+      display: inline;
+      margin-right: 1vw;
     }
   }
-
-
-.sub-footer {
-  height: 6rem;
-  background-color: $secondary-blue-color ;
-  color: $white-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: $footer-text-size;
 }
 
-//TODO MediaQuery
-@media screen and (max-width: 1024px) {
-  .footer-wrapper {
-    height: 20rem;
+  .contact {
+    .contact-header {
+      @include font-size(2rem);
+    }
+    ul {
+      padding-left: 0;
+      margin-top: 10px;
+     list-style-type: none;
+   }
+   .contact-information {
+    font-size:calc(20px + 2*(100vw - 420px) / 860);
+    a {
+      font-size:calc(14px + 2*(100vw - 420px) / 860);
+      color: $secondary-blue-shadow-1;
+    }
+   }
+ }
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  margin-right: 12px;
+}
+
+.blue-link {
+  color: $secondary-blue-shadow-1;
+
+  i {
+    font-size:calc(24px + 2*(100vw - 420px) / 860);
+    &:hover {
+      background-color: $secondary-blue-shadow-1;
+      color: $white-color;
+    }
+  }
+  span {
+    font-size:calc(14px + 2*(100vw - 420px) / 860);
+    padding: 4px;
+    &:hover {
+      background-color: $secondary-blue-shadow-1;
+      color: $white-color;
+    }
   }
 }
 
-@media screen and (max-width: 768px) {
-  .footer-wrapper {
-    height: 20rem;
+.mini-logo {
+  img {
+    width: 10rem;
   }
+  padding: 20px;
 }
 
 /* phone */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
 
-  .contact button {
-    width: 100%;
-    height: 4rem;
-    border-radius: 6px;
+  .footer-link {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .contact {
+    margin-top: 10px;
+    align-items: center !important;
+
+    .contact-header {
+      margin-right: 20vw;
+    }
+  }
+
+  .social {
+    justify-content: center !important;
+    align-items: center !important;
+    a.blue-link > i{
+      margin:2px;
+
+    }
   }
 }

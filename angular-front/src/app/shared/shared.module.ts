@@ -9,4 +9,5 @@ import * as sharedComponents from '.';
   imports: [CommonModule, RouterModule, MatSlideToggleModule],
   exports: [...sharedComponents.exportComponents]
 })
-export class SharedModule { }
+export class SharedModule {
+}

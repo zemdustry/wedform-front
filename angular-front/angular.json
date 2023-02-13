@@ -48,7 +48,7 @@
             "styles": [
               "src/styles/styles.scss",
               "src/styles/material.scss",
-              "src/styles/fonts.scss"
+              "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css"
             ],
             "scripts": []
           },
@@ -150,7 +150,7 @@
             "styles": [
               "src/styles/styles.scss",
               "src/styles/material.scss",
-              "src/styles/fonts.scss"
+              "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css"
             ],
             "scripts": []
           }
