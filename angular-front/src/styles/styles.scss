@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   &:before, &:after{
     content: "";
     flex: 1 1;
-    border-bottom: 0.18rem solid $white-color;
+    border-bottom: 1.2px solid $white-color;
     margin: auto;
   }
   &:before {
