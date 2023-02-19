@@ -1,6 +1,4 @@
-/* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-
 @import "variables.scss";
 
 .footer-container {
@@ -16,97 +14,115 @@
     background-color: transparent;
     height: 1px;
     border-bottom: 1.2px solid $secondary-gold-color;
-}
+  }
 
-.footer-sud-menu {
-  ul {
-    padding: 0;
-    margin-left: 12px;
-    list-style-type: none;
-    li {
-      display: inline;
-      margin-right: 1vw;
+  .footer-sud-menu {
+    ul {
+      padding: 0;
+      margin-left: 12px;
+      list-style-type: none;
+
+      li {
+        display: inline;
+        margin-right: 1vw;
+      }
     }
   }
-}
 
   .contact {
     .contact-header {
       @include font-size(2rem);
     }
+
     ul {
       padding-left: 0;
       margin-top: 10px;
-     list-style-type: none;
-   }
-   .contact-information {
-    font-size:calc(20px + 2*(100vw - 420px) / 860);
-    a {
-      font-size:calc(14px + 2*(100vw - 420px) / 860);
-      color: $secondary-blue-shadow-1;
+      list-style-type: none;
     }
-   }
- }
-}
 
-a {
-  text-decoration: none;
-}
+    .contact-information {
+      font-size: calc(20px + 2*(100vw - 420px) / 860);
 
-i {
-  margin-right: 12px;
-}
+      a {
+        font-size: calc(14px + 2*(100vw - 420px) / 860);
+        color: $secondary-blue-shadow-1;
+      }
+    }
+  }
 
-.blue-link {
-  color: $secondary-blue-shadow-1;
+  a {
+    text-decoration: none;
+  }
 
   i {
-    font-size:calc(24px + 2*(100vw - 420px) / 860);
-    &:hover {
-      background-color: $secondary-blue-shadow-1;
-      color: $white-color;
+    margin-right: 12px;
+  }
+
+  .blue-link {
+    color: $secondary-blue-shadow-1;
+
+    i {
+      font-size: calc(24px + 2*(100vw - 420px) / 860);
+
+      &:hover {
+        background-color: $secondary-blue-shadow-1;
+        color: $white-color;
+      }
     }
-  }
-  span {
-    font-size:calc(14px + 2*(100vw - 420px) / 860);
-    padding: 4px;
-    &:hover {
-      background-color: $secondary-blue-shadow-1;
-      color: $white-color;
-    }
-  }
-}
 
-.mini-logo {
-  img {
-    width: 10rem;
-  }
-  padding: 20px;
-}
+    span {
+      font-size: calc(14px + 2*(100vw - 420px) / 860);
+      padding: 4px;
 
-/* phone */
-@media screen and (max-width: 580px) {
-
-  .footer-link {
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .contact {
-    margin-top: 10px;
-    align-items: center !important;
-
-    .contact-header {
-      margin-right: 20vw;
+      &:hover {
+        background-color: $secondary-blue-shadow-1;
+        color: $white-color;
+      }
     }
   }
 
-  .social {
-    justify-content: center !important;
-    align-items: center !important;
-    a.blue-link > i{
-      margin:2px;
+  .mini-logo {
+    img {
+      width: 10rem;
+    }
 
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 780px) {
+
+    .mini-logo {
+      img {
+        width: 8rem !important;
+      }
+
+      margin-left: 5px;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+
+    .footer-link {
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .contact {
+      margin-top: 10px;
+      align-items: center !important;
+
+      .contact-header {
+        margin-right: 20vw;
+      }
+    }
+
+    .social {
+      justify-content: center !important;
+      align-items: center !important;
+
+      a.blue-link>i {
+        margin: 2px;
+      }
     }
   }
 }
