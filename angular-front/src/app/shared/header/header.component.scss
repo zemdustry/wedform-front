@@ -2,13 +2,14 @@
 @import "../../../node_modules/rfs/scss";
 
 .navbar-title {
-  font-family: 'Cherolina';
+  font-family: $unveiling-font;
+
   color: $primary-gold-color;
   @include font-size(8.5rem);
 }
 
 .navbar-subtitle {
-  font-family: 'saudagar';
+  font-family: $heading-font;
   @include font-size(1.5rem);
   background: -webkit-linear-gradient($grey-color, $secondary-blue-color);
   -webkit-background-clip: text;
@@ -18,7 +19,7 @@
 .navbar-link {
   text-decoration: none;
   span {
-    font-family: 'saudagar';
+    font-family: $heading-font;
     @include font-size(2rem);
     color: $dark-color;
   }

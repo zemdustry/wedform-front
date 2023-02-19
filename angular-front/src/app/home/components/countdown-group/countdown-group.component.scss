@@ -2,14 +2,16 @@
 @import "../../../node_modules/rfs/scss";
 
 .countdown{
-  background: rgb(67,206,162);
-  background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
+  // TODO
+  // background: rgb(67,206,162);
+  // background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
+  // background:linear-gradient(-15deg,#00ff94 10%,#00e5c4 60%,#00beff);
+  // background-image: linear-gradient(-15deg, rgb(0, 255, 148) 10%, rgb(0, 229, 196) 50%, rgb(0, 190, 255));
+  background-color: #60C4BF;
 }
 
 .clock-unit {
-  font-family: 'fenomen';
-  @include font-size(2rem);
-  color:$secondary-gold-color;
+  color:$dark-color;
 }
 
 .flip-element {
@@ -24,7 +26,6 @@
     @include font-size(3rem);
   }
 }
-
 
 @media only screen and (min-width: 1440px) {
   .clock-unit {
@@ -44,7 +45,6 @@
       @include font-size(3vw);
     }
   }
-
 
   @media only screen and (max-width: 768px) {
     .clock-unit {

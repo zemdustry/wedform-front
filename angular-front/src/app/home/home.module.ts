@@ -6,10 +6,11 @@ import { CustomCountdownComponent } from './components/countdown-custom/countdow
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { CountdownGroupComponent } from './components/countdown-group/countdown-group.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, CustomCountdownComponent, CountdownGroupComponent],
+  declarations: [HomeComponent, CustomCountdownComponent, CountdownGroupComponent, HeroComponent],
   imports: [
     CommonModule,
     RouterModule,
