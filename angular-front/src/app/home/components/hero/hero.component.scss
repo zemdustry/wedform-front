@@ -1,4 +1,43 @@
-.hero-section {
-  height: 22rem;
-  background-color: #f4f4f4;
+@import "variables.scss";
+
+.couple-section {
+  min-height: 22rem;
+  background-color: $white-color;
+  padding: 80px 0 80px;
+
+  .couple-title {
+    // max-width: 15px;
+    padding: 0 15px;
+  }
+
+  .heart {
+    width: 180px;
+    height: 80px;
+    margin-bottom: 120px;
+    animation: 1.5s ease 0s infinite beat;
+  }
+
+  .couple {
+    width: 40%;
+    max-width: 50%;
+    img {
+      width: 280px;
+      height: 320px;
+      border-radius: 50%;
+      border: 6px solid $primary-gold-color;
+    }
+    .couple-title {
+      font-size: 68px;
+      color: $primary-gold-color;
+      font-family: $stylish-font;
+      letter-spacing: 1px;
+    }
+  }
 }
+
+@keyframes beat {
+  0%, 50%, 100% { transform: scale(1, 1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+}
+
+

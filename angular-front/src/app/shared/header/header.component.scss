@@ -2,8 +2,8 @@
 @import "../../../node_modules/rfs/scss";
 
 .navbar-title {
-  font-family: $unveiling-font;
-
+  font-family: $stylish-font;
+  letter-spacing: 1px;
   color: $primary-gold-color;
   @include font-size(8.5rem);
 }
