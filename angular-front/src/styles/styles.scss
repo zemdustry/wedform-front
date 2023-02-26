@@ -30,11 +30,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   margin-bottom: 0 !important;
-  padding: 2rem 2rem 2.5rem 2rem;
+  padding: 1.5rem 3rem 2.5rem 3rem;
   &:before, &:after{
     content: "";
     flex: 1 1;
-    border-bottom: 1.2px solid $white-color;
+    border-bottom: $sizeBorder solid $white-color;
     margin: auto;
   }
   &:before {
@@ -42,6 +42,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   &:after {
     margin-left: 1.2rem;
+  }
+
+  &.gold {
+    color: $secondary-gold-color;
+    &:before, &:after{
+      border-bottom: $sizeBorder solid $secondary-gold-color;
+    }
   }
 }
 
