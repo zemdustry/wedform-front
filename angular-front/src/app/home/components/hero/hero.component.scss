@@ -2,18 +2,22 @@
 
 .couple-section {
   min-height: 22rem;
-  background-color: $white-color;
-  padding: 40px 0 80px;
+  background-color: $grey-color;
+  padding: 40px 0 40px;
 
-  .heart {
-    width: 80px;
-    height: 50px;
-    margin-bottom: 120px;
-    animation: 1.5s ease 0s infinite beat;
+
+  .info-center {
+    width: 10%;
+    .heart {
+      width: 35%;
+      height: 50px;
+      animation: 1.5s ease 0s infinite beat;
+  }
   }
 
+
   .couple {
-    width: 40%;
+    width: 45%;
     max-width: 50%;
     img {
       width: 280px;
@@ -27,6 +31,10 @@
       font-family: $stylish-font;
       letter-spacing: 1px;
     }
+  }
+
+  .logo-bottom {
+    width: 25%;
   }
 }
 
