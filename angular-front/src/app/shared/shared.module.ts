@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { RouterModule } from '@angular/router';
 import * as sharedComponents from '.';
+import { AgePipe } from './pipes/age-pipe';
 
 @NgModule({
   declarations: [...sharedComponents.declarationComponents],

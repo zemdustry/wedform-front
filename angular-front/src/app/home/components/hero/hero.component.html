@@ -1,29 +1,93 @@
 <section class="couple-section">
   <div class="container-fluid">
-    <div class="row">
-      <div class="text-center">
-        <h1 class="heading-line gold" i18n>{{dDay | date:'longDate'}}</h1>
+    <div class="d-flex justify-content-center">
+      <div class="warp" aria-labelledby="warp-label">
+        <span id="warp-label" class="warp__placeholder">
+          It's a match
+        </span>
+
+        <span aria-role="presentation">
+          <span class="warp__0">
+            I
+          </span>
+          <span class="warp__1">
+            t
+          </span>
+          <span class="warp__2">
+            '
+          </span>
+          <span class="warp__3">
+            s
+          </span>
+          <span class="warp__4">
+
+          </span>
+          <span class="warp__5">
+            a
+          </span>
+          <span class="warp__6">
+
+          </span>
+          <span class="warp__7">
+            m
+          </span>
+          <span class="warp__8">
+            a
+          </span>
+          <span class="warp__9">
+            t
+          </span>
+          <span class="warp__10">
+            c
+          </span>
+          <span class="warp__11">
+            h
+          </span>
+        </span>
       </div>
-      <div class="row d-flex align-items-center justify-content-center">
-        <div class="couple text-center">
-          <img src="/assets/images/clement_profil.jpg" alt="Clement">
-          <h3 class="couple-title mt-2">Clément</h3>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div
+          class="card husband col-sm-5 col-md-5 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
+          <img src="/assets/images/clement_profil.jpg" alt="clement">
+          <div class="card-info mt-2">
+            <div class="d-flex align-items-center justify-content-start">
+              <p class="couple-title">Clément Gibert, {{CBirthDay | agePipe}}</p>
+              <img class="icon-certified" src="/assets/images/certified.svg" alt="certified" />
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <i class="las la-map-marker"></i>
+              <p class="ml-5">Nîmes, France</p>
+            </div>
+          </div>
         </div>
-        <div class="info-center d-flex flex-column align-items-center justify-content-center">
-          <h3 class="couple-title">Save the date</h3>
-          <h3 class="couple-title">test</h3>
-          <img class="heart beat" src="/assets/images/heart.png">
+        <div class="middle col-1 d-flex flex-column justify-content-end align-items-center">
+          <img class="matcher" src="/assets/images/percentmatcher.svg" alt="certified" />
         </div>
-        <div class="couple text-center">
-          <img src="/assets/images/huyen_profil.jpg" alt="Huyen">
-          <h3 class="couple-title mt-2">Huyen</h3>
+        <div
+          class="card wife col-sm-5 col-md-5 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
+          <img src="/assets/images/huyen_profil.jpg" alt="clement">
+          <div class="card-info mt-2">
+            <div class="d-flex align-items-center justify-content-start">
+              <p class="couple-title">Huyen Lethi, {{HBirthDay | agePipe}}</p>
+              <img class="icon-certified" src="/assets/images/certified.svg" alt="certified" />
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <i class="las la-map-marker"></i>
+              <p class="ml-5">Hanoi, Vietnam</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row d-flex justify-content-center text-center mt-2">
-        <p class="">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <img class="logo-bottom" src="/assets/images/logo-mirror.png">
       </div>
     </div>
   </div>
+  <div class="container d-flex justify-content-center">
+    <div class="welcom-container text-center">
+      <p class="welcom-text">Nous sommes ravis de vous inviter à notre mariage qui aura lieu le <b>7 juin 2023</b>. <br>
+         Nous espérons que vous pourrez être des nôtres pour célébrer avec nous cette journée si spéciale.
+         Merci de faire partie de notre vie et de partager ce moment important avec nous.</p>
+    </div>
+  </div>
+
 </section>

@@ -156,3 +156,27 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
     font-size: 4vw;
   }
 }
+
+
+//HEART
+
+
+@keyframes beat {
+
+  20%,
+  80% {
+    transform: scale(1.15, 1.15);
+  }
+
+  40%,
+  60%,
+  100% {
+    transform: scale(0.88, 0.90);
+  }
+}
+
+.heart {
+  width: 60px;
+  height: 60px;
+  animation: 1.5s ease 0s infinite beat;
+}

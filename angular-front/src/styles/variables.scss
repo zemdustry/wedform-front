@@ -12,7 +12,7 @@ $green-blue-color: #43cea2;
 $light-blue-color: #E3FFFC;
 //FIXME change gold color
 $primary-gold-color: #EDB24C;
-$secondary-gold-color:#E59933;
+$secondary-gold-color:#f1a624;
 //gold e2c080
 $primary-negative-color:#D98F9A;
 $prmary-positive-color:#8FD9A9;
@@ -43,6 +43,21 @@ $borderRadius: 2.5vw;
 @font-face {
   font-family: "josefin-light";
   src: local("josefin-light-font"), url(/assets/fonts/josefin/JosefinSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-medium";
+  src: local("josefin-medium-font"), url(/assets/fonts/josefin/JosefinSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-medium-italic";
+  src: local("josefin-medium-italic-font"), url(/assets/fonts/josefin/JosefinSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-regular";
+  src: local("josefin-regular"), url(/assets/fonts/josefin/JosefinSans-Regular.ttf) format("truetype");
 }
 
 @font-face {
