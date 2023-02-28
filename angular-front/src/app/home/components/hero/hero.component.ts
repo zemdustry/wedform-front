@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
+  dDay: Date = new Date("06/17/2023");
+
   constructor() { }
 
   ngOnInit(): void {
