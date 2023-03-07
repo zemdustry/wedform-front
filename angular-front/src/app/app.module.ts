@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { InformationModule } from './information/information.module';
 import { HomeModule } from './home/home.module';
 import { RegisterModule } from './register/register.module';
+import { PhotoModule } from './photo/photo.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,11 @@ import { RegisterModule } from './register/register.module';
     AppRoutingModule,
     CommonModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RegisterModule,
+    HomeModule,
+    InformationModule,
+    PhotoModule
   ],
   providers: [],
   bootstrap: [AppComponent],
