@@ -1,11 +1,14 @@
 <div class="countdown d-flex flex-column align-items-center">
-  <h1 class="heading-line" i18n>Temps Restant</h1>
+  <div class="countdown-title d-flex flex-column align-items-center">
+    <h1 class="section-heading gold text-center" i18n>Time remaining</h1>
+    <img class="us" src="/assets/images/us.png" alt="us" />
+  </div>
   <div class="unselectable-content d-flex justify-content-center align-items-center">
     <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [unit]="monthToDday"></app-countdown-custom>
+      <app-countdown-custom [unit]="daysToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
-          Mois
+          Days
         </span>
       </div>
     </div>
@@ -13,7 +16,7 @@
       <app-countdown-custom [unit]="hoursToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
-          Heures
+          Hours
         </span>
       </div>
     </div>
@@ -29,7 +32,7 @@
       <app-countdown-custom [unit]="secondsToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
-          Secondes
+          Seconds
         </span>
       </div>
     </div>

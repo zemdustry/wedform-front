@@ -1,40 +1,41 @@
 <nav class="container-fluid mb-3">
   <div class="unselectable-content row justify-content-center">
-    <img alt="image du logo" i18n-alt class="col-11 col-sm-10 col-md-8 mt-2 mt-md-4" src="/assets/images/logo-full.png"/>
+    <img alt="image du logo" i18n-alt class="col-xxl-8 col-xl-8 col-lg-9 col-md-9 col-sm-12 col-12  mt-2 logo"
+      src="/assets/images/logo-full.png" />
   </div>
-  <div class="unselectable-content row">
-    <div class="text-center col-12 mt-4 mt-sm-4 mt-md-5">
-      <h1 class="navbar-title mt-sm-3 mt-md-3">Huyen & Clément</h1>
-      <div class="col-sm-10 col-md-10 col-lg-8 d-flex justify-content-end mt-2">
-        <p class="navbar-subtitle">{{dDay | date:'longDate'}}</p>
-      </div>
+  <div class="unselectable-content row justify-content-center navbar-title">
+    <div class="row text-center col-12">
+      <h1 class="title mt-sm-3 mt-md-3">Huyen & Clément</h1>
+    </div>
+    <div class="row navbar-subtitle col-5">
+      <p class="subtitle" i18n>Are getting married</p>
     </div>
   </div>
-  <div class="container mt-5">
-    <div class="row">
-      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/home"
-        routerLinkActive="active-link">
-        <span i18n>ACCUEIL</span>
-      </a>
-      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/information"
-        routerLinkActive="active-link">
-        <span i18n>INFORMATION</span>
-      </a>
-      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/register"
-        routerLinkActive="active-link">
-        <span i18n>INSCRIPTION</span>
-      </a>
-      <a class="navbar-link unselectable-content col-3 text-center" routerLink="/photo"
-        routerLinkActive="active-link">
-        <span i18n>ALBUM</span>
-      </a>
+
+  <div class="d-flex justify-content-center align-items-center unselectable-content">
+    <div class="navbar-links row col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+      <a class="link col text-center" routerLink="/home" routerLinkActive="active-link">HOME</a>
+      <a class="link col text-center" routerLink="/information" routerLinkActive="active-link">INFO</a>
+      <a class="link col text-center" routerLink="/register" routerLinkActive="active-link">FORM</a>
+      <a class="link col text-center" routerLink="/photo" routerLinkActive="active-link">ALBUM</a>
     </div>
-    <div class="row mt-3">
+  </div>
+
+  <div class="d-flex justify-content-center unselectable-content mt-1">
+    <div class="navbar-lines row col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
       <hr class="navbar-line col-12">
-      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/', '/home')}">
-      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/information')}">
-      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/register')}">
-      <hr class="navbar-subline unselectable-content col-3" [ngClass]="{'subline-active': isActivesRoutes('/photo')}">
+      <div class="navbar-subline col d-flex justify-content-center">
+        <hr class="subline" [ngClass]="{'subline-active': isActivesRoutes('/', '/home')}">
+      </div>
+      <div class="navbar-subline col d-flex justify-content-center">
+        <hr class="subline" [ngClass]="{'subline-active': isActivesRoutes('/information')}">
+      </div>
+      <div class="navbar-subline col d-flex justify-content-center">
+        <hr class="subline" [ngClass]="{'subline-active': isActivesRoutes('/register')}">
+      </div>
+      <div class="navbar-subline col d-flex justify-content-center">
+        <hr class="subline" [ngClass]="{'subline-active': isActivesRoutes('/photo')}">
+      </div>
     </div>
   </div>
 </nav>

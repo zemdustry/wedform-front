@@ -27,6 +27,15 @@
 
 Even if CSS3 can be enough, Bootstrap is really useful to build a responsive website and it's used in many realistic profesionnal projects that is an occasion to practice it.
 
+### Run
+
+```bash
+npm start
+
+# local network devices
+ng serve -o --host 192.168.0.17
+ ```
+
 ## Français 🇫🇷
 
 
@@ -48,3 +57,13 @@ Even if CSS3 can be enough, Bootstrap is really useful to build a responsive web
 *Pourquoi Bootstrap ?* </br> 
 
 Même si CSS3 pourrait faire l'affaire, Bootstrap est très utile pour constuire un site web responsive et il est très utilisé dans de nombreux projets professionnels, c'est donc l'occasion de le pratiquer.
+
+
+### Lancer
+
+```bash
+npm start
+
+# appareils du réseau local
+ng serve -o --host 192.168.0.17
+ ```

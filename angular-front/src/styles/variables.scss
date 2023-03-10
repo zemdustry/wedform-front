@@ -10,15 +10,20 @@ $third-secondary-blue-shadow-dark-1: #6aa39b;
 $third-secondary-blue-shadow-dark-2: #90ddd1;
 $green-blue-color: #43cea2;
 $light-blue-color: #E3FFFC;
+//FIXME change gold color
 $primary-gold-color: #EDB24C;
-$secondary-gold-color:#E59933;
+$secondary-gold-color:#f1a624;
+//gold e2c080
 $primary-negative-color:#D98F9A;
 $prmary-positive-color:#8FD9A9;
 $dark-color: #231D21;
 $grey-color: #f4f4f4;
-$white-color: #fbf9f7;
+$white-color: #ffffff;
 $blue-color: #122274;
 $red-color: #CF081F;
+
+/* HEADING LINE */
+$sizeBorder: 2px;
 
 /* COUNTDOWN */
 $halfPaletteHeight: 4vw;
@@ -41,6 +46,21 @@ $borderRadius: 2.5vw;
 }
 
 @font-face {
+  font-family: "josefin-medium";
+  src: local("josefin-medium-font"), url(/assets/fonts/josefin/JosefinSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-medium-italic";
+  src: local("josefin-medium-italic-font"), url(/assets/fonts/josefin/JosefinSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-regular";
+  src: local("josefin-regular"), url(/assets/fonts/josefin/JosefinSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "cherolina";
   src: local("cherolina-font"), url(/assets/fonts/Cherolina.ttf) format("truetype");
 }
@@ -60,7 +80,7 @@ $borderRadius: 2.5vw;
   src: local("utopia-font"), url(/assets/fonts/Utopia.otf) format("opentype");
 }
 
-$unveiling-font: 'cherolina';
+$stylish-font: 'cherolina';
 $heading-font: 'saudagar';
 $text-font: 'josefin-light';
 $text-italic-font: 'cabin-italic';

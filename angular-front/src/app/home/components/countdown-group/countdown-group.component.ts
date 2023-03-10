@@ -19,8 +19,6 @@ export class CountdownGroupComponent implements OnDestroy {
   public minutesToDday: string;
   public hoursToDday: string;
   public daysToDday: string;
-  //FIXME when days under 100
-  public monthToDday: string;
 
   constructor() {
     //Time units
@@ -28,8 +26,6 @@ export class CountdownGroupComponent implements OnDestroy {
     this.minutesToDday = '0';
     this.hoursToDday = '0';
     this.daysToDday = '0';
-    //FIXME when days under 100 show days
-    this.monthToDday = '0';
 
     this.subscription = interval(1000).subscribe((x) => {
       this.getTimeDifference();
@@ -55,9 +51,6 @@ export class CountdownGroupComponent implements OnDestroy {
     this.hoursToDday = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute)) % this.hoursInADay)
       .toString();
     this.daysToDday = Math.floor(this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay))
-      .toString();
-    //FIXME remove when days used
-    this.monthToDday = Math.floor(this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay) / 27)
       .toString();
   }
 }

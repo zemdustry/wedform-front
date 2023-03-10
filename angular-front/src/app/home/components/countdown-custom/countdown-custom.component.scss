@@ -41,7 +41,7 @@
   transform-style: preserve-3d;
   width: $paletteWidth;
   transform: translateZ(0);
-  background: $third-secondary-blue-color;
+  background: $white-color;
   box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-dark-1,
     inset -20px -20px 60px $third-secondary-blue-shadow-dark-2;
 }
@@ -59,7 +59,7 @@
   border-radius: 0 0 $borderRadius $borderRadius;
   pointer-events: none;
   overflow: hidden;
-  background: $secondary-blue-color;
+  background: $white-color;
   box-shadow: inset 20px 20px 60px $secondary-blue-shadow-1,
     inset -20px -20px 60px $secondary-blue-shadow-2;
   border-bottom: solid 3px $third-secondary-blue-color;
@@ -96,7 +96,7 @@
 
 .flip-element {
   border-radius: $borderRadius;
-  background: $primary-blue-color;
+  background: $white-color;
   box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-clear-1,
   inset -20px -20px 60px $third-secondary-blue-shadow-clear-1;
   padding-bottom: 1px;

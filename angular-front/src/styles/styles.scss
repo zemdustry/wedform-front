@@ -24,24 +24,14 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
-.heading-line {
+.section-heading {
   width: 100%;
+  @include font-size(7vw);
   color: $white-color;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 0 !important;
-  padding: 2rem 2rem 2.5rem 2rem;
-  &:before, &:after{
-    content: "";
-    flex: 1 1;
-    border-bottom: 1.2px solid $white-color;
-    margin: auto;
-  }
-  &:before {
-    margin-right: 1.2rem;
-  }
-  &:after {
-    margin-left: 1.2rem;
+  padding: 1rem 0 1rem 0;
+
+  &.gold {
+    color: $secondary-gold-color;
   }
 }
 
@@ -107,9 +97,6 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
   }
 
 @media only screen and (min-width: 768px) {
-  .heading-line {
-    @include font-size(2vw);
-  }
 
   .light-button {
     font-size: 1.5vw;
@@ -118,8 +105,8 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
 }
 
 @media only screen and (max-width: 768px) {
-  .heading-line {
-    @include font-size(2rem);
+  .section-heading {
+    @include font-size(8vw);
     &:before {
       margin-right: 1rem;
     }
@@ -135,7 +122,7 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
 }
 
 @media only screen and (max-width: 425px) {
-  .heading-line {
+  .section-heading {
     @include font-size(6vw);
     &:before {
       margin-right: 0.5rem;
@@ -148,4 +135,28 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
   .light-button {
     font-size: 4vw;
   }
+}
+
+
+//HEART
+
+
+@keyframes beat {
+
+  20%,
+  80% {
+    transform: scale(1.15, 1.15);
+  }
+
+  40%,
+  60%,
+  100% {
+    transform: scale(0.88, 0.90);
+  }
+}
+
+.heart {
+  width: 60px;
+  height: 60px;
+  animation: 1.5s ease 0s infinite beat;
 }
