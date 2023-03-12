@@ -1,3 +1,168 @@
-<div class="container">
-  <app-dynamic-form [formFields]="formFields | async "></app-dynamic-form>
+<div class="d-flex justify-content-center">
+  <div class="form-container p-5">
+
+    <div class="form-presentation text-center">
+      <h1 i18n>Dear guest</h1>
+      <p i18n>We would be honored by your presence and look forward to see you there.<br>
+        Kindly RSVP to let us know if you will be able to attend. <br>
+        Your response will help us ensure that the event is a success. <br>
+        <b>Thank you!</b>
+      </p>
+    </div>
+
+    <form [formGroup]="guestForm" class="form-group" (ngSubmit)="onFormSubmit()">
+      <div class="guest-info col-12">
+        <div class="d-flex flex-wrap">
+          <div class="guest-name col-12 col-sm-12 col-md-6 p-1">
+            <label for="guest-name">Name:</label>
+            <input id="guest-name" class="form-control" formControlName="name" type="textbox">
+          </div>
+          <div class="guest-surname col-12 col-sm-12 col-md-6 p-1">
+            <label for="guest-surname">Surname:</label>
+            <input id="guest-surname" class="form-control" formControlName="surname" type="textbox">
+          </div>
+        </div>
+        <div class="d-flex flex-wrap">
+          <div class="guest-phone col-12 col-sm-12 col-md-6 p-1">
+            <label for="guest-phone">Phone:</label>
+            <input id="guest-phone" class="form-control" formControlName="phone" type="tel">
+          </div>
+          <div class="guest-email col-12 col-sm-12 col-md-6 p-1">
+            <label for="guest-email">Email:</label>
+            <input id="guest-email" class="form-control" formControlName="email" type="mail">
+          </div>
+        </div>
+      </div>
+
+      <div class="guest-detail">
+        <div class="p-1">
+          <label for="guest-attend">Will you be attending our wedding on the 17th of June 2023 ?</label>
+          <select id="guest-attend" class="form-select" formControlName="attend" value="Yes">
+            <option *ngFor="let opt of attendOptions" [ngValue]="opt.key">{{opt.value}}</option>
+          </select>
+        </div>
+
+        <div *ngIf="willAttend" class="form-detail">
+          <div class="p-1">
+            <label for="guest-persons">Adultes:</label>
+            <input id="guest-persons" class="form-control" formControlName="persons" type="number" min="1" max="10"
+              value="1">
+          </div>
+          <div *ngIf="numberOfPeople > 1">
+            <div class="guest-person" *ngFor="let person of numSequence(numberOfPeople - 1); let number = index;">
+              <label><b>Guest {{number + 2}}</b></label>
+              <div class="p-1">
+                <label for="guest-name">Name:</label>
+                <input id="guest-name" class="form-control" formControl="childFormGroups[number]" type="textbox">
+              </div>
+              <div class="p-1">
+                <label for="guest-surname">Surname:</label>
+                <input id="guest-surname" class="form-control" formControl="childFormGroups[number]" type="textbox">
+              </div>
+            </div>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-children">Enfants:</label>
+            <input id="guest-children" class="form-control" formControlName="children" type="number" min="0" max="10"
+              value="0">
+          </div>
+
+          <div *ngIf="numberOfChildren >= 1">
+            <div class="guest-child" *ngFor="let person of numSequence(numberOfChildren); let number = index;">
+              <label><b>Child {{number + 1}}</b></label>
+              <div class="p-1">
+                <label for="guest-name">Name:</label>
+                <input id="guest-name" class="form-control" formControlName="name" type="textbox">
+              </div>
+              <div class="p-1">
+                <label for="guest-surname">Surname:</label>
+                <input id="guest-surname" class="form-control" formControlName="surname" type="textbox">
+              </div>
+            </div>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-arrival">When will you be arriving in the area ?</label>
+            <select id="guest-arrival" class="form-select" formControlName="arrival">
+              <option *ngFor="let opt of arrivalOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            </select>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-transportation">How do you come to the wedding ?</label>
+            <select id="guest-transportation" class="form-select" formControlName="transportation">
+              <option *ngFor="let opt of transportOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            </select>
+          </div>
+
+          <div *ngIf="transportation == 'car'">
+            <div class="p-1">
+              <label for="guest-transport-share">Would you be willing to carpool with other guests ?</label>
+              <select id="guest-transport-share" class="form-select" formControlName="transportShare">
+                <option *ngFor="let opt of transportShareOptions" [ngValue]="opt.key">{{opt.value}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-event">Which events will you attend ?</label>
+            <select id="guest-event" class="form-select" formControlName="event">
+              <option *ngFor="let opt of eventOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            </select>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-dietary">Do you or your family members have any dietary restrictions or allergies?</label>
+            <select id="guest-dietary" class="form-select" formControlName="dietary">
+              <option *ngFor="let opt of dietaryOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            </select>
+          </div>
+
+          <div *ngIf="dietary" class="guest-dietary-detail">
+            <div class="p-1">
+              <label for="guest-dietary-detail">Detail:</label>
+              <textarea id="guest-dietary-detail" class="form-control" formControlName="dietaryDetail"
+                rows="5"></textarea>
+            </div>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-song">Do you have any song recommandation ?</label>
+            <div class="d-flex flex-row justify-content-center align-items-center">
+              <input id="guest-song" class="form-control" formControlName="song" type="textbox">
+              <button type="button" class="input-button d-flex justify-content-center align-items-center text-center" (click)="addSong()">
+                <i class="las la-plus-circle"></i>
+              </button>
+            </div>
+          </div>
+
+          <div *ngIf="songs.length >= 1">
+            <div class="badge-song" *ngFor="let song of songs">
+              <button class="blank-button text-center" type="button" (click)="removeSong(song)">
+                <i class="las la-minus-circle"></i>
+              </button>
+              <span >{{song}}</span>
+            </div>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-brunch">Do you or your family members have any dietary restrictions or allergies ?</label>
+            <select id="guest-brunch" class="form-select" formControlName="brunch">
+              <option *ngFor="let opt of dietaryOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            </select>
+          </div>
+
+          <div class="p-1">
+            <label for="guest-comment">Do you have any additional comments or suggestions ?</label>
+            <textarea id="guest-comment" class="form-control" formControlName="comment" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+      <button i18n class="light-button gold" type="submit"
+        i18n>
+        SUBMIT
+      </button>
+    </form>
+  </div>
 </div>
