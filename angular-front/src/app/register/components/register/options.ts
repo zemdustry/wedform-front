@@ -33,7 +33,11 @@ export const arrivalOptions: Options[] = [
   },
   {
     key: "before",
-    value: "Many days before"
+    value: "Few days before"
+  },
+  {
+    key: "idk",
+    value: "I don't know yet"
   }
 ]
 
@@ -52,28 +56,17 @@ export const transportOptions: Options[] = [
   },
   {
     key: "idk",
-    value: "I don't know"
+    value: "I don't know yet"
   },
-]
-
-export const transportShareOptions: Options[] = [
-  {
-    key: "yes",
-    value: "Yes"
-  },
-  {
-    key: "no",
-    value: "No"
-  }
 ]
 
 export const eventOptions: Options[] = [
   {
-    key: "morning-ceremony",
+    key: "morning",
     value: "Only morning Ceremony in the City Hall of Le Grau du Roi which starts at 11am"
   },
   {
-    key: "afternoon-ceremony",
+    key: "afternoon",
     value: "Only afternoon Ceremony in the Mas de la Montille – Aigues Morte which starts at 2pm"
   },
   {
@@ -81,34 +74,22 @@ export const eventOptions: Options[] = [
     value: "Only reception on the Canal Boat which starts at 6pm"
   },
   {
-    key: "ceremonies",
+    key: "morning,afternoon",
     value: "Both Ceremonies only"
   },
   {
-    key: "morning-ceremony-and-boat",
+    key: "morning,boat",
     value: "Morning Ceremony and boat"
   },
   {
-    key: "afternoon-ceremony-and-boat",
+    key: "afternoon,boat",
     value: "Afternoon Ceremony and Reception boat"
   },
   {
-    key: "all",
-    value: "I'm going to participate in everything! 🎉"
+    key: "morning,afternoon,boat",
+    value: "All events 🎉"
   },
 ]
-
-export const dietaryOptions: Options[] = [
-  {
-    key: "yes",
-    value: "Yes"
-  },
-  {
-    key: "no",
-    value: "No"
-  }
-]
-
 
 export const musicOptions: Options[] = [
   {
@@ -140,12 +121,16 @@ export const musicOptions: Options[] = [
     value: "Latino"
   },
   {
+    key: "v-pop",
+    value: "V-pop"
+  },
+  {
     key: "80",
     value: "80s"
   }
 ]
 
-export const brunchOptions: Options[] = [
+export const yesNoOption: Options[] = [
   {
     key: "yes",
     value: "Yes"

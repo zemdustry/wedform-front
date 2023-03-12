@@ -45,6 +45,7 @@
               ]
             },
             "styles": [
+              "./node_modules/intl-tel-input/build/css/intlTelInput.css",
               "src/styles/styles.scss",
               "src/styles/material.scss",
               "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css"

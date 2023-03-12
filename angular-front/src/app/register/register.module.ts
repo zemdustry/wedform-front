@@ -1,25 +1,25 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../shared/shared.module';
-import { RegisterComponent } from './components/register/register.component';
-import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
-import { DynamicFormInputComponent } from './components/dynamic-form-input/dynamic-form-input.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { GuestCompletionService } from '../shared/services/guest/guest-completion.service';
+import { SharedModule } from '../shared/shared.module';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
-  declarations: [RegisterComponent,
-    DynamicFormComponent,
-    DynamicFormInputComponent],
+  declarations: [RegisterComponent],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgxIntlTelInputModule
   ],
-  exports: [RegisterComponent]
+  exports: [RegisterComponent],
+  providers: [GuestCompletionService]
 })
 export class RegisterModule { }

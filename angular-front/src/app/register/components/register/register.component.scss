@@ -2,7 +2,7 @@
 @import "../../../node_modules/rfs/scss";
 
 .form-container {
-  width: 80%;
+  width: 50%;
   background-color: $grey-color;
   border-radius: $border-radius;
 
@@ -29,6 +29,9 @@
       padding-right: 15px;
       margin-top: 10px;
       margin-bottom: 10px;
+      .guest-person-label {
+        font-size: 1.1rem;
+      }
     }
 
     .guest-child {
@@ -36,6 +39,9 @@
       padding-right: 15px;
       margin-top: 10px;
       margin-bottom: 10px;
+      .guest-child-label {
+        font-size: 1.1rem;
+      }
     }
 
     .guest-dietary-detail {
@@ -59,10 +65,7 @@
     }
 
     .badge-song {
-      display: inline-block;
       border-radius: $border-radius;
-      min-width: 2rem;
-      width: auto;
       margin-top: 6px;
       margin-bottom: 6px;
       margin-left: 5px;
@@ -87,11 +90,17 @@
 
       span {
         font-size: 1rem;
+        padding-right: 9px;
       }
     }
   }
 }
 
+.is-invalid {
+  border-color: $red-color;
+}
+
+::ng-deep ngx-intl-tel-input .iti{ width: 100% !important; }
 
 @media only screen and (min-width: 768px) {
 

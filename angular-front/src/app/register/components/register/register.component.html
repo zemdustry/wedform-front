@@ -14,155 +14,202 @@
       <div class="guest-info col-12">
         <div class="d-flex flex-wrap">
           <div class="guest-name col-12 col-sm-12 col-md-6 p-1">
-            <label for="guest-name">Name:</label>
-            <input id="guest-name" class="form-control" formControlName="name" type="textbox">
+            <label for="guest-name" i18n>Name:</label>
+            <input id="guest-name" class="form-control" formControlName="name" type="textbox"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['name'].errors }">
           </div>
           <div class="guest-surname col-12 col-sm-12 col-md-6 p-1">
-            <label for="guest-surname">Surname:</label>
-            <input id="guest-surname" class="form-control" formControlName="surname" type="textbox">
+            <label for="guest-surname" i18n>Surname:</label>
+            <input id="guest-surname" class="form-control" formControlName="surname" type="textbox"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['surname'].errors }">
           </div>
         </div>
         <div class="d-flex flex-wrap">
-          <div class="guest-phone col-12 col-sm-12 col-md-6 p-1">
-            <label for="guest-phone">Phone:</label>
-            <input id="guest-phone" class="form-control" formControlName="phone" type="tel">
+          <div class="guest-phone col-12 col-sm-12 col-md-6 p-1 d-flex flex-column">
+            <label for="guest-phone" i18n>Phone:</label>
+            <ngx-intl-tel-input
+              [cssClass]="{'form-control': true, 'is-invalid': isSubmitted && guestForm.controls['phone'].errors}"
+              [preferredCountries]="preferredCountries"
+              [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+              [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+              [selectFirstCountry]="false"
+              [selectedCountryISO]="CountryISO.France"
+              [maxLength]="15"
+              [phoneValidation]="true"
+              [separateDialCode]="separateDialCode"
+              [numberFormat]="PhoneNumberFormat.National"
+              name="phone" formControlName="phone">
+            </ngx-intl-tel-input>
           </div>
           <div class="guest-email col-12 col-sm-12 col-md-6 p-1">
-            <label for="guest-email">Email:</label>
-            <input id="guest-email" class="form-control" formControlName="email" type="mail">
+            <label for="guest-email" i18n>Email:</label>
+            <input id="guest-email" class="form-control" formControlName="email" type="email"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['email'].errors }">
           </div>
         </div>
       </div>
 
       <div class="guest-detail">
         <div class="p-1">
-          <label for="guest-attend">Will you be attending our wedding on the 17th of June 2023 ?</label>
-          <select id="guest-attend" class="form-select" formControlName="attend" value="Yes">
+          <label for="guest-attend" i18n>Will you be attending our wedding on the <b>17th of June 2023</b> ?</label>
+          <select id="guest-attend" class="form-select" formControlName="attend" value="Yes"
+          [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['attend'].errors }">
             <option *ngFor="let opt of attendOptions" [ngValue]="opt.key">{{opt.value}}</option>
           </select>
         </div>
 
         <div *ngIf="willAttend" class="form-detail">
           <div class="p-1">
-            <label for="guest-persons">Adultes:</label>
-            <input id="guest-persons" class="form-control" formControlName="persons" type="number" min="1" max="10"
-              value="1">
+            <label for="guest-people" i18n>Adults with you:</label>
+            <input id="guest-people" class="form-control" formControlName="people" type="number"
+            min="0" max="9" value="1" [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['people'].errors }">
           </div>
-          <div *ngIf="numberOfPeople > 1">
-            <div class="guest-person" *ngFor="let person of numSequence(numberOfPeople - 1); let number = index;">
-              <label><b>Guest {{number + 2}}</b></label>
+          <ng-container *ngIf="numberOfPeople >= 1 && numberOfPeople < 10" formArrayName="peopleFormArray">
+            <div *ngFor="let person of numSequence(numberOfPeople); let index = index;" class="guest-person"
+              [formGroupName]="index">
+              <label class="guest-person-label" i18n><b>Adult {{index + 1}}</b></label>
               <div class="p-1">
-                <label for="guest-name">Name:</label>
-                <input id="guest-name" class="form-control" formControl="childFormGroups[number]" type="textbox">
+                <label for="{{'guest-person-name-' + (index + 1)}}" i18n>Name:</label>
+                <input id="{{'guest-person-name-' + (index + 1)}}" class="form-control" type="textbox"
+                  formControlName="name"  [ngClass]="{ 'is-invalid': isSubmitted && guestForm.get('peopleFormArray.' + index + '.name').invalid }">
               </div>
               <div class="p-1">
-                <label for="guest-surname">Surname:</label>
-                <input id="guest-surname" class="form-control" formControl="childFormGroups[number]" type="textbox">
-              </div>
-            </div>
-          </div>
-
-          <div class="p-1">
-            <label for="guest-children">Enfants:</label>
-            <input id="guest-children" class="form-control" formControlName="children" type="number" min="0" max="10"
-              value="0">
-          </div>
-
-          <div *ngIf="numberOfChildren >= 1">
-            <div class="guest-child" *ngFor="let person of numSequence(numberOfChildren); let number = index;">
-              <label><b>Child {{number + 1}}</b></label>
-              <div class="p-1">
-                <label for="guest-name">Name:</label>
-                <input id="guest-name" class="form-control" formControlName="name" type="textbox">
-              </div>
-              <div class="p-1">
-                <label for="guest-surname">Surname:</label>
-                <input id="guest-surname" class="form-control" formControlName="surname" type="textbox">
+                <label for="{{'guest-person-surname-' + (index + 1)}}" i18n>Surname:</label>
+                <input id="{{'guest-person-surname-' + (index + 1)}}" class="form-control" type="textbox"
+                  formControlName="surname" [ngClass]="{ 'is-invalid': isSubmitted && guestForm.get('peopleFormArray.' + index + '.surname').invalid }">
               </div>
             </div>
-          </div>
+          </ng-container>
 
           <div class="p-1">
-            <label for="guest-arrival">When will you be arriving in the area ?</label>
-            <select id="guest-arrival" class="form-select" formControlName="arrival">
+            <label for="guest-children" i18n>Children:</label>
+            <input id="guest-children" class="form-control" formControlName="children" type="number"
+            min="0" max="9" value="0" [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['children'].errors}">
+          </div>
+          <ng-container *ngIf="numberOfChildren >= 1 && numberOfChildren < 10" formArrayName="childFormArray">
+            <div *ngFor="let person of numSequence(numberOfChildren); let index = index;" class="guest-child"
+              [formGroupName]="index">
+              <label class="guest-child-label" i18n><b>Child {{index + 1}}</b></label>
+              <div class="p-1">
+                <label for="{{'guest-child-name-' + (index + 1)}}" i18n>Name:</label>
+                <input id="{{'guest-child-name-' + (index + 1)}}" class="form-control" type="textbox"
+                  formControlName="name" [ngClass]="{ 'is-invalid': isSubmitted && guestForm.get('childFormArray.' + index + '.name').invalid}">
+              </div>
+              <div class="p-1">
+                <label for="{{'guest-child-age-' + (index + 1)}}" i18n>Age:</label>
+                <input id="{{'guest-child-age-' + (index + 1)}}" class="form-control" type="number"
+                  formControlName="age" [ngClass]="{ 'is-invalid': isSubmitted && guestForm.get('childFormArray.' + index + '.age').invalid}">
+              </div>
+            </div>
+          </ng-container>
+
+          <div class="p-1">
+            <label for="guest-arrival" i18n>When will you be arriving in the area ?</label>
+            <select id="guest-arrival" class="form-select" formControlName="arrival"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['arrival'].errors }">
               <option *ngFor="let opt of arrivalOptions" [ngValue]="opt.key">{{opt.value}}</option>
             </select>
           </div>
 
           <div class="p-1">
-            <label for="guest-transportation">How do you come to the wedding ?</label>
-            <select id="guest-transportation" class="form-select" formControlName="transportation">
+            <label for="guest-transportation" i18n>How do you come to the event on the wedding day ?</label>
+            <select id="guest-transportation" class="form-select" formControlName="transportation"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['transportation'].errors }">
               <option *ngFor="let opt of transportOptions" [ngValue]="opt.key">{{opt.value}}</option>
             </select>
           </div>
 
           <div *ngIf="transportation == 'car'">
             <div class="p-1">
-              <label for="guest-transport-share">Would you be willing to carpool with other guests ?</label>
+              <label for="guest-transport-share" i18n>Would you be willing to carpool with other guests ?</label>
               <select id="guest-transport-share" class="form-select" formControlName="transportShare">
-                <option *ngFor="let opt of transportShareOptions" [ngValue]="opt.key">{{opt.value}}</option>
+                <option *ngFor="let opt of yesNoOption" [ngValue]="opt.key">{{opt.value}}</option>
               </select>
             </div>
           </div>
 
           <div class="p-1">
-            <label for="guest-event">Which events will you attend ?</label>
-            <select id="guest-event" class="form-select" formControlName="event">
+            <label for="guest-from" i18n>Which city are you arriving from ?</label>
+            <input id="guest-from" class="form-control" formControlName="from" type="textbox"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['from'].errors }">
+          </div>
+
+          <div class="p-1">
+            <label for="guest-event" i18n>Which events will you attend ?</label>
+            <select id="guest-event" class="form-select" formControlName="event"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['event'].errors }">
               <option *ngFor="let opt of eventOptions" [ngValue]="opt.key">{{opt.value}}</option>
             </select>
           </div>
 
           <div class="p-1">
-            <label for="guest-dietary">Do you or your family members have any dietary restrictions or allergies?</label>
-            <select id="guest-dietary" class="form-select" formControlName="dietary">
-              <option *ngFor="let opt of dietaryOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            <label for="guest-dietary" i18n>Do you or your family members have any dietary restrictions or
+              allergies?</label>
+            <select id="guest-dietary" class="form-select" formControlName="dietary"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['dietary'].errors }">
+              <option *ngFor="let opt of yesNoOption" [ngValue]="opt.key">{{opt.value}}</option>
             </select>
           </div>
 
-          <div *ngIf="dietary" class="guest-dietary-detail">
+          <div *ngIf="hasDietary" class="guest-dietary-detail">
             <div class="p-1">
-              <label for="guest-dietary-detail">Detail:</label>
-              <textarea id="guest-dietary-detail" class="form-control" formControlName="dietaryDetail"
-                rows="5"></textarea>
+              <label for="guest-dietary-detail" i18n>Please specify:</label>
+              <textarea id="guest-dietary-detail" class="form-control" formControlName="dietaryDetail" maxlength="280"
+                rows="5" [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['dietaryDetail'].errors }"></textarea>
             </div>
           </div>
 
           <div class="p-1">
-            <label for="guest-song">Do you have any song recommandation ?</label>
+            <label for="guest-song" i18n>Which style of music do you prefer ?</label>
+            <!-- <div class="form-check">
+              <input class="form-check-input" type="checkbox" [formControlName]="input.key" [id]="input.key">
+              <label class="form-check-label" [attr.for]="input.key">{{input.label}}</label>
+            </div> -->
+          </div>
+
+          <div class="p-1">
+            <label for="guest-song" i18n>Do you have any song recommandation ?</label>
             <div class="d-flex flex-row justify-content-center align-items-center">
-              <input id="guest-song" class="form-control" formControlName="song" type="textbox">
-              <button type="button" class="input-button d-flex justify-content-center align-items-center text-center" (click)="addSong()">
+              <input id="guest-song" class="form-control" formControlName="song" type="textbox" maxlength="100"
+              [ngClass]="{ 'is-invalid': isSubmitted &&  (guestForm.controls['song'].errors || songError) }">
+              <button type="button" class="input-button d-flex justify-content-center align-items-center text-center"
+                (click)="addSong()">
                 <i class="las la-plus-circle"></i>
               </button>
             </div>
           </div>
-
-          <div *ngIf="songs.length >= 1">
-            <div class="badge-song" *ngFor="let song of songs">
+          <div class="mb-2" *ngIf="songs.length >= 1">
+            <div *ngFor="let song of songs" class="badge-song d-inline-block">
               <button class="blank-button text-center" type="button" (click)="removeSong(song)">
                 <i class="las la-minus-circle"></i>
               </button>
-              <span >{{song}}</span>
+              <span class="text-wrap">{{song}}</span>
             </div>
           </div>
 
           <div class="p-1">
-            <label for="guest-brunch">Do you or your family members have any dietary restrictions or allergies ?</label>
-            <select id="guest-brunch" class="form-select" formControlName="brunch">
-              <option *ngFor="let opt of dietaryOptions" [ngValue]="opt.key">{{opt.value}}</option>
+            <label for="guest-brunch" i18n>Are you planning to attend the Sunday’s Brunch ?</label>
+            <select id="guest-brunch" class="form-select" formControlName="brunch"
+            [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['brunch'].errors}">
+              <option *ngFor="let opt of yesNoOption" [ngValue]="opt.key">{{opt.value}}</option>
             </select>
           </div>
 
           <div class="p-1">
-            <label for="guest-comment">Do you have any additional comments or suggestions ?</label>
-            <textarea id="guest-comment" class="form-control" formControlName="comment" rows="5"></textarea>
+            <label for="guest-comment" i18n>Do you have any additional comments or suggestions ?</label>
+            <textarea id="guest-comment" class="form-control" formControlName="comment" maxlength="280"
+            rows="5" [ngClass]="{ 'is-invalid': isSubmitted &&  guestForm.controls['comment'].errors }"></textarea>
           </div>
         </div>
       </div>
-      <button i18n class="light-button gold" type="submit"
-        i18n>
-        SUBMIT
-      </button>
+      <div class="d-flex  flex-column justify-content-center align-items-center">
+        <div class="error-field" >
+          <p *ngIf="isSubmitted && hasError" class="error-message" i18n>Please fill in all required fields.</p>
+          <p *ngIf="isSubmitted && !dietaryDetailIsValid()" class="error-message" i18n>dietary details should have 280 characters maximum.</p>
+          <p *ngIf="isSubmitted && !commentIsValid()" class="error-message" i18n>comment should have 280 characters maximum.</p>
+        </div>
+        <button i18n class="light-button gold" type="submit" i18n>SUBMIT</button>
+      </div>
     </form>
   </div>
 </div>
