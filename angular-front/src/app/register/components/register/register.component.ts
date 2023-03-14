@@ -66,6 +66,7 @@ export class RegisterComponent {
   public CountryISO = CountryISO;
   public PhoneNumberFormat = PhoneNumberFormat;
 
+  private peopleFormName: string = 'peopleFormArray';
   public numberOfPeople: number = 0;
   public numberOfChildren: number = 0;
   public willAttend: boolean = true;
@@ -82,8 +83,8 @@ export class RegisterComponent {
     this.guestForm.get('attend').valueChanges.subscribe(value => {
       this.willAttend = value == "no" ? false : true;
     });
-    this.guestForm.get('people').valueChanges.subscribe(peopleCount => this.managePeople(peopleCount));
-    this.guestForm.get('children').valueChanges.subscribe(childrenCount => this.manageChildren(childrenCount));
+    this.guestForm.get('people').valueChanges.subscribe(peopleCount => this.manageFormArray(peopleCount, 'peopleFormArray'));
+    this.guestForm.get('children').valueChanges.subscribe(childrenCount => this.manageFormArray(childrenCount, 'childFormArray'));
     this.guestForm.get('transportation').valueChanges.subscribe(transport => this.transportation = transport);
     this.guestForm.get('transportShare').valueChanges.subscribe(transportShare => this.willShareTransportation = transportShare == 'yes' ? true : false);
     this.guestForm.get('dietary').valueChanges.subscribe(dietary => this.hasDietary = dietary == 'yes' ? true : false);
@@ -94,65 +95,65 @@ export class RegisterComponent {
     return Array(n);
   }
 
-  managePeople(peopleCount: number) {
-    if (peopleCount >= 1) {
-      if (this.numberOfPeople < peopleCount) {
-        const personFormArray = this.guestForm.get('peopleFormArray') as FormArray;
-        for (let index = this.numberOfPeople; index < peopleCount; index++) {
-          personFormArray.push(new FormGroup({
-            name: new FormControl(undefined, [
-              Validators.required,
-              Validators.min(1),
-              Validators.max(50)
-            ]),
-            surname: new FormControl(undefined, [
-              Validators.required,
-              Validators.min(1),
-              Validators.max(50)
-            ])
-          }));
-        }
-      } else if (this.numberOfPeople > peopleCount) {
-        const personFormArray = this.guestForm.get('peopleFormArray') as FormArray;
-        for (let index = this.numberOfChildren; index > peopleCount; index--) {
-          personFormArray.removeAt(index);
-        }
+  manageFormArray(currentCount: number, formArrayName: string) {
+    const previousCount: number = formArrayName == this.peopleFormName
+      ? this.numberOfPeople
+      : this.numberOfChildren;
+
+    const formArray = this.guestForm.get(formArrayName) as FormArray;
+
+    if (previousCount <= currentCount) {
+      const formGroupFunction = formArrayName == this.peopleFormName
+        ? () => this.newPeopleFormGroup()
+        : () => this.newChildrenFormGroup();
+
+      for (let index = previousCount; index < currentCount; index++) {
+        formArray.push(formGroupFunction());
       }
-      this.numberOfPeople = peopleCount;
+
     } else {
-      this.numberOfPeople = 0;
+      for (let index = previousCount; index > currentCount; index--) {
+        formArray.removeAt(index - 1);
+      }
+    }
+
+    const newCount = currentCount >= 1 ? currentCount : 0;
+    if (formArrayName == this.peopleFormName) {
+      this.numberOfPeople = newCount;
+    } else {
+      this.numberOfChildren = newCount;
     }
   }
 
-  manageChildren(childrenCount: number) {
-    if (childrenCount >= 1) {
-      if (this.numberOfChildren < childrenCount) {
-        const childFormArray = this.guestForm.get('childFormArray') as FormArray;
-        for (let index = this.numberOfChildren; index < childrenCount; index++) {
-          childFormArray.push(new FormGroup({
-            name: new FormControl(undefined, [
-              Validators.required,
-              Validators.min(1),
-              Validators.max(50)
-            ]),
-            age: new FormControl(undefined, [
-              Validators.required,
-              Validators.pattern(/^-?\d+$/),
-              Validators.min(0),
-              Validators.max(99)
-            ])
-          }));
-        }
-      } else if (this.numberOfChildren > childrenCount) {
-        const childFormArray = this.guestForm.get('childFormArray') as FormArray;
-        for (let index = this.numberOfChildren; index > childrenCount; index--) {
-          childFormArray.removeAt(index);
-        }
-      }
-      this.numberOfChildren = childrenCount;
-    } else {
-      this.numberOfChildren = 0;
-    }
+  newPeopleFormGroup(): FormGroup {
+    return new FormGroup({
+      name: new FormControl(undefined, [
+        Validators.required,
+        Validators.min(1),
+        Validators.max(50)
+      ]),
+      surname: new FormControl(undefined, [
+        Validators.required,
+        Validators.min(1),
+        Validators.max(50)
+      ])
+    });
+  }
+
+  newChildrenFormGroup(): FormGroup {
+    return new FormGroup({
+      name: new FormControl(undefined, [
+        Validators.required,
+        Validators.min(1),
+        Validators.max(50)
+      ]),
+      age: new FormControl(undefined, [
+        Validators.required,
+        Validators.pattern(/^-?\d+$/),
+        Validators.min(0),
+        Validators.max(99)
+      ])
+    });
   }
 
   addSong() {

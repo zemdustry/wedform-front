@@ -2,10 +2,9 @@
 @import "../../../node_modules/rfs/scss";
 
 .form-container {
-  width: 50%;
   background-color: $grey-color;
   border-radius: $border-radius;
-
+  width: 50%;
 
   .form-presentation {
     h1 {
@@ -64,6 +63,10 @@
       }
     }
 
+    .guest-music-style {
+      padding: 20px;
+    }
+
     .badge-song {
       border-radius: $border-radius;
       margin-top: 6px;
@@ -85,6 +88,7 @@
 
       .blank-button {
         background-color: $primary-gold-color;
+        border-radius: $border-radius;
         border: none;
       }
 
@@ -102,8 +106,39 @@
 
 ::ng-deep ngx-intl-tel-input .iti{ width: 100% !important; }
 
-@media only screen and (min-width: 768px) {
+//TODO tablette and mobile music checkboxes inline
 
+
+@media only screen and (min-width: 1440px) {
+  .form-container {
+    width: 50%;
+    padding: 4rem !important;
+  }
+}
+
+
+@media only screen and (max-width: 1440px) {
+  .form-container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+
+  .form-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+  .form-container {
+    width: 80%;
+  }
+}
+
+
+@media only screen and (min-width: 720px) {
   .guest-name,
   .guest-phone {
     padding-right: 12px !important;
@@ -112,5 +147,23 @@
   .guest-surname,
   .guest-email {
     padding-left: 12px !important;
+  }
+}
+
+
+@media only screen and (max-width: 720px) {
+  .form-container {
+    width: 85%;
+    padding: 1.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .form-container {
+    width: 90%;
+    padding: 1.5rem !important;
+  }
+  .form-check {
+    display: block !important;
   }
 }

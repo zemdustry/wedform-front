@@ -125,7 +125,7 @@ export const musicOptions: Options[] = [
     value: "V-pop"
   },
   {
-    key: "80",
+    key: "eighties",
     value: "80s"
   }
 ]

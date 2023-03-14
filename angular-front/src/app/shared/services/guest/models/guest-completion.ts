@@ -19,6 +19,7 @@ export interface GuestCompletion {
   event: string
   dietary: boolean,
   dietaryDetail: string,
+  musicStyle: string,
   songs: string[];
   brunch: boolean,
   comment: string

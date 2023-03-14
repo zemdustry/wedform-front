@@ -160,11 +160,13 @@
           </div>
 
           <div class="p-1">
-            <label for="guest-song" i18n>Which style of music do you prefer ?</label>
-            <!-- <div class="form-check">
-              <input class="form-check-input" type="checkbox" [formControlName]="input.key" [id]="input.key">
-              <label class="form-check-label" [attr.for]="input.key">{{input.label}}</label>
-            </div> -->
+            <label for="guest-music-style" i18n>Which style of music do you prefer ?</label>
+            <div id="guest-music-style" class="guest-music-style">
+              <div *ngFor="let opt of musicOptions" class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" [id]="opt.key">
+                <label class="form-check-label" [attr.for]="opt.key">{{opt.value}}</label>
+              </div>
+            </div>
           </div>
 
           <div class="p-1">
