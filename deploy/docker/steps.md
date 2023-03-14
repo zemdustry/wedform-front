@@ -3,20 +3,26 @@
 Steps to launch all the usefull containers for the project. 
 Don't forget to securise them !
 #### requirement :
-- openjdk-17.0.2_linux-x64_bin
-- wildfly-preview-23.0.2.Final.zip
-- postgresql-42.2.20.jar
+- OpenJDK 17.0.6
 <br>
 
 
+1. Lancer les containers (PostgreSQL, PgAdmin) 🐘🐋
+
+*Dans le répertoire `quarkus-backend/compose`*
+```bash 
+docker-compose up
+```
+
+#### alternative :
 ### PostegreSQL container (Dev) 🐘
 📁 into the "postgres" directory
 ```bash 
-docker build -t postgres-dev dev/
-docker run -p 5430:5432/tcp --name postgres-coco-dev -e POSTGRES_PASSWORD=<my-password> -d postgres-dev
+docker build -t postgres-wedform-dev dev/
+docker run -p 5430:5432/tcp --name postgres-wedform-dev -e POSTGRES_PASSWORD=<my-password> -d postgres-wedform-dev
 
-docker build -t postgres-test test/
-docker run -p 5431:5432/tcp --name postgres-coco-test -e POSTGRES_PASSWORD=<my-password> -d postgres-test
+docker build -t postgres-wedform-test test/
+docker run -p 5431:5432/tcp --name postgres-wedform-test -e POSTGRES_PASSWORD=<my-password> -d postgres-wedform-test
 ```
 
 __To change password__ : Login/Group Roles ➡️ Properties➡️  Definition ➡️ Password
@@ -43,55 +49,6 @@ __To change password__ : "my-email@gmail.com" ➡️ Change password
 
 2. Add server **postgres-test** ➡️ **Host name/address** : <your-ip> ➡️ **Port** : 5431 ➡️ **Username** : postgres ➡️ **Password** : \<my-password\>
 
-<br>
-    
-### Wildfly 23.0.2.Final server ☕ 
-📁 into the "docker" directory
-
-```bash 
-docker build -t wildfly23 wildfly23/
-#expose web application
-docker run -p 8180:8080 --name wildflycoco -d wildfly23
-#expose web application & wildfly admin interface 
-docker run -p 8180:8080 -p 9990:9990 --name wildflycoco -d wildfly23
-#expose web application and launch standalone.xml with the wildfly name version
-docker run -p 8180:8080 --name wildflycoco -d wildfly23 /opt/jboss/wildfly-preview-23.0.2.Final/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
-```
-
-.1 **Postgres driver installation :** 
-- _(Optional)_ change module name in the **module.xml** file (by default postgresql-42.2.20.jar)
-- copy the file postgresql module **.jar** in _/org/postgresql/main/_ (by default postgresql-42.2.20.jar)
-- copy the file **module.xml** in _/org/postgresql/main/_
-
-**standalone.xml configuration for the datasources :** xa-datasource
-```xml
-<subsystem xmlns="urn:jboss:domain:datasources:6.0">
-    <datasources>
-        <xa-datasource jndi-name="java:jboss/jdbc/COCO_DS" pool-name="CocoDSDev" enabled="true" use-java-context="true" spy="true">
-            <xa-datasource-property name="ServerName">
-                <!--ip-->
-            </xa-datasource-property>
-            <xa-datasource-property name="PortNumber">
-                <!--port-->
-            </xa-datasource-property>
-            <xa-datasource-property name="DatabaseName">
-                <!--database-->
-            </xa-datasource-property>
-            <driver>postgresql</driver>
-            <transaction-isolation>TRANSACTION_REPEATABLE_READ</transaction-isolation>
-            <security>
-                <user-name><!--user--></user-name>
-                <password><!--password--></PASSWORD>
-            </security>
-            <validation>
-                <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker"/>
-                <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter"/>
-            </validation>
-        </xa-datasource>
-    </datasources>
-</subsystem>
-```
-<br>
 <br>
 
 *Usefull :*
