@@ -53,42 +53,29 @@ SET search_path TO wedapp;
 		CONSTRAINT fk_phone_id FOREIGN KEY(phone_id) REFERENCES wedapp.phones(phone_id)
 		);
 
--- CREATE child TABLE --
+-- CREATE children TABLE --
 	CREATE TABLE wedapp.children (
 		child_id SERIAL PRIMARY KEY,
+		guest_id INTEGER NOT NULL,
 		name VARCHAR(255) NOT NULL,
-		age INTEGER NOT NULL
+		age INTEGER NOT NULL,
+		CONSTRAINT fk_guest_id FOREIGN KEY(guest_id) REFERENCES wedapp.guests(guest_id)
 		);
 
 		-- CREATE person TABLE --	
 	CREATE TABLE wedapp.persons (
 		person_id SERIAL PRIMARY KEY,
+		guest_id INTEGER NOT NULL,
 		name VARCHAR(255) NOT NULL,
-		surname VARCHAR(255) NOT NULL
-		);
-
-
--- CREATE guests_children TABLE --
-	CREATE TABLE guests_children (
-		guest_id INTEGER NOT NULL,
-		child_id INTEGER NOT NULL,
-		PRIMARY KEY (guest_id, child_id),
-		CONSTRAINT fk_guest_id FOREIGN KEY(guest_id) REFERENCES wedapp.guests(guest_id),
-		CONSTRAINT fk_child_id FOREIGN KEY(child_id) REFERENCES wedapp.children(child_id)
-		);
-
--- CREATE guests_persons TABLE --
-	CREATE TABLE guests_persons (
-		guest_id INTEGER NOT NULL,
-		person_id INTEGER NOT NULL,
-		PRIMARY KEY (guest_id, person_id),
-		CONSTRAINT fk_guest_id FOREIGN KEY(guest_id) REFERENCES wedapp.guests(guest_id),
-		CONSTRAINT fk_person_id FOREIGN KEY(person_id) REFERENCES wedapp.persons(person_id)
+		surname VARCHAR(255) NOT NULL,
+		CONSTRAINT fk_guest_id FOREIGN KEY(guest_id) REFERENCES wedapp.guests(guest_id)
 		);
 	
 -- GRANT cocoadm -- 
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA wedapp TO wedadm;	
-GRANT SELECT, UPDATE, USAGE ON ALL SEQUENCES IN SCHEMA wedapp to wedadm;
+GRANT ALL ON SCHEMA wedapp TO wedweb;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA wedapp TO wedweb;	
+
 
 -- GRANT cocoweb --
 GRANT SELECT, INSERT ON TABLE guests TO wedweb;
@@ -102,6 +89,3 @@ GRANT SELECT, UPDATE, USAGE ON "children_child_id_seq" TO wedweb;
 
 GRANT SELECT, INSERT ON TABLE persons TO wedweb;
 GRANT SELECT, UPDATE, USAGE ON "persons_person_id_seq" TO wedweb;
-
-GRANT SELECT, INSERT ON TABLE guests_children TO wedweb;
-GRANT SELECT, INSERT ON TABLE guests_persons TO wedweb;
