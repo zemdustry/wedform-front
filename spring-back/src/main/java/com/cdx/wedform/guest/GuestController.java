@@ -7,24 +7,29 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
+@RequestMapping("/guests")
+@CrossOrigin(origins = "http://localhost:4200")
 public class GuestController {
 
-    @Autowired
-    GuestService guestService;
+    final GuestService guestService;
 
-    @GetMapping("/guests")
+    public GuestController(GuestService guestService) {
+        this.guestService = guestService;
+    }
+
+    @GetMapping
     List<Guest> findAll() {
         return guestService.findAll();
     }
 
-    @GetMapping("/guests/{id}")
+    @GetMapping("/{id}")
     Guest findById(@PathVariable Long id) {
         return guestService.findById(id)
                 .orElseThrow(() -> new NoSuchElementException());
     }
 
-//    @PostMapping("/guests")
-//    List<Guest> createGuest(@RequestBody Guest newGuest) {
-//        return guestService.saveGuest(newGuest);
-//    }
+    @PostMapping
+    Guest createGuest(@RequestBody Guest newGuest) {
+        return guestService.saveGuest(newGuest);
+    }
 }

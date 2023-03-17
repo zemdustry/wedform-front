@@ -108,11 +108,39 @@ h6 {
 
 
 
-.error-field {
+.input-button {
+  background-color: $grey-color;
+  border: 0;
+
+  .las {
+    border-radius: 8rem;
+    box-shadow: inset 0 0 0 4px $grey-color;
+    background-color: $white-color;
+    font-size: 2.2rem;
+    color: $primary-gold-color;
+  }
+
+  &.black {
+    background-color: transparent;
+
+    .las {
+      font-size: 1.5rem;
+      color: $dark-color;
+      box-shadow: inset 0 0 0 4px transparent;
+    }
+  }
+}
+
+
+.message-field {
   min-width: 2rem;
   min-height: 2.5rem;
   .error-message {
     color: $red-color;
+  }
+
+  .validation-message {
+    color:$prmary-positive-color
   }
 }
 

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
-import { GuestCompletionService } from 'src/app/shared/services/guest/guest-completion.service';
+import { NGXLogger } from 'ngx-logger';
+import { GuestService } from 'src/app/shared/services/guest/guest.service';
 import { Child } from 'src/app/shared/services/guest/models/child';
-import { GuestCompletion } from 'src/app/shared/services/guest/models/guest-completion';
+import { Guest } from 'src/app/shared/services/guest/models/guest';
 import { Person } from 'src/app/shared/services/guest/models/person';
-import { arrivalOptions, attendOptions, eventOptions, transportOptions, musicOptions, yesNoOption } from './options';
+import { NotificationService } from 'src/app/shared/services/notification/notification.service';
 
 @Component({
   selector: 'app-register',
@@ -14,50 +15,51 @@ import { arrivalOptions, attendOptions, eventOptions, transportOptions, musicOpt
 })
 export class RegisterComponent {
   public guestForm = new FormGroup({
-    name: new FormControl(undefined, [
+    name: new FormControl(null, [
       Validators.required,
       Validators.min(1),
       Validators.max(50)]),
-    surname: new FormControl(undefined, [
+    surname: new FormControl(null, [
       Validators.required,
       Validators.min(1),
       Validators.max(50)
     ]),
-    phone: new FormControl(undefined, [Validators.required]),
-    email: new FormControl(undefined, [Validators.required, Validators.email]),
-    attend: new FormControl(undefined, [Validators.required]),
+    phone: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    attend: new FormControl('yes', [Validators.required]),
     people: new FormControl(0, [Validators.required]),
     peopleFormArray: new FormArray([]),
     children: new FormControl(0, [Validators.required]),
     childFormArray: new FormArray([]),
-    arrival: new FormControl(undefined, [Validators.required]),
-    transportation: new FormControl(undefined, [Validators.required]),
-    from: new FormControl(undefined, [Validators.required]),
-    transportShare: new FormControl(),
-    event: new FormControl(undefined, [Validators.required]),
-    dietary: new FormControl(undefined, [Validators.required]),
-    dietaryDetail: new FormControl(undefined, [
+    arrival: new FormControl(null, [Validators.required]),
+    transportation: new FormControl(null, [Validators.required]),
+    from: new FormControl(null, [Validators.required]),
+    transportShare: new FormControl(null),
+    event: new FormControl(null, [Validators.required]),
+    dietary: new FormControl(null, [Validators.required]),
+    dietaryDetail: new FormControl(null, [
       Validators.min(0),
       Validators.max(280)
     ]),
-    song: new FormControl(undefined, [
+    song: new FormControl(null, [
       Validators.min(0),
       Validators.max(100)
     ]),
-    brunch: new FormControl(undefined, [Validators.required]),
-    comment: new FormControl(undefined, [
+    musicGeneral: new FormControl(false),
+    musicDanceElectro: new FormControl(false),
+    musicPopRock: new FormControl(false),
+    musicFunk: new FormControl(false),
+    musicRap: new FormControl(false),
+    musicDisco: new FormControl(false),
+    musicLatino: new FormControl(false),
+    musicVpop: new FormControl(false),
+    musicEighties: new FormControl(false),
+    brunch: new FormControl(null, [Validators.required]),
+    comment: new FormControl(null, [
       Validators.min(0),
       Validators.max(280)
     ])
   });
-
-  // select inputs
-  public attendOptions = attendOptions;
-  public arrivalOptions = arrivalOptions;
-  public transportOptions = transportOptions;
-  public eventOptions = eventOptions;
-  public musicOptions = musicOptions;
-  public yesNoOption = yesNoOption;
 
   // phone input
   public preferredCountries: CountryISO[] = [CountryISO.France, CountryISO.CzechRepublic, CountryISO.Vietnam, CountryISO.UnitedKingdom];
@@ -75,11 +77,14 @@ export class RegisterComponent {
   public hasDietary: boolean;
   public willBrunch: boolean;
   public isSubmitted: boolean = false;
+  public isPosted: boolean = false;
   public hasError: boolean = false;
   public songError: boolean = false;
   public songs: string[] = [];
 
-  constructor(private guestCompletionService: GuestCompletionService) {
+  constructor(private guestService: GuestService,
+    private logger: NGXLogger,
+    private notificationService: NotificationService) {
     this.guestForm.get('attend').valueChanges.subscribe(value => {
       this.willAttend = value == "no" ? false : true;
     });
@@ -127,12 +132,12 @@ export class RegisterComponent {
 
   newPeopleFormGroup(): FormGroup {
     return new FormGroup({
-      name: new FormControl(undefined, [
+      name: new FormControl(null, [
         Validators.required,
         Validators.min(1),
         Validators.max(50)
       ]),
-      surname: new FormControl(undefined, [
+      surname: new FormControl(null, [
         Validators.required,
         Validators.min(1),
         Validators.max(50)
@@ -142,12 +147,12 @@ export class RegisterComponent {
 
   newChildrenFormGroup(): FormGroup {
     return new FormGroup({
-      name: new FormControl(undefined, [
+      name: new FormControl(null, [
         Validators.required,
         Validators.min(1),
         Validators.max(50)
       ]),
-      age: new FormControl(undefined, [
+      age: new FormControl(null, [
         Validators.required,
         Validators.pattern(/^-?\d+$/),
         Validators.min(0),
@@ -196,30 +201,40 @@ export class RegisterComponent {
   onFormSubmit(): void {
     this.guestForm.markAllAsTouched();
     this.isSubmitted = true;
-
-    if (this.guestForm instanceof FormGroup && this.guestForm.valid) {
+    this.logger.info("submit guest");
+    if (this.formGroupValid()) {
       this.hasError = false;
-      const guest: GuestCompletion = this.createCompletedGuest();
-      console.log(guest);
-      this.guestCompletionService.addGuestCompletion(guest).subscribe({
-        next: () => console.log('Guest added successfully'),
-        error: () => console.error('Error adding guest')
-      });
-    } else {
-      console.error('####################')
-      this.hasError = true;
-      Object.keys(this.guestForm.controls).forEach(key => {
-        const controlErrors = this.guestForm.get(key).errors;
-        if (controlErrors != null) {
-          Object.keys(controlErrors).forEach(keyError => {
-            console.log(`Invalid control: ${key}, ${keyError}: ${controlErrors[keyError]}`);
-          });
+      const guest: Guest = this.createCompletedGuest();
+      this.guestService.addGuestCompletion(guest).subscribe({
+        next: () => {
+          this.notificationService.success('Success', 'Registration successful, thank you.', 6000);
+          this.isPosted = true;
+          this.logger.info("Guests added successfully");
+          this.guestForm.reset();
+      },
+        error: () => {
+          this.notificationService.error('Failed', 'Registration failed. Please try again later.', 6000);
+          this.logger.info("Error while adding guests");
         }
       });
+    } else {
+      this.hasError = true;
     }
   }
 
-  createCompletedGuest(): GuestCompletion {
+  formGroupValid(): boolean {
+    if (this.guestForm.get('attend').value == 'no') {
+      return this.guestForm.get('name').valid &&
+        this.guestForm.get('surname').valid &&
+        this.guestForm.get('phone').valid &&
+        this.guestForm.get('email').valid;
+    } else {
+      return this.guestForm instanceof FormGroup && this.guestForm.valid;
+    }
+  }
+
+  //TODO extract to component
+  createCompletedGuest(): Guest {
     const formValues = this.guestForm.value;
     return {
       name: formValues.name,
@@ -233,15 +248,16 @@ export class RegisterComponent {
       children: this.getChildren(),
       arrival: formValues.arrival,
       transportation: formValues.transportation,
-      from: formValues.from,
+      fromLocation: formValues.from,
       transportShare: this.willShareTransportation,
       event: formValues.event,
       dietary: this.hasDietary,
       dietaryDetail: formValues.dietaryDetail,
-      songs: this.songs,
+      songs: this.getSongs(),
+      musicStyles: this.getMusicStyles(),
       brunch: this.willBrunch,
       comment: formValues.comment
-    } as GuestCompletion;
+    } as Guest;
   }
 
   getPeople(): Person[] {
@@ -266,5 +282,23 @@ export class RegisterComponent {
       });
     }
     return [];
+  }
+
+  getSongs(): string {
+    let songsStr = '';
+    this.songs.forEach(song => {
+      songsStr += `${song},`;
+    })
+    return songsStr;
+  }
+
+  getMusicStyles(): string {
+    const map = new Map();
+    const musicControls = Object.keys(this.guestForm.controls)
+      .filter(controlName => controlName.startsWith('music'))
+      .forEach(controlName => {
+        map.set(controlName, this.guestForm.controls[controlName].value)
+      });
+    return Object.fromEntries(map);
   }
 }

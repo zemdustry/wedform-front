@@ -2,7 +2,7 @@ import { Child } from "./child";
 import { Person } from "./person";
 import { Phone } from "./phone";
 
-export interface GuestCompletion {
+export interface Guest {
   id: number,
   name: string,
   surname: string,
@@ -10,18 +10,19 @@ export interface GuestCompletion {
   email: string,
   attend: string,
   peopleCount: number,
-  people: Person[],
+  people?: Person[],
   childrenCount:number,
-  children: Child[],
+  children?: Child[],
   arrival: string,
   transportation: string,
-  from: string,
-  transportShare: boolean,
+  fromLocation: string,
+  transportShare?: boolean,
   event: string
   dietary: boolean,
-  dietaryDetail: string,
-  musicStyle: string,
-  songs: string[];
+  dietaryDetail?: string,
+  songs?: string,
+  musicStyles: string,
   brunch: boolean,
-  comment: string
+  comment?: string
 }
+

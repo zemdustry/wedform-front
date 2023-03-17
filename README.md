@@ -16,6 +16,7 @@ Architecture `n-tiers`
 * **Angular2+:** 14.2
 * **CSS3 + Scss**
 * **Bootstrap:** 5.1.3
+* **NodeJS:** 18.15.0
 
 ### Tools: 🧰 
 Vscode, IntelliJ Idea, Docker, Git

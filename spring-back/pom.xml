@@ -15,7 +15,6 @@
 	<description>Back-end server for a wedding website</description>
 	<properties>
 		<java.version>17</java.version>
-		<org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
 	</properties>
 	<dependencies>
 		<dependency>

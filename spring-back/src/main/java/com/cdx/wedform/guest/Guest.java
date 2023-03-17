@@ -1,10 +1,14 @@
 package com.cdx.wedform.guest;
 
+import com.cdx.wedform.music.MusicStyles;
 import com.cdx.wedform.person.Person;
 import com.cdx.wedform.phone.Phone;
 import com.cdx.wedform.child.Child;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.annotations.Type;
+import org.hibernate.type.SqlTypes;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -43,42 +47,47 @@ public class Guest implements Serializable {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "guest", fetch = FetchType.EAGER)
     @JsonManagedReference
-    private Set<Person> persons = new HashSet<>();
+    private Set<Person> people = new HashSet<>();
 
     @Column(name = "children_count", nullable = false)
     private Integer childrenCount;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "guest",  fetch = FetchType.EAGER)
+    @JsonManagedReference
     private Set<Child> children = new HashSet<>();
 
-    @Column(name = "arrival", nullable = false)
+    @Column(name = "arrival", nullable = true)
     private String arrival;
 
-    @Column(name = "transportation", nullable = false)
+    @Column(name = "transportation", nullable = true)
     private String transportation;
 
-    @Column(name = "from_location", nullable = false)
+    @Column(name = "from_location", nullable = true)
     private String fromLocation;
 
-    @Column(name = "transport_share", nullable = false)
+    @Column(name = "transport_share", nullable = true)
     private Boolean transportShare;
 
-    @Column(name = "event", nullable = false)
+    @Column(name = "event", nullable = true)
     private String event;
 
-    @Column(name = "dietary", nullable = false)
+    @Column(name = "dietary", nullable = true)
     private Boolean dietary;
 
-    @Column(name = "dietary_detail", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "dietary_detail", nullable = true, columnDefinition = "TEXT")
     private String dietaryDetail;
 
-    @Column(name = "music_style", nullable = false)
-    private String musicStyle;
+    @Column(name = "songs", nullable = true)
+    private String songs;
 
-    @Column(name = "brunch", nullable = false)
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(name = "music_styles", columnDefinition = "jsonb")
+    private MusicStyles musicStyles;
+
+    @Column(name = "brunch", nullable = true)
     private Boolean brunch;
 
-    @Column(name = "comment", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "comment", nullable = true, columnDefinition = "TEXT")
     private String comment;
 
     public Long getGuestId() {
@@ -137,12 +146,12 @@ public class Guest implements Serializable {
         this.peopleCount = peopleCount;
     }
 
-    public Set<Person> getPersons() {
-        return persons;
+    public Set<Person> getPeople() {
+        return people;
     }
 
-    public void setPersons(Set<Person> persons) {
-        this.persons = persons;
+    public void setPeople(Set<Person> persons) {
+        this.people = persons;
     }
 
     public Integer getChildrenCount() {
@@ -217,12 +226,20 @@ public class Guest implements Serializable {
         this.dietaryDetail = dietaryDetail;
     }
 
-    public String getMusicStyle() {
-        return musicStyle;
+    public String getSongs() {
+        return songs;
     }
 
-    public void setMusicStyle(String musicStyle) {
-        this.musicStyle = musicStyle;
+    public void setSongs(String songs) {
+        this.songs = songs;
+    }
+
+    public MusicStyles getMusicStyles() {
+        return musicStyles;
+    }
+
+    public void setMusicStyles(MusicStyles musicStyles) {
+        this.musicStyles = musicStyles;
     }
 
     public Boolean getBrunch() {

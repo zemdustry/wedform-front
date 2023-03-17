@@ -3,6 +3,7 @@ package com.cdx.wedform.database;
 import com.cdx.wedform.child.Child;
 import com.cdx.wedform.guest.Guest;
 import com.cdx.wedform.guest.GuestRepository;
+import com.cdx.wedform.music.MusicStyles;
 import com.cdx.wedform.person.Person;
 import com.cdx.wedform.phone.Phone;
 import org.slf4j.Logger;
@@ -11,7 +12,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class LoadDatabase {
 
     private static final Logger logger = LoggerFactory.getLogger(LoadDatabase.class);
@@ -42,7 +43,7 @@ public class LoadDatabase {
         person.setName("Paul");
         person.setSurname("Gibert");
         person.setGuest(guest);
-        guest.getPersons().add(person);
+        guest.getPeople().add(person);
         guest.setChildrenCount(1);
         Child child = new Child();
         child.setName("toto");
@@ -56,7 +57,18 @@ public class LoadDatabase {
         guest.setEvent("wedding");
         guest.setDietary(false);
         guest.setDietaryDetail("");
-        guest.setMusicStyle("pop");
+        MusicStyles musicStyles = new MusicStyles();
+        musicStyles.setMusicDanceElectro(true);
+        musicStyles.setMusicDisco(false);
+        musicStyles.setMusicEighties(true);
+        musicStyles.setMusicFunk(true);
+        musicStyles.setMusicGeneral(false);
+        musicStyles.setMusicLatino(false);
+        musicStyles.setMusicPopRock(true);
+        musicStyles.setMusicRap(false);
+        musicStyles.setMusicVpop(false);
+        guest.setMusicStyles(musicStyles);
+        guest.setSongs("Nas - Ny state of mind,toto ,");
         guest.setBrunch(true);
         guest.setComment("Looking forward to the celebration!");
         return guest;
