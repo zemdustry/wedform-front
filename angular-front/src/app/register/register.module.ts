@@ -17,7 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
     HttpClientModule,
     ReactiveFormsModule,
     SharedModule,
-    NgxIntlTelInputModule
+    NgxIntlTelInputModule,
   ],
   exports: [RegisterComponent],
   providers: [GuestService]

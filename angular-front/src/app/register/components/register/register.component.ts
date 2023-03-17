@@ -61,6 +61,7 @@ export class RegisterComponent {
     ])
   });
 
+
   // phone input
   public preferredCountries: CountryISO[] = [CountryISO.France, CountryISO.CzechRepublic, CountryISO.Vietnam, CountryISO.UnitedKingdom];
   public separateDialCode = false;
