@@ -3,14 +3,23 @@
 
 @import "variables.scss";
 
-html, body { padding: 0; margin: 0;}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
 
 * {
   font-family: $text-font;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $heading-font;
 }
 
@@ -50,36 +59,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .golden-background {
-  background: rgb(170,129,83);
-  background: radial-gradient(circle, rgba(170,129,83,1) 2%,
-  rgba(170,129,83,1) 14%, rgba(184,143,91,1) 25%,
-   rgba(184,143,91,1) 36%, rgba(192,152,96,1) 46%,
-    rgba(208,167,104,1) 60%, rgba(241,198,122,1) 80%,
-    rgba(229,184,115,1) 100%);
+  background: rgb(170, 129, 83);
+  background: radial-gradient(circle, rgba(170, 129, 83, 1) 2%,
+      rgba(170, 129, 83, 1) 14%, rgba(184, 143, 91, 1) 25%,
+      rgba(184, 143, 91, 1) 36%, rgba(192, 152, 96, 1) 46%,
+      rgba(208, 167, 104, 1) 60%, rgba(241, 198, 122, 1) 80%,
+      rgba(229, 184, 115, 1) 100%);
 }
 
 .yellow-background {
-  background: rgb(237,178,76);
-background: radial-gradient(circle, rgba(237,178,76,1) 16%,
-rgba(237,178,76,0.8001401244091386) 39%,
-rgba(237,178,76,0.9037815809917717) 60%,
-rgba(237,178,76,1) 95%);
+  background: rgb(237, 178, 76);
+  background: radial-gradient(circle, rgba(237, 178, 76, 1) 16%,
+      rgba(237, 178, 76, 0.8001401244091386) 39%,
+      rgba(237, 178, 76, 0.9037815809917717) 60%,
+      rgba(237, 178, 76, 1) 95%);
 }
 
 
 .turquoise-radiant {
-  background: rgb(125,192,182);
-  background: linear-gradient(0deg, rgba(125,192,182,1) 0%, rgba(143,217,206,1) 25%, rgba(141,240,229,1) 49%, rgba(100,221,192,1) 82%, rgba(87,215,180,1) 92%, rgba(67,206,162,1) 100%); }
-
-.turquoise-radiant-reverse {
- background: rgb(67,206,162);
-background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
+  background: rgb(125, 192, 182);
+  background: linear-gradient(0deg, rgba(125, 192, 182, 1) 0%, rgba(143, 217, 206, 1) 25%, rgba(141, 240, 229, 1) 49%, rgba(100, 221, 192, 1) 82%, rgba(87, 215, 180, 1) 92%, rgba(67, 206, 162, 1) 100%);
 }
 
 .turquoise-radiant-reverse {
-  background: rgb(67,206,162);
- background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, rgba(100,221,192,1) 18%, rgba(141,240,229,1) 50%, rgba(143,217,206,1) 75%, rgba(125,192,182,1) 100%);
- }
+  background: rgb(67, 206, 162);
+  background: linear-gradient(0deg, rgba(67, 206, 162, 1) 0%, rgba(87, 215, 180, 1) 8%, rgba(100, 221, 192, 1) 18%, rgba(141, 240, 229, 1) 50%, rgba(143, 217, 206, 1) 75%, rgba(125, 192, 182, 1) 100%);
+}
+
+.turquoise-radiant-reverse {
+  background: rgb(67, 206, 162);
+  background: linear-gradient(0deg, rgba(67, 206, 162, 1) 0%, rgba(87, 215, 180, 1) 8%, rgba(100, 221, 192, 1) 18%, rgba(141, 240, 229, 1) 50%, rgba(143, 217, 206, 1) 75%, rgba(125, 192, 182, 1) 100%);
+}
 
 .light-button {
   cursor: pointer;
@@ -94,7 +104,45 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
     background-color: $primary-gold-color;
     color: $dark-color;
   }
+}
+
+
+
+.input-button {
+  background-color: $grey-color;
+  border: 0;
+
+  .las {
+    border-radius: 8rem;
+    box-shadow: inset 0 0 0 4px $grey-color;
+    background-color: $white-color;
+    font-size: 2.2rem;
+    color: $primary-gold-color;
   }
+
+  &.black {
+    background-color: transparent;
+
+    .las {
+      font-size: 1.5rem;
+      color: $dark-color;
+      box-shadow: inset 0 0 0 4px transparent;
+    }
+  }
+}
+
+
+.message-field {
+  min-width: 2rem;
+  min-height: 2.5rem;
+  .error-message {
+    color: $red-color;
+  }
+
+  .validation-message {
+    color:$prmary-positive-color
+  }
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -107,9 +155,11 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
 @media only screen and (max-width: 768px) {
   .section-heading {
     @include font-size(8vw);
+
     &:before {
       margin-right: 1rem;
     }
+
     &:after {
       margin-left: 1rem;
     }
@@ -124,9 +174,11 @@ background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(87,215,180,1) 8%, 
 @media only screen and (max-width: 425px) {
   .section-heading {
     @include font-size(6vw);
+
     &:before {
       margin-right: 0.5rem;
     }
+
     &:after {
       margin-left: 0.5rem;
     }

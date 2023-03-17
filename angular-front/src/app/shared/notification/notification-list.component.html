@@ -1,0 +1,18 @@
+<div class="notifications">
+	<div *ngFor="let notification of notifications" class="notification" [ngClass]="className(notification)">
+		<ng-container *ngTemplateOutlet="notificationTpl;context:{notification:notification}"></ng-container>
+	</div>
+</div>
+
+<ng-template #notificationTpl let-notification="notification">
+
+	<div class="title d-flex flex-row align-items-center justify-content-between p-1">
+    <span class="text-wrap">{{notification.title}}</span>
+    <button (click)="close(notification)" class="input-button black d-flex justify-content-center align-items-center text-center" type="button">
+      <i class="las la-times-circle"></i>
+    </button>
+	</div>
+
+	<div class="message">{{notification.message}}</div>
+
+</ng-template>

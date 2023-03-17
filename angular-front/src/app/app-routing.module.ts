@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/components/home/home.component';
 import { InformationComponent } from './information/components/information/information.component';
 import { PhotoComponent } from './photo/components/photo.component';
-import { RegisterComponent } from './register/components/register.component';
+import { RegisterComponent } from './register/components/register/register.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
