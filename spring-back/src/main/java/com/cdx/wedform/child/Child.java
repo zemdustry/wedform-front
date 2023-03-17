@@ -1,6 +1,7 @@
 package com.cdx.wedform.child;
 
 import com.cdx.wedform.guest.Guest;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -20,8 +21,9 @@ public class Child implements Serializable {
     @Column(name = "age", nullable = false)
     private Integer age;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "guest_id")
+    @JsonBackReference
     private Guest guest;
 
     public Long getChildId() {

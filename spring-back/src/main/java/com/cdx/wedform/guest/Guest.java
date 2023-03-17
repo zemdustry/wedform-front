@@ -3,6 +3,7 @@ package com.cdx.wedform.guest;
 import com.cdx.wedform.person.Person;
 import com.cdx.wedform.phone.Phone;
 import com.cdx.wedform.child.Child;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -13,7 +14,7 @@ import java.util.Set;
  * Wedding guest
  */
 @Entity(name = "Guest")
-@Table(schema = "wedapp", name = "guests", uniqueConstraints = @UniqueConstraint(columnNames = "guest_id"))
+@Table(schema = "wedapp", name = "guests")
 public class Guest implements Serializable {
 
     @Id
@@ -27,7 +28,7 @@ public class Guest implements Serializable {
     @Column(name = "surname", nullable = false)
     private String surname;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "phone_id", nullable = false)
     private Phone phone;
 
@@ -40,13 +41,14 @@ public class Guest implements Serializable {
     @Column(name = "people_count", nullable = false)
     private Integer peopleCount;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "guest")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "guest", fetch = FetchType.EAGER)
+    @JsonManagedReference
     private Set<Person> persons = new HashSet<>();
 
     @Column(name = "children_count", nullable = false)
     private Integer childrenCount;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "guest")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "guest",  fetch = FetchType.EAGER)
     private Set<Child> children = new HashSet<>();
 
     @Column(name = "arrival", nullable = false)

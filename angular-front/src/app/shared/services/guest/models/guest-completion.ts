@@ -3,6 +3,7 @@ import { Person } from "./person";
 import { Phone } from "./phone";
 
 export interface GuestCompletion {
+  id: number,
   name: string,
   surname: string,
   phone: Phone,
