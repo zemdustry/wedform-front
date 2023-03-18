@@ -8,8 +8,6 @@ export class AgePipe implements PipeTransform {
     if (birthDate == null) {
       return "0";
     }
-
-    console.log(birthDate)
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();

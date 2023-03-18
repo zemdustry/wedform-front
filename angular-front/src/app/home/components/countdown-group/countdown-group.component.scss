@@ -6,28 +6,31 @@
   // background: linear-gradient(0deg, #1db1e2 0%, #40c2cc 35%, #8ee3e9 100%);
   background: rgb(29,177,226);
   background: radial-gradient(circle, rgba(29,177,226,1) 0%, rgba(64,194,204,1) 50%, rgba(142,227,233,1) 85%, rgba(186,239,242,1) 100%);
-  padding: 40px 0 40px;
+  padding: 40px 0 10px;
 
   .countdown-title {
-    padding: 0 0 6rem 0;
+    padding: 0 0 5vw 0;
     position: relative;
+    display: inline-flex;
+    margin-top: 6vw;
+
     .us {
       width: 60%;
-      margin-top: 110px;
       border-radius: 25px;
     }
-
-    .section-heading {
+    .countdown-text-stick {
       position: absolute;
-      top: 0px;
+      top: -11%;
+      left: 0%;
+      width: 100%;
     }
-
   }
 
-}
 
 .clock-unit {
-  color: $dark-color;
+  color: $white-color;
+}
+
 }
 
 .flip-element {
@@ -49,14 +52,27 @@
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1440px) {
   .clock-unit {
     @include font-size(2rem);
   }
+
+  .us {
+    width: 70% !important;
+  }
+
 }
 
 /* Tablette */
 @media only screen and (max-width: 1024px) {
+  .countdown-text-stick {
+    top: -14% !important;
+  }
+
+  .section-heading {
+    @include font-size(7vw);
+  }
+
   .clock-unit {
     @include font-size(3vw);
   }
@@ -66,9 +82,20 @@
   .clock-unit {
     @include font-size(5vw);
   }
+
+  .countdown-text-stick {
+    top: -14% !important;
+  }
+
+  .us {
+    width: 80% !important;
+  }
 }
 
 @media only screen and (max-width: 425px) {
+  .countdown-text-stick {
+    top: -17% !important;
+  }
   .clock-unit {
     @include font-size(1.2rem);
   }

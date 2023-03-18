@@ -1,11 +1,13 @@
 <div class="countdown d-flex flex-column align-items-center">
   <div class="countdown-title d-flex flex-column align-items-center">
-    <h1 class="section-heading gold text-center" i18n>Time remaining</h1>
-    <img class="us" src="/assets/images/us.png" alt="us" />
+    <div class="countdown-text-stick">
+      <h1 class="section-heading gold text-center" i18n>Celebrating our Love</h1>
+    </div>
+    <img class="us" src="/assets/images/us2.png" alt="us" />
   </div>
   <div class="unselectable-content d-flex justify-content-center align-items-center">
     <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [unit]="daysToDday"></app-countdown-custom>
+      <app-countdown-custom [value]="daysToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
           Days
@@ -13,7 +15,7 @@
       </div>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [unit]="hoursToDday"></app-countdown-custom>
+      <app-countdown-custom [value]="hoursToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
           Hours
@@ -21,7 +23,7 @@
       </div>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [unit]="minutesToDday"></app-countdown-custom>
+      <app-countdown-custom [value]="minutesToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
           Minutes
@@ -29,7 +31,7 @@
       </div>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [unit]="secondsToDday"></app-countdown-custom>
+      <app-countdown-custom [value]="secondsToDday"></app-countdown-custom>
       <div class="d-flex justify-content-center mt-2">
         <span class="clock-unit mt-2" i18n>
           Seconds
