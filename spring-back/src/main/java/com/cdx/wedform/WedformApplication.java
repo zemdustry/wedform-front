@@ -8,10 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("com.cdx.wedform.guest")
 public class WedformApplication {
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(WedformApplication.class, args);
-
 	}
-
 }
