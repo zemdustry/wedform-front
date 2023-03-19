@@ -1,0 +1,245 @@
+@import "variables.scss";
+@import "../../../node_modules/rfs/scss";
+
+.bottom {
+  position: absolute;
+  //TODO
+  height: 5rem;
+  width: 100%;
+  background-color: $white-color;
+  border-bottom-left-radius: 50% 50px;
+  border-bottom-right-radius: 50% 50px;
+  box-shadow: 0 -5px 5px -5px $white-color;
+  z-index: 20;
+}
+
+.couple-section {
+  height: 54rem;
+  z-index: 10;
+  background-color: $white-color;
+  padding: 20px 0 18px;
+  box-shadow: 10px 10px 1px 0px $white-color;
+  border: none;
+
+  .middle {
+    width: 55px;
+    position: relative;
+    .flower {
+      position: absolute;
+      z-index: 99;
+      margin-right: 22px;
+    }
+  }
+
+  .card {
+    border: 0.1px solid $white-color;
+    border-radius: 25px;
+    background: rgb(47, 128, 237);
+    background: linear-gradient(160deg, rgba(47, 128, 237, 1) 5%, rgba(141, 240, 229, 1) 85%);
+    padding: 0 0 10px 0;
+    height: 26rem;
+
+    .image-husban, .image-wife {
+      width: 100%;
+      height: 85%;
+      border-top-left-radius: 1.4rem;
+      border-top-right-radius: 1.4rem;
+    }
+
+    .card-info {
+      height: 15%;
+      width: 80%;
+      color: $dark-color;
+
+      .icon-certified {
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .couple-title {
+        font-size: 20px;
+        font-family: $text-font;
+        letter-spacing: 1px;
+        font-family: 'josefin-regular';
+      }
+
+      .las {
+        margin-right: 4px;
+        font-size: calc(16px + 2*(100vw - 420px) / 860);
+      }
+    }
+
+    .logo-bottom {
+      width: 25%;
+    }
+  }
+
+  .husband {
+    transform: rotate(-2deg);
+    box-shadow: -25px 25px 50px #a6bab8,
+      0 0 0 #ffffff;
+  }
+
+  .wife {
+    transform: rotate(2deg);
+    box-shadow: 25px 25px 50px #a6bab8,
+      0 0 0 #ffffff;
+  }
+
+  .welcom-container {
+    width: 60%;
+    margin-top: 10rem;
+
+    .welcom-text {
+      font-size: calc(16px + 2*(100vw - 420px) / 860);
+    }
+  }
+}
+
+.subtitle {
+  margin-top: 80px;
+  color: $primary-gold-color;
+  z-index: 1;
+}
+
+.heart-background {
+  position: absolute;
+  height: 52rem;
+  width: 56rem;
+}
+
+/* Tablette */
+@media only screen and (min-width: 1024px) {
+  .couple-section .middle .flower {
+    top: 68%;
+    width: 12rem;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .heart-background {
+    margin-top: 80px;
+    height: 44rem;
+    width: 46rem;
+  }
+  .card {
+    height: 23rem !important;
+  }
+  .couple-section {
+    height: 50rem;
+  }
+}
+
+/* Phone */
+@media only screen and (min-width: 768px) {
+  .couple-section .middle .flower {
+    top: 68%;
+    width: 12rem;
+  }
+
+  .card {
+    height: 20rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .couple-section .middle .flower {
+    margin-left: 14px;
+    top: 70%;
+    width: 10rem;
+  }
+
+
+  .heart-background {
+    position: absolute;
+    height: 38rem;
+    width: 100vw;
+  }
+
+  .card {
+    height: 20rem;
+    width: 42%;
+  }
+
+
+  .couple-section {
+    height: 45rem;
+  }
+
+}
+
+@media only screen and (max-width: 568px) {
+  .couple-section {
+    max-width: 100%;
+  }
+
+  .couple-section .middle .flower {
+    top: 78%;
+    width: 8rem;
+  }
+
+  .middle {
+    width: 1vw !important;
+  }
+  .card {
+    height: 320px !important;
+    width: 40%;
+  }
+
+
+  .couple-section {
+    height: 41rem;
+  }
+
+}
+@media only screen and (max-width: 425px) {
+
+  .heart-background {
+    margin-top: 0;
+  }
+
+  .couple-section {
+    max-width: 100%;
+  }
+
+  .couple-section .middle .flower {
+    top: 70%;
+    width: 6rem;
+  }
+
+  .card {
+    height: 200px !important;
+    width: 40%;
+  }
+
+  .couple-title {
+    font-size: 2.4vw !important;
+  }
+
+  .icon-certified {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .las {
+    margin-right: 2px !important;
+    font-size: 2vw !important;
+  }
+
+  .couple-subtitle {
+    font-size: 2.4vw;
+  }
+
+  .couple-section {
+    height: 32rem;
+  }
+}

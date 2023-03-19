@@ -1,0 +1,92 @@
+/* COLORS */
+$primary-blue-color: #8DF0E5;
+$secondary-blue-color: #8FD9CE;
+$secondary-blue-shadow-1: #78ccc3;
+$secondary-blue-shadow-2: #a2ffff;
+$third-secondary-blue-color: #7dc0b6;
+$third-secondary-blue-shadow-clear-1: #7ab8af;
+$third-secondary-blue-shadow-clear-2: #a4faed;
+$third-secondary-blue-shadow-dark-1: #6aa39b;
+$third-secondary-blue-shadow-dark-2: #90ddd1;
+$green-blue-color: #43cea2;
+$light-blue-color: #E3FFFC;
+//FIXME change gold color
+$primary-gold-color: #EDB24C;
+$secondary-gold-color:#f1a624;
+//gold e2c080
+$primary-negative-color:#D98F9A;
+$prmary-positive-color:#8FD9A9;
+$dark-color: #231D21;
+$grey-color: #f4f4f4;
+$white-color: #ffffff;
+$mat-white-color: #D6ECEA;
+$blue-color: #122274;
+$red-color: #CF081F;
+
+/* HEADING LINE */
+$sizeBorder: 2px;
+
+/* COUNTDOWN */
+$halfPaletteHeight: 4vw;
+$paletteWidth: 9vw;
+
+// SIZES
+$footer-link-text-size: 2rem;
+$footer-text-size: 1.2rem;
+//TODO check
+$borderRadius: 2.5vw;
+
+//COMMON BORDER RADIUS
+$border-radius: 25px;
+
+/* FONTS */
+@font-face {
+  font-family: "josefin-light-italic";
+  src: local("josefin-light-italic-font"), url(/assets/fonts/josefin/JosefinSans-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-light";
+  src: local("josefin-light-font"), url(/assets/fonts/josefin/JosefinSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-medium";
+  src: local("josefin-medium-font"), url(/assets/fonts/josefin/JosefinSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-medium-italic";
+  src: local("josefin-medium-italic-font"), url(/assets/fonts/josefin/JosefinSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "josefin-regular";
+  src: local("josefin-regular"), url(/assets/fonts/josefin/JosefinSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "cherolina";
+  src: local("cherolina-font"), url(/assets/fonts/Cherolina.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "fenomen";
+  src: local("fenomen-font"), url(/assets/fonts/Fenomen.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "saudagar";
+  src: local("saudagar-font"), url(/assets/fonts/Saudagar.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "utopia";
+  src: local("utopia-font"), url(/assets/fonts/Utopia.otf) format("opentype");
+}
+
+$stylish-font: 'cherolina';
+$heading-font: 'saudagar';
+$text-font: 'josefin-light';
+$text-italic-font: 'cabin-italic';
+$time-font: 'fenomen';

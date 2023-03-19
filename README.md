@@ -1,59 +1,27 @@
-# WedForm
+# WebForm
 
-## Stack:
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-Architecture `n-tiers` 
+## Development server
 
-### Backend: ⚙️
-* **Java version :** Java 17
-* **JDK :** OpenJDK 17.0.6
-* **Spring:** SpringBoot 3.0.4
-* **Maven :** 3.8.6
-* **Database :** PostgreSQL
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-### Frontend: 🖥️ 
-* **Angular2+:** 14.2
-* **CSS3 + Scss**
-* **Bootstrap:** 5.1.3
-* **NodeJS:** 18.15.0
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Tools: 🧰 
-Vscode, IntelliJ Idea, Docker, Git
+## Build
 
-# Languages
-[English](#english-)
-&
-[Français](#français-)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## English 🇬🇧
+## Running unit tests
 
-## Introduction:
-*L'objectif de ce projet est de réaliser une application web de cours particuliers. Cette application permettra à mes proches d'apprendre de nouvelles choses liées à l'informatique et de réviser les formations vue ensemble.*
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Objective:
-- Home page 
-- Wedding planning
-- Form for guest
-- Photo gallery
+## Running end-to-end tests
 
-## Français 🇫🇷
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Introduction:
-<p>Afin de bien préparer notre mariage nous avons besoin nous avons besoin d'un site web. Ce site composé d'une simple page permettra aux invités de présenter notre union et de leur fournir un formulaire de présence.</p>
+## Further help
 
-## Objectif:
-- Page d'accueil 
-- Programme du mariage
-- Formulaire des invités
-- Galerie de photos
-
-### Run
-
-```bash
-npm start
-
-# local network devices
-ng serve -o --host 192.168.0.17
- ```
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

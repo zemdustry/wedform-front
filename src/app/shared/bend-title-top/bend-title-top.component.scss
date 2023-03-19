@@ -1,0 +1,169 @@
+@import "variables.scss";
+span {
+  font-family: $heading-font;
+}
+
+.warp {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  left: -200px;
+  top: 0px;
+  color: $secondary-gold-color;
+  font-size: 3rem;
+  text-align: center;
+}
+
+[class*='warp__'] {
+  display: block;
+  position: absolute;
+  left: 50%; /* center the child elements horizontally */
+  transform: translateX(-50%);
+}
+
+.warp__0 {
+  transform-origin: 50% 44px;
+  transform: translate(6px,97.14949999999999px) rotate(-0.877589rad);
+}
+
+.warp__1 {
+  transform-origin: 50% 44px;
+  transform: translate(36px,70.7835px) rotate(-0.694386rad);
+}
+
+.warp__2 {
+  transform-origin: 50% 44px;
+  transform: translate(66px,49.965199999999996px) rotate(-0.51477rad);
+}
+
+.warp__3 {
+  transform-origin: 50% 44px;
+  transform: translate(96px,35.210800000000006px) rotate(-0.35325rad);
+}
+
+.warp__4 {
+  transform-origin: 50% 44px;
+  transform: translate(126px,25.501000000000005px) rotate(-0.20949rad);
+}
+
+.warp__5 {
+  transform-origin: 50% 44px;
+  transform: translate(156px,20.826099999999997px) rotate(-0.101382rad);
+}
+
+.warp__6 {
+  transform-origin: 50% 44px;
+  transform: translate(186px,19.200000000000003px) rotate(0.009117rad);
+}
+
+.warp__7 {
+  transform-origin: 50% 44px;
+  transform: translate(224px,22.2106px) rotate(0.150523rad);
+}
+
+.warp__8 {
+  transform-origin: 50% 44px;
+  transform: translate(246px,29.738px) rotate(0.292539rad);
+}
+
+.warp__9 {
+  transform-origin: 50% 44px;
+  transform: translate(276px,43.479299999999995px) rotate(0.459086rad);
+}
+
+.warp__10 {
+  transform-origin: 50% 44px;
+  transform: translate(306px,63.9744px) rotate(0.637708rad);
+}
+
+.warp__11 {
+  transform-origin: 50% 44px;
+  transform: translate(336px,84.85730000000001px) rotate(0.779664rad);
+}
+
+.warp__12 {
+  transform-origin: 50% 44px;
+  transform: translate(356px,108.3451px) rotate(0.911728rad);
+}
+
+
+@media only screen and (max-width: 1024px) {
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 425px) {
+  .warp {
+    font-size: 2.5rem;
+
+  }
+
+  .warp__0 {
+    transform-origin: 50% 44px;
+    transform: translate(80px,90.14949999999999px) rotate(-0.907589rad);
+  }
+
+  .warp__1 {
+    transform-origin: 50% 44px;
+    transform: translate(95px,70.7835px) rotate(-0.694386rad);
+  }
+
+  .warp__2 {
+    transform-origin: 50% 44px;
+    transform: translate(110px,55.965199999999996px) rotate(-0.51477rad);
+  }
+
+  .warp__3 {
+    transform-origin: 50% 44px;
+    transform: translate(128px,42.210800000000006px) rotate(-0.35325rad);
+  }
+
+  .warp__4 {
+    transform-origin: 50% 44px;
+    transform: translate(140,25.501000000000005px) rotate(-0.20949rad);
+  }
+
+  .warp__5 {
+    transform-origin: 50% 44px;
+    transform: translate(170px,25.826099999999997px) rotate(-0.101382rad);
+  }
+
+  .warp__6 {
+    transform-origin: 50% 44px;
+    transform: translate(190px,25.200000000000003px) rotate(0.009117rad);
+  }
+
+  .warp__7 {
+    transform-origin: 50% 44px;
+    transform: translate(212px,25.2106px) rotate(0.150523rad);
+  }
+
+  .warp__8 {
+    transform-origin: 50% 44px;
+    transform: translate(210px,29.738px) rotate(0.292539rad);
+  }
+
+  .warp__9 {
+    transform-origin: 50% 44px;
+    transform: translate(250px,43.479299999999995px) rotate(0.459086rad);
+  }
+
+  .warp__10 {
+    transform-origin: 50% 44px;
+    transform: translate(270px,55.9744px) rotate(0.627708rad);
+  }
+
+  .warp__11 {
+    transform-origin: 50% 44px;
+    transform: translate(285px,68.85730000000001px) rotate(0.909664rad);
+  }
+
+  .warp__12 {
+    transform-origin: 50% 44px;
+    transform: translate(295px,85.3451px) rotate(0.911728rad);
+  }
+}
