@@ -9,6 +9,7 @@ public class MusicStyles {
     private boolean musicLatino;
     private boolean musicPopRock;
     private boolean musicRap;
+    private boolean musicKpop;
     private boolean musicVpop;
 
     public boolean isMusicDanceElectro() {
@@ -73,6 +74,14 @@ public class MusicStyles {
 
     public void setMusicRap(boolean musicRap) {
         this.musicRap = musicRap;
+    }
+
+    public boolean isMusicKpop() {
+        return musicKpop;
+    }
+
+    public void setMusicKpop(boolean musicKpop) {
+        this.musicKpop = musicKpop;
     }
 
     public boolean isMusicVpop() {

@@ -1,5 +1,6 @@
 import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { Component, Input, SimpleChanges } from '@angular/core';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-countdown-custom',
@@ -25,7 +26,7 @@ import { Component, Input, SimpleChanges } from '@angular/core';
     ]),
     trigger('flipBottom', [
       transition('* => *', [
-        animate('500ms 900ms cubic-bezier(.15,.45,.28,1)',
+        animate('500ms 900ms cubic-bezier(.17,.67,.2,1.12)',
           keyframes([
             style({
               transformOrigin: 'center top',
@@ -43,27 +44,39 @@ import { Component, Input, SimpleChanges } from '@angular/core';
           ])
         )
       ])
+    ]),
+    trigger("flip",[
+      transition('*=>*',[
+      animate(".7s",keyframes([
+        style({transform:"rotateX(0deg)",offset: 0}),
+        style({transform:"rotateX(-90deg)",offset: .5}),
+        style({transform:"rotateX(-180deg)",offset: 1}),
+      ]))
     ])
+  ])
   ]
 })
 
 export class CustomCountdownComponent {
 
   @Input()
-  public unit : string;
-  public lastUnit: string;
+  public value : number;
+  public currentValue: number;
+  public lastValue: number;
+
 
   constructor() {
-    this.unit = '0';
-    this.lastUnit = '0';
+    this.value = 0;
+    this.currentValue = 0;
+    this.lastValue = 0;
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.lastUnit = this.unit;
-    this.unit = this.transformTime(changes["unit"].currentValue);
+    this.lastValue = this.currentValue;
+    this.currentValue = this.value;
   }
 
-  private transformTime(time: number) : string {
+  public transformTime(time: number) : string {
     if (time < 10) {
       return String('0' + time);
     }
