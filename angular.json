@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webForm": {
+    "wedForm": {
       "i18n": {
         "sourceLocale": "fr",
         "locales": {
@@ -29,7 +29,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": ["fr"],
-            "outputPath": "dist/web-form",
+            "outputPath": "dist/wed-form",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,22 +75,22 @@
             },
             "fr": {
               "localize": ["fr"],
-              "outputPath": "dist/web-form/fr",
+              "outputPath": "dist/wed-form/fr",
               "i18nMissingTranslation": "error"
             },
             "en": {
               "localize": ["en"],
-              "outputPath": "dist/web-form/en",
+              "outputPath": "dist/wed-form/en",
               "i18nMissingTranslation": "error"
             },
             "cs": {
               "localize": ["cs"],
-              "outputPath": "dist/web-form/cs",
+              "outputPath": "dist/wed-form/cs",
               "i18nMissingTranslation": "error"
             },
             "vi": {
               "localize": ["vi"],
-              "outputPath": "dist/web-form/vi",
+              "outputPath": "dist/wed-form/vi",
               "i18nMissingTranslation": "error"
             },
             "development": {
@@ -108,22 +108,22 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "webForm:build:production"
+              "browserTarget": "wedForm:build:production"
             },
             "development": {
-              "browserTarget": "webForm:build:development"
+              "browserTarget": "wedForm:build:development"
             },
             "fr": {
-              "browserTarget": "webForm:build:fr"
+              "browserTarget": "wedForm:build:fr"
             },
             "en": {
-              "browserTarget": "webForm:build:en"
+              "browserTarget": "wedForm:build:en"
             },
             "cs": {
-              "browserTarget": "webForm:build:cs"
+              "browserTarget": "wedForm:build:cs"
             },
             "vi": {
-              "browserTarget": "webForm:build:vi"
+              "browserTarget": "wedForm:build:vi"
             }
           },
           "defaultConfiguration": "development"
@@ -131,7 +131,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "webForm:build"
+            "browserTarget": "wedForm:build"
           }
         },
         "test": {

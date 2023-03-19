@@ -1,5 +1,5 @@
 {
-  "name": "web-form",
+  "name": "wed-form",
   "version": "1.0.0",
   "engines": {
     "node": "18.15.0",
@@ -45,10 +45,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.10",
-    "@angular/cli": "^14.2.10",
-    "@angular/compiler-cli": "^14.2.12",
+    "@angular/cli": "^15.2.4",
+    "@angular/compiler-cli": "^14.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
