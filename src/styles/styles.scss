@@ -1,7 +1,5 @@
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
-@import "variables.scss";
+@import 'variables.scss';
+@import 'bootstrap/scss/bootstrap';
 
 html,
 body {

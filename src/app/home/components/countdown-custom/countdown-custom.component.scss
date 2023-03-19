@@ -1,5 +1,4 @@
 @import "variables.scss";
-@import "../../../node_modules/rfs/scss";
 
 
 .flip-clock {
@@ -36,7 +35,6 @@
   font-family: $time-font;
   padding: 0.25em 0.25em;
   border-radius: $borderRadius $borderRadius 0 0;
-  // FIXME
   backface-visibility: hidden;
   transform-style: preserve-3d;
   width: $paletteWidth;
