@@ -1,6 +1,10 @@
 {
   "name": "web-form",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.6.2"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,7 +16,7 @@
   "dependencies": {
     "@angular/animations": "^14.2.12",
     "@angular/cdk": "^14.2.7",
-    "@angular/common": "^14.2.12",
+    "@angular/common": "^14.3.0",
     "@angular/compiler": "^14.2.12",
     "@angular/core": "^14.2.12",
     "@angular/forms": "^14.2.12",
