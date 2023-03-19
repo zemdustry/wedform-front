@@ -14,7 +14,7 @@
 }
 
 .couple-section {
-  height: 52rem;
+  height: 54rem;
   z-index: 10;
   background-color: $white-color;
   padding: 20px 0 18px;
@@ -133,6 +133,9 @@
   .card {
     height: 23rem !important;
   }
+  .couple-section {
+    height: 50rem;
+  }
 }
 
 /* Phone */
@@ -168,6 +171,11 @@
     width: 42%;
   }
 
+
+  .couple-section {
+    height: 45rem;
+  }
+
 }
 
 @media only screen and (max-width: 568px) {
@@ -186,6 +194,11 @@
   .card {
     height: 320px !important;
     width: 40%;
+  }
+
+
+  .couple-section {
+    height: 41rem;
   }
 
 }
@@ -224,5 +237,9 @@
 
   .couple-subtitle {
     font-size: 2.4vw;
+  }
+
+  .couple-section {
+    height: 32rem;
   }
 }

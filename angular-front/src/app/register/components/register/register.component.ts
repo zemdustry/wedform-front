@@ -52,6 +52,7 @@ export class RegisterComponent {
     musicRap: new FormControl(false),
     musicDisco: new FormControl(false),
     musicLatino: new FormControl(false),
+    musicKpop: new FormControl(false),
     musicVpop: new FormControl(false),
     musicEighties: new FormControl(false),
     brunch: new FormControl(null, [Validators.required]),
@@ -295,7 +296,7 @@ export class RegisterComponent {
 
   getMusicStyles(): string {
     const map = new Map();
-    const musicControls = Object.keys(this.guestForm.controls)
+    Object.keys(this.guestForm.controls)
       .filter(controlName => controlName.startsWith('music'))
       .forEach(controlName => {
         map.set(controlName, this.guestForm.controls[controlName].value)
