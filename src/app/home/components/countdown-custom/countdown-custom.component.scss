@@ -37,7 +37,7 @@
   padding: 0.25em 0.25em;
   border-radius: $borderRadius $borderRadius 0 0;
   // FIXME
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   transform-style: preserve-3d;
   width: $paletteWidth;
   transform: translateZ(0);
