@@ -1,1 +1,9 @@
-.vscode
+.project
+.settings/*
+*/.classpath
+*/.settings/*
+.vscode/*
+/node_modules
+.angular/*
+.angular
+/dist/
