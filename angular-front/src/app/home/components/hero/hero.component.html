@@ -1,47 +1,44 @@
 <section class="couple-section">
   <div class="container-fluid">
     <div class="d-flex justify-content-center">
-      <h1>It's a match</h1>
+      <img class="heart-background" src="/assets/images/heart-with-radient.svg" alt="heart">
     </div>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="card husband col-sm-5 col-md-5 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
-          <img src="/assets/images/clement_profil.jpg" alt="clement">
+        <app-bend-title-top></app-bend-title-top>
+        <div class="card husband col-sm-4 col-md-4 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
+          <img class="image-husban" src="/assets/images/clement_profil.jpg" alt="clement">
           <div class="card-info mt-2">
             <div class="d-flex align-items-center justify-content-start">
-              <p class="couple-title">Clément Gibert, {{CBirthDay | agePipe}}</p>
+              <p class="couple-title">Clément Gibert</p>
               <img class="icon-certified" src="/assets/images/certified.svg" alt="certified" />
             </div>
-            <div class="d-flex align-items-start justify-content-start">
+            <div class="d-flex col align-items-start justify-content-start">
               <i class="las la-map-marker"></i>
-              <p class="ml-5">Nîmes, France</p>
+              <p class="couple-subtitle ml-5">Nîmes, France</p>
             </div>
           </div>
         </div>
-        <div class="middle col-1 d-flex flex-column justify-content-end align-items-center">
-          <img class="matcher" src="/assets/images/percentmatcher.svg" alt="certified" />
+        <div class="middle d-flex flex-column justify-content-end align-items-center">
+          <img class="flower" src="/assets/images/flower.png" alt="certified" />
         </div>
-        <div class="card wife col-sm-5 col-md-5 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
-          <img src="/assets/images/huyen_profil.jpg" alt="clement">
+        <div
+          class="card wife col-sm-4 col-md-4 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
+          <img class="image-wife" src="/assets/images/huyen_profil.jpg" alt="clement">
           <div class="card-info mt-2">
             <div class="d-flex align-items-center justify-content-start">
-              <p class="couple-title">Huyen Lethi, {{HBirthDay | agePipe}}</p>
+              <p class="couple-title">Huyen Lethi</p>
               <img class="icon-certified" src="/assets/images/certified.svg" alt="certified" />
             </div>
             <div class="d-flex align-items-start justify-content-start">
               <i class="las la-map-marker"></i>
-              <p class="ml-5">Hanoi, Vietnam</p>
+              <p class="couple-subtitle ml-5">Hanoi, Vietnam</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container d-flex justify-content-center">
-    <div class="welcom-container text-center">
-      <p class="welcom-text">Nous sommes ravis de vous inviter à notre mariage qui aura lieu le <b>7 juin 2023</b>. <br>
-         Nous espérons que vous pourrez être des nôtres pour célébrer avec nous cette journée si spéciale.
-         Merci de faire partie de notre vie et de partager ce moment important avec nous.</p>
+      <app-bend-title-bottom></app-bend-title-bottom>
     </div>
   </div>
 </section>
+<div class="bottom"></div>

@@ -17,12 +17,6 @@
     position: absolute;
     top: 70%;
     left: 64%;
-
-    .subtitle {
-      font-family: $heading-font;
-      @include font-size(1.5vw);
-      color: $secondary-blue-color;
-    }
   }
 
   margin-bottom: 4rem;

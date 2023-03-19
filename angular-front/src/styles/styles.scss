@@ -23,6 +23,12 @@ h6 {
   font-family: $heading-font;
 }
 
+.subtitle {
+  font-family: $heading-font;
+  @include font-size(1.5vw);
+  color: $secondary-blue-color;
+}
+
 .subline-active {
   visibility: visible;
 }
@@ -37,6 +43,7 @@ h6 {
     color: $secondary-gold-color;
   }
 }
+
 
 .heading-sub {
   color: $white-color;
@@ -181,28 +188,4 @@ h6 {
   .light-button {
     font-size: 4vw;
   }
-}
-
-
-//HEART
-
-
-@keyframes beat {
-
-  20%,
-  80% {
-    transform: scale(1.15, 1.15);
-  }
-
-  40%,
-  60%,
-  100% {
-    transform: scale(0.88, 0.90);
-  }
-}
-
-.heart {
-  width: 60px;
-  height: 60px;
-  animation: 1.5s ease 0s infinite beat;
 }

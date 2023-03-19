@@ -4,9 +4,10 @@
 .countdown {
   // background: #1db1e2;
   // background: linear-gradient(0deg, #1db1e2 0%, #40c2cc 35%, #8ee3e9 100%);
+
   background: rgb(29,177,226);
   background: radial-gradient(circle, rgba(29,177,226,1) 0%, rgba(64,194,204,1) 50%, rgba(142,227,233,1) 85%, rgba(186,239,242,1) 100%);
-  padding: 40px 0 10px;
+  padding: 100px 0 10px;
 
   .countdown-title {
     padding: 0 0 5vw 0;

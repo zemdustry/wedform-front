@@ -72,14 +72,8 @@ export class CustomCountdownComponent {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("before")
-    console.log(this.lastValue)
-    console.log(this.currentValue)
     this.lastValue = this.currentValue;
     this.currentValue = this.value;
-    console.log("after")
-    console.log(this.lastValue)
-    console.log(this.currentValue)
   }
 
   public transformTime(time: number) : string {

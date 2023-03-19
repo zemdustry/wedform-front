@@ -1,22 +1,33 @@
 @import "variables.scss";
 @import "../../../node_modules/rfs/scss";
 
-.couple-section {
-  height: 60rem;
+.bottom {
+  position: absolute;
+  //TODO
+  height: 5rem;
+  width: 100%;
   background-color: $white-color;
-  padding: 0 0 10px;
-  background-image: url('/assets/images/heart-background.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 55rem 45rem;
+  border-bottom-left-radius: 50% 50px;
+  border-bottom-right-radius: 50% 50px;
+  box-shadow: 0 -5px 5px -5px $white-color;
+  z-index: 20;
+}
+
+.couple-section {
+  height: 52rem;
+  z-index: 10;
+  background-color: $white-color;
+  padding: 20px 0 18px;
+  box-shadow: 10px 10px 1px 0px $white-color;
+  border: none;
 
   .middle {
+    width: 55px;
     position: relative;
-    .matcher {
+    .flower {
       position: absolute;
-      top: 77%;
       z-index: 99;
-      width: 6rem;
+      margin-right: 22px;
     }
   }
 
@@ -26,17 +37,17 @@
     background: rgb(47, 128, 237);
     background: linear-gradient(160deg, rgba(47, 128, 237, 1) 5%, rgba(141, 240, 229, 1) 85%);
     padding: 0 0 10px 0;
-    margin-top: 280px;
+    height: 26rem;
 
-    img {
+    .image-husban, .image-wife {
       width: 100%;
-      height: 100%;
-      height: 320px;
+      height: 85%;
       border-top-left-radius: 1.4rem;
       border-top-right-radius: 1.4rem;
     }
 
     .card-info {
+      height: 15%;
       width: 80%;
       color: $dark-color;
 
@@ -90,128 +101,128 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
-
-  .couple-section .middle .matcher {
-    top: 72%;
-    width: 7.5rem;
-  }
+.subtitle {
+  margin-top: 80px;
+  color: $primary-gold-color;
+  z-index: 1;
 }
 
-@media only screen and (max-width: 1440px) {
-  .couple-section .middle .matcher {
-    top: 75%;
-    width: 6.5rem;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
+.heart-background {
+  position: absolute;
+  height: 52rem;
+  width: 56rem;
 }
 
 /* Tablette */
+@media only screen and (min-width: 1024px) {
+  .couple-section .middle .flower {
+    top: 68%;
+    width: 12rem;
+  }
+
+}
+
+
+
 @media only screen and (max-width: 1024px) {
-  .couple-section .middle .matcher {
-    top: 78%;
-    width: 5.5rem;
+  .heart-background {
+    margin-top: 80px;
+    height: 44rem;
+    width: 46rem;
+  }
+  .card {
+    height: 23rem !important;
   }
 }
 
 /* Phone */
-@media only screen and (max-width: 768px) {
-  .couple-section .middle .matcher {
-    top: 85%;
-    width: 4rem;
+@media only screen and (min-width: 768px) {
+  .couple-section .middle .flower {
+    top: 68%;
+    width: 12rem;
   }
+
+  .card {
+    height: 20rem;
+  }
+
 }
 
+
+@media only screen and (max-width: 768px) {
+  .couple-section .middle .flower {
+    margin-left: 14px;
+    top: 70%;
+    width: 10rem;
+  }
+
+
+  .heart-background {
+    position: absolute;
+    height: 38rem;
+    width: 100vw;
+  }
+
+  .card {
+    height: 20rem;
+    width: 42%;
+  }
+
+}
+
+@media only screen and (max-width: 568px) {
+  .couple-section {
+    max-width: 100%;
+  }
+
+  .couple-section .middle .flower {
+    top: 78%;
+    width: 8rem;
+  }
+
+  .middle {
+    width: 1vw !important;
+  }
+  .card {
+    height: 320px !important;
+    width: 40%;
+  }
+
+}
 @media only screen and (max-width: 425px) {
 
-}
+  .heart-background {
+    margin-top: 0;
+  }
 
+  .couple-section {
+    max-width: 100%;
+  }
 
-// TITLE
+  .couple-section .middle .flower {
+    top: 70%;
+    width: 6rem;
+  }
 
-.warp__placeholder{
-  position: absolute;
-  color: transparent;
-}
+  .card {
+    height: 200px !important;
+    width: 40%;
+  }
 
-span {
-  font-family: $heading-font;
-}
+  .couple-title {
+    font-size: 2.4vw !important;
+  }
 
-.warp {
-  display: block;
-  position: relative;
-  width: 620px;
-  height: 250px;
+  .icon-certified {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .las {
+    margin-right: 2px !important;
+    font-size: 2vw !important;
+  }
 
-  color: $secondary-gold-color;
-  font-size: 100px;
-  margin-bottom: 40px;
-}
-
-[class*='warp__'] {
-  display: block;
-  position: absolute;
-}
-
-.warp__0 {
-  transform-origin: 50% 75px;
-  transform: translate(83.7303px,126.4485px) rotate(-0.853294rad);
-}
-
-.warp__1 {
-  transform-origin: 50% 75px;
-  transform: translate(97.5844px,103.9974px) rotate(-0.743744rad);
-}
-
-.warp__2 {
-  transform-origin: 50% 75px;
-  transform: translate(130.4418px,86.23249999999999px) rotate(-0.643516rad);
-}
-
-.warp__3 {
-  transform-origin: 50% 75px;
-  transform: translate(141.986px,69.52440000000001px) rotate(-0.532958rad);
-}
-
-.warp__4 {
-  transform-origin: 50% 75px;
-  transform: translate(181.3856px,49.9846px) rotate(-0.36863rad);
-}
-
-.warp__5 {
-  transform-origin: 50% 75px;
-  transform: translate(225.04px,36.7338px) rotate(-0.204263rad);
-}
-
-.warp__6 {
-  transform-origin: 50% 90px;
-  transform: translate(272.9394px,30.7359px) rotate(-0.055712rad);
-}
-
-.warp__7 {
-  transform-origin: 50% 90px;
-  transform: translate(320.0136px,33.122600000000006px) rotate(0.126482rad);
-}
-
-.warp__8 {
-  transform-origin: 50% 90px;
-  transform: translate(403.4px,48.45px) rotate(0.345555rad);
-}
-
-.warp__9 {
-  transform-origin: 50% 90px;
-  transform: translate(447.7283px,66.61170000000001px) rotate(0.512484rad);
-}
-
-.warp__10 {
-  transform-origin: 50% 90px;
-  transform: translate(479.4104px,91.7963px) rotate(0.691383rad);
-}
-
-.warp__11 {
-  transform-origin: 50% 90px;
-  transform: translate(513.0503px,128.5664px) rotate(0.894623rad);
+  .couple-subtitle {
+    font-size: 2.4vw;
+  }
 }
