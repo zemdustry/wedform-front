@@ -45,11 +45,23 @@ export class CountdownGroupComponent implements OnDestroy {
   private allocateTimeUnits() {
     this.secondsToDday = Math.floor((this.timeDifference / this.milliSecondsInASecond) % this.SecondsInAMinute)
       .toString();
-    this.minutesToDday = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour)) % this.SecondsInAMinute)
-     .toString();
-    this.hoursToDday = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute)) % this.hoursInADay)
+
+      const currentMinutesToDay = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour)) % this.SecondsInAMinute)
       .toString();
-    this.daysToDday = Math.floor(this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay))
+      if (currentMinutesToDay != this.minutesToDday) {
+        this.minutesToDday = currentMinutesToDay;
+      }
+
+      const currentHoursToDday = Math.floor((this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute)) % this.hoursInADay)
       .toString();
+      if (currentHoursToDday != this.hoursToDday) {
+        this.hoursToDday = currentHoursToDday;
+      }
+
+      const currentDaysToDday = Math.floor(this.timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour * this.SecondsInAMinute * this.hoursInADay))
+      .toString();
+      if (currentDaysToDday != this.daysToDday) {
+        this.daysToDday = currentDaysToDday;
+      }
   }
 }

@@ -1,10 +1,10 @@
 <div class="flip-clock-element">
   <div class="flip-element">
     <div class="palette">
-      <b class="palette-top text-center" [@flipTop]="value">{{value}}</b>
+      <b class="palette-top text-center" [@flipTop]="value">{{currentValue}}</b>
       <b class="palette-bottom text-center" [attr.data]="lastValue"></b>
       <b class="palette-back text-center" [attr.data]="lastValue">
-        <b class="palette-bottom text-center" [@flipBottom]="value" [attr.data]="value">
+        <b class="palette-bottom text-center" [@flipBottom]="currentValue" [attr.data]="currentValue">
         </b>
       </b>
     </div>

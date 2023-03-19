@@ -14,7 +14,7 @@
 }
 
 .couple-section {
-  height: 54rem;
+  height: 64rem;
   z-index: 10;
   background-color: $white-color;
   padding: 20px 0 18px;
@@ -94,11 +94,12 @@
   .welcom-container {
     width: 60%;
     margin-top: 10rem;
-
-    .welcom-text {
-      font-size: calc(16px + 2*(100vw - 420px) / 860);
-    }
   }
+}
+
+.welcome-text {
+  font-size: calc(20px + 2*(100vw - 420px) / 860) !important;
+
 }
 
 .subtitle {
@@ -113,13 +114,11 @@
   width: 56rem;
 }
 
-/* Tablette */
 @media only screen and (min-width: 1024px) {
   .couple-section .middle .flower {
     top: 68%;
     width: 12rem;
   }
-
 }
 
 
@@ -134,7 +133,7 @@
     height: 23rem !important;
   }
   .couple-section {
-    height: 50rem;
+    height: 62rem;
   }
 }
 
@@ -173,7 +172,12 @@
 
 
   .couple-section {
-    height: 45rem;
+    height: 62rem;
+  }
+
+  .welcome-text {
+    padding: 20px;
+    margin-top: 0 !important;
   }
 
 }
@@ -181,6 +185,7 @@
 @media only screen and (max-width: 568px) {
   .couple-section {
     max-width: 100%;
+    height: 62rem;
   }
 
   .couple-section .middle .flower {
@@ -196,13 +201,16 @@
     width: 40%;
   }
 
-
-  .couple-section {
-    height: 41rem;
+  .welcome-text {
+    padding: 20px;
+    margin-top: 0 !important;
   }
-
 }
 @media only screen and (max-width: 425px) {
+
+  .couple-section {
+    height: 54rem;
+  }
 
   .heart-background {
     margin-top: 0;
@@ -239,7 +247,8 @@
     font-size: 2.4vw;
   }
 
-  .couple-section {
-    height: 32rem;
+  .welcome-text {
+    padding: 20px;
+    margin-top: 0 !important;
   }
 }

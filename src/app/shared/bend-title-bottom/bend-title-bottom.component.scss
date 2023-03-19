@@ -71,3 +71,10 @@ span {
   transform-origin: 50% 44px;
   transform: translate(230px,192.9226px) rotate(-0.44481rad);
 }
+
+
+@media only screen and (max-width: 568px) {
+  .warp-date {
+    top:-120px;
+  }
+}
