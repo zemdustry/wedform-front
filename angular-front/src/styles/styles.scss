@@ -23,10 +23,10 @@ h6 {
   font-family: $heading-font;
 }
 
-
-.main-container {
-  //TODO min height to fix
-  min-height: 90rem;
+.subtitle {
+  font-family: $heading-font;
+  @include font-size(1.5vw);
+  color: $secondary-blue-color;
 }
 
 .subline-active {
@@ -35,7 +35,7 @@ h6 {
 
 .section-heading {
   width: 100%;
-  @include font-size(7vw);
+  @include font-size(5.5vw);
   color: $white-color;
   padding: 1rem 0 1rem 0;
 
@@ -43,6 +43,7 @@ h6 {
     color: $secondary-gold-color;
   }
 }
+
 
 .heading-sub {
   color: $white-color;
@@ -98,7 +99,7 @@ h6 {
   background-color: $white-color;
   border: 0;
   border-radius: 80px !important;
-  margin: 2vw;
+  margin: 3vw;
 
   &.gold {
     background-color: $primary-gold-color;
@@ -148,7 +149,7 @@ h6 {
 
   .light-button {
     font-size: 1.5vw;
-    padding: 0.6vw 2vw;
+    padding: 0.5vw 1.8vw;
   }
 }
 
@@ -167,13 +168,13 @@ h6 {
 
   .light-button {
     font-size: 3vw;
-    padding: 1.4vw 2.8vw;
+    padding: 1vw 2.8vw;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .section-heading {
-    @include font-size(6vw);
+    @include font-size(8vw);
 
     &:before {
       margin-right: 0.5rem;
@@ -187,28 +188,4 @@ h6 {
   .light-button {
     font-size: 4vw;
   }
-}
-
-
-//HEART
-
-
-@keyframes beat {
-
-  20%,
-  80% {
-    transform: scale(1.15, 1.15);
-  }
-
-  40%,
-  60%,
-  100% {
-    transform: scale(0.88, 0.90);
-  }
-}
-
-.heart {
-  width: 60px;
-  height: 60px;
-  animation: 1.5s ease 0s infinite beat;
 }

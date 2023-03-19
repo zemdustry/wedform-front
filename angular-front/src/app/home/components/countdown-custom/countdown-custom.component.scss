@@ -42,7 +42,7 @@
   width: $paletteWidth;
   transform: translateZ(0);
   background: $white-color;
-  box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-dark-1,
+  box-shadow: inset 20px 20px 60px $white-color,
     inset -20px -20px 60px $third-secondary-blue-shadow-dark-2;
 }
 
@@ -60,7 +60,7 @@
   pointer-events: none;
   overflow: hidden;
   background: $white-color;
-  box-shadow: inset 20px 20px 60px $secondary-blue-shadow-1,
+  box-shadow: inset 20px 20px 60px $mat-white-color,
     inset -20px -20px 60px $secondary-blue-shadow-2;
   border-bottom: solid 3px $third-secondary-blue-color;
 }
@@ -87,11 +87,6 @@
   position: relative;
   z-index: -1;
   overflow: hidden;
-}
-
-.clock-unit {
-  font-size: 4vh;
-  color: $white-color;
 }
 
 .flip-element {
@@ -167,4 +162,68 @@
   .flip-element {
     border-radius: 6vw;
   }
+}
+
+
+
+.flip {
+  position: relative;
+  height: 60px;
+  width: 45px;
+}
+.up,
+.down {
+  text-align: center;
+  height: 30px;
+  overflow: hidden;
+}
+.up > div,
+.down > div {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 60px;
+  align-self: center;
+}
+.down > div > div {
+  margin-top: -30px;
+}
+
+.flip-card {
+  perspective: 300px;
+  position: relative;
+  height: 30px;
+  width: 45px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  -ms-transform-origin: 50% 100%; /* IE 9 */
+  transform-origin: 50% 100%; /* IE 9 */
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.flip-card-front,.up {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back,.down {
+  background-color: #2980b9;
+  color: black;
+}
+.flip-card-back {
+  transform: rotateX(180deg);
 }

@@ -11,6 +11,7 @@ import org.hibernate.annotations.Type;
 import org.hibernate.type.SqlTypes;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -89,6 +90,9 @@ public class Guest implements Serializable {
 
     @Column(name = "comment", nullable = true, columnDefinition = "TEXT")
     private String comment;
+
+    @Column(name = "register_date")
+    private Instant registerDate = Instant.now();
 
     public Long getGuestId() {
         return guestId;

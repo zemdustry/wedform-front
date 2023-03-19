@@ -2,11 +2,10 @@
   <div class="form-container p-5">
 
     <div class="form-presentation text-center">
-      <h1 i18n>Dear guest</h1>
-      <p i18n>We would be honored by your presence and look forward to see you there.<br>
-        Kindly RSVP to let us know if you will be able to attend. <br>
-        Your response will help us ensure that the event is a success. <br>
-        <b>Thank you!</b>
+      <h1 i18n>Dear Family and Friends</h1>
+      <p i18n>To help us with the final preparations,<br>
+         kindly please RSVP by <b>31st of match would</b> to let us know if you will be able to attend.<br>
+        Your response will be greatly appreciated.
       </p>
     </div>
 
@@ -108,10 +107,10 @@
             <label for="guest-arrival" i18n>When will you be arriving in the area ?</label>
             <select id="guest-arrival" class="form-select" formControlName="arrival"
               [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['arrival'].errors }">
-              <option ngValue="already" i18n>I am already in the area</option>
-              <option ngValue="17" i18n>The D-Day, Saturday 17th of June</option>
-              <option ngValue="16" i18n>The Friday 16th of June</option>
-              <option ngValue="before" i18n>Few days before</option>
+              <option ngValue="already" i18n>I am from the area</option>
+              <option ngValue="17" i18n>On the D-Day, 17th of June</option>
+              <option ngValue="16" i18n>On Friday, 16th of June</option>
+              <option ngValue="before" i18n>Few days before the event</option>
               <option ngValue="idk" i18n>I don't know yet</option>
             </select>
           </div>
@@ -147,15 +146,15 @@
             <label for="guest-event" i18n>Which events will you attend ?</label>
             <select id="guest-event" class="form-select" formControlName="event"
               [ngClass]="{ 'is-invalid': isSubmitted && guestForm.controls['event'].errors }">
-              <option ngValue="morning" i18n>Only morning Ceremony in the City Hall of Le Grau du Roi which starts at
-                11am</option>
-              <option ngValue="afternoon" i18n>Only afternoon Ceremony in the Mas de la Montille – Aigues Morte which
-                starts at 2pm</option>
-              <option ngValue="boat" i18n>Only reception on the Canal Boat which starts at 6pm</option>
-              <option ngValue="morning,afternoon" i18n>Both Ceremonies only</option>
-              <option ngValue="morning,boat" i18n>Morning Ceremony and boat</option>
-              <option ngValue="afternoon,boat" i18n>Afternoon Ceremony and Reception boat</option>
-              <option ngValue="morning,afternoon,boat" i18n>All events 🎉</option>
+              <option ngValue="morning" i18n>Only morning Ceremony in the <b>City Hall of Le Grau du Roi</b> which begins at
+                10:45am</option>
+              <option ngValue="afternoon" i18n>Only afternoon Ceremony in the <b>Mas de la Montille – Aigues Mortes</b> which
+                begins at 2pm</option>
+              <option ngValue="boat" i18n>Only reception on the <b>Canal Boat at Aigue Mortes</b> which begins at 6pm</option>
+              <option ngValue="morning,afternoon" i18n>Both Ceremonies</option>
+              <option ngValue="morning,boat" i18n>Morning Ceremony and Reception Boat</option>
+              <option ngValue="afternoon,boat" i18n>Afternoon Ceremony and Reception Boat</option>
+              <option ngValue="morning,afternoon,boat" i18n>All three events</option>
             </select>
           </div>
 
@@ -179,7 +178,7 @@
           </div>
 
           <div class="p-1">
-            <label for="guest-music-style" i18n>Which style of music do you prefer ?</label>
+            <label for="guest-music-style" i18n>What kind of music do you like 🎵?</label>
             <div id="guest-music-style" class="guest-music-style">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="music-general" formControlName="musicGeneral">
@@ -215,6 +214,10 @@
                 <label class="form-check-label" for="music-v-pop" i18n>V-Pop</label>
               </div>
               <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="music-k-pop" formControlName="musicKpop">
+                <label class="form-check-label" for="music-k-pop" i18n>K-Pop</label>
+              </div>
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="music-eighties" formControlName="musicEighties">
                 <label class="form-check-label" for="music-eighties" i18n>80s</label>
               </div>
@@ -222,7 +225,7 @@
           </div>
 
           <div class="p-1">
-            <label for="guest-song" i18n>Do you have any song recommandation ?</label>
+            <label for="guest-song" i18n>Do you have any song recommandations ?</label>
             <div class="d-flex flex-row justify-content-center align-items-center">
               <input id="guest-song" class="form-control" formControlName="song" type="textbox" maxlength="100"
                 [ngClass]="{ 'is-invalid': isSubmitted &&  (guestForm.controls['song'].errors || songError) }">
@@ -251,7 +254,7 @@
           </div>
 
           <div class="p-1">
-            <label for="guest-comment" i18n>Do you have any additional comments or suggestions ?</label>
+            <label for="guest-comment" i18n>Do you have any additional comments or suggestions ? <br>(Anything that you are worried about...) </label>
             <textarea id="guest-comment" class="form-control" formControlName="comment" maxlength="280" rows="5"
               [ngClass]="{ 'is-invalid': isSubmitted &&  guestForm.controls['comment'].errors }"></textarea>
           </div>

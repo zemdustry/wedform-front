@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
@@ -29,7 +29,6 @@ export class CountdownGroupComponent implements OnDestroy {
 
     this.subscription = interval(1000).subscribe((x) => {
       this.getTimeDifference();
-      console.log(this.daysToDday)
     });
   }
 

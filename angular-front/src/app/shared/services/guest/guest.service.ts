@@ -14,7 +14,7 @@ export class GuestService {
   constructor(private http: HttpClient) { }
 
   public addGuestCompletion(guest: Guest): Observable<Guest> {
-    console.log(environment.apiUrl);
+    console.log(guest)
     return this.http.post<Guest>(`${environment.apiUrl}/${this.basePath}`, guest);
   }
 }

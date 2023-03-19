@@ -51,6 +51,7 @@ SET search_path TO wedapp;
 		music_styles jsonb NOT NULL,
 		brunch BOOLEAN,
 		comment TEXT,
+		register_date TIMESTAMP,
 		CONSTRAINT fk_phone_id FOREIGN KEY(phone_id) REFERENCES wedapp.phones(phone_id)
 		);
 
