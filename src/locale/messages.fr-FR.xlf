@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="fr" datatype="plaintext" original="ng2.template">
+  <file source-language="fr-FR" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
@@ -253,63 +253,84 @@
         </context-group>
       </trans-unit>
       <trans-unit id="1308580816012344183" datatype="html">
-        <source>Celebrating Our Love</source>
+        <source>Célébrons Notre Amour</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8072824855484846960" datatype="html">
-        <source> Days </source>
+        <source>Jours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">12,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="382638704914738895" datatype="html">
-        <source> Hours </source>
+        <source>Heures</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">20,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7952303717918806517" datatype="html">
-        <source> Minutes </source>
+        <source>Minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">28,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2666945421568002246" datatype="html">
-        <source> Seconds </source>
+        <source> Secondes </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7504575185985899009" datatype="html">
-        <source> RSVP </source>
+        <source> INVITATION </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">42,44</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2179450090228383781" datatype="html">
+        <source>Nous serions honorés si vous pouviez vous joindre à nous pour célébrer notre mariage.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/hero/hero.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        </trans-unit>
+        <trans-unit id="9889675731041766" datatype="html">
+        <source>Veuillez sauvegarder la date et confirmer votre présence sur notre site web de mariage.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/hero/hero.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5070013118319383058" datatype="html">
+        <source>Nous avons hâte de partager cette journée spéciale avec vous.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/hero/hero.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8485092479320244252" datatype="html">
-        <source>Dear Family and Friends</source>
+        <source>Chèr(e)s famille et Ami(e)s</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6846544474571646565" datatype="html">
-        <source>To help us with the final preparations,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> kindly please RSVP by <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>31st of march<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> to let us know if you will be able to attend.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Your response will be greatly appreciated. </source>
+        <source>Pour nous aider dans les préparatifs finaux,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> veuillez s'il vous plaît confirmer votre présence avant le <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>31 mars 2023<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Votre réponse sera très appréciée. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">6,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7658402240953727096" datatype="html">
-        <source>Name:</source>
+        <source>Nom:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">16</context>
@@ -324,7 +345,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5966006824638961469" datatype="html">
-        <source>Surname:</source>
+        <source>Nom de famille:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">21</context>
@@ -335,7 +356,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4378227938065070603" datatype="html">
-        <source>Phone:</source>
+        <source>Téléphone:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">28</context>
@@ -349,14 +370,14 @@
         </context-group>
       </trans-unit>
       <trans-unit id="25712579369283593" datatype="html">
-        <source>Will you be attending our wedding on the <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>17th of June 2023<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> ?</source>
+        <source>Seras-tu présent(e) à notre mariage le <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>17 juin 2023<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2807800733729323332" datatype="html">
-        <source>Yes</source>
+        <source>Oui</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">51</context>
@@ -375,7 +396,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3542042671420335679" datatype="html">
-        <source>No</source>
+        <source>Non</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">52</context>
@@ -394,14 +415,14 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2939262564808809726" datatype="html">
-        <source>Maybe...</source>
+        <source>Peut être...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8190051760784398357" datatype="html">
-        <source>Adults with you:</source>
+        <source>Adulte(s) qui t'accompagne(nt):</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">59</context>
@@ -415,14 +436,14 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2276125596718445443" datatype="html">
-        <source>Children:</source>
+        <source>Enfants:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1159797058951735903" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Child <x id="INTERPOLATION" equiv-text="{{index + 1}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Enfant <x id="INTERPOLATION" equiv-text="{{index + 1}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">90</context>
@@ -436,42 +457,42 @@
         </context-group>
       </trans-unit>
       <trans-unit id="7888439673664993739" datatype="html">
-        <source>When will you be arriving in the area ?</source>
+        <source>Quand arriveras-tu dans la région ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4395579362252331986" datatype="html">
-        <source>I am from the area</source>
+        <source>Je suis de la région</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4242339116170857148" datatype="html">
-        <source>On the D-Day, 17th of June</source>
+        <source>Le jour J, le 17 juin</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5977133332665443477" datatype="html">
-        <source>On Friday, 16th of June</source>
+        <source>Vendredi, le 16 juin</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4596724244273600092" datatype="html">
-        <source>Few days before the event</source>
+        <source>Quelques jours avant l'événement</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="992437671262209396" datatype="html">
-        <source>I don&apos;t know yet</source>
+        <source>Je ne sais pas encore</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">114</context>
@@ -482,126 +503,126 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3774629145969023265" datatype="html">
-        <source>How do you come to the event on the wedding day ?</source>
+        <source>Comment viendras-tu à l'événement le jour de notre mariage ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="511631437668607232" datatype="html">
-        <source>By car</source>
+        <source>En voiture</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">122</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7215339968309520870" datatype="html">
-        <source>By taxi</source>
+        <source>En taxi</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8484488240837147743" datatype="html">
-        <source>By train</source>
+        <source>En train</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="320336014573178615" datatype="html">
-        <source>Would you be willing to carpool with other guests ?</source>
+        <source>Voudrais-tu faire du covoiturage avec d'autres invités ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4637074295040232024" datatype="html">
-        <source>Which city are you arriving from ?</source>
+        <source>De quelle ville arriveras-tu ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8982618325649875257" datatype="html">
-        <source>Which events will you attend ?</source>
+        <source>À quels événements vas-tu participer ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">146</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8537538438841513356" datatype="html">
-        <source>Only morning Ceremony in the <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>City Hall of Le Grau du Roi<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> which begins at 10:45am</source>
+        <source>Uniquement à la cérémonie civile à la <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>mairie du Grau du Roi<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> qui commence à 10h45</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">149,150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1984717797095630719" datatype="html">
-        <source>Only afternoon Ceremony in the <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Mas de la Montille – Aigues Mortes<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> which begins at 2pm</source>
+        <source>Uniquement à la cérémonie laique au <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Mas de la Montille – Aigues Mortes<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> qui commence à 14h</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">151,152</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8643527329297112146" datatype="html">
-        <source>Only reception on the <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Canal Boat at Aigue Mortes<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> which begins at 6pm</source>
+        <source>Uniquement à la réception, cocktail dinatoire sur la  <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>péniche à Aigues Mortes<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> qui commence à 18h</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">153</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2577641919716609337" datatype="html">
-        <source>Both Ceremonies</source>
+        <source>Aux deux cérémonies</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">154</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3014632973598660675" datatype="html">
-        <source>Morning Ceremony and Reception Boat</source>
+        <source>Cérémonies du matin et à la réception sur la péniche</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">155</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5153880962106745487" datatype="html">
-        <source>Afternoon Ceremony and Reception Boat</source>
+        <source>A la cérémonie de l'après-midi et la réception sur la péniche</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7324304304484126955" datatype="html">
-        <source>All three events</source>
+        <source>Aux trois événements</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">157</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2815704260246380966" datatype="html">
-        <source>Do you or your family members have any dietary restrictions or allergies?</source>
+        <source>Avez-vous ( toi ou quelqu'un de ta famille) des restrictions alimentaires ou des allergies ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">162,163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5581480025141495589" datatype="html">
-        <source>Please specify:</source>
+        <source>Merci de préciser:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8234344515812566829" datatype="html">
-        <source>What kind of music do you like 🎵?</source>
+        <source>Quel genre de musique aimes-tu 🎵 ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">181</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6439365426343089851" datatype="html">
-        <source>General</source>
+        <source>Général</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">185</context>
@@ -664,70 +685,70 @@
         </context-group>
       </trans-unit>
       <trans-unit id="7827061221860411990" datatype="html">
-        <source>80s</source>
+        <source>Années 80</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">222</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5048082824465165094" datatype="html">
-        <source>Do you have any song recommandations ?</source>
+        <source>As-tu des recommandations de chansons ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">228</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2252379977806920606" datatype="html">
-        <source>Are you planning to attend the Sunday’s Brunch ?</source>
+        <source>Seras-tu présent(e) pour le brunch du dimanche ?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">248</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3109760799138815965" datatype="html">
-        <source>Do you have any additional comments or suggestions ? <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>(Anything that you are worried about...) </source>
+        <source>As-tu des commentaires ou des suggestions supplémentaires ?<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>(Tout ce qui t'inquiète..)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">257</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8443012030610155754" datatype="html">
-        <source>Please fill in all required fields.</source>
+        <source>Veuillez remplir tous les champs requis.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">265</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8385464718133564287" datatype="html">
-        <source>dietary details should have 280 characters maximum.</source>
+        <source>les détails de restrictions alimentaires doivent comporter 280 caractères maximum.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">266,267</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5760091858903474198" datatype="html">
-        <source>comment should have 280 characters maximum.</source>
+        <source>Les commentaires doivent comporter 280 caractères maximum.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">268,269</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2664155155534464315" datatype="html">
-        <source>SUBMIT</source>
+        <source>VALIDER</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">271</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2236877205125634440" datatype="html">
-        <source>Get in touch</source>
+        <source>Nous contacter</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2821179408673282599" datatype="html">
-        <source>Home</source>
+        <source>Accueil</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">44</context>
@@ -741,14 +762,14 @@
         </context-group>
       </trans-unit>
       <trans-unit id="8956629690682741547" datatype="html">
-        <source>Registry</source>
+        <source>Inscription</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2181154762165715522" datatype="html">
-        <source>Gallery</source>
+        <source>Galerie</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/footer/footer.component.html</context>
           <context context-type="linenumber">56</context>
@@ -766,6 +787,48 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
           <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="309021515737959804" datatype="html">
+        <source>ACCUEIL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1924346591461694285" datatype="html">
+        <source>DÉTAILS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8240785445135866655" datatype="html">
+        <source>RSVP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2648483735072923838" datatype="html">
+        <source>GALERIE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8057319775708531759" datatype="html">
+        <source>Cette page est en cours de conception</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/maintenance/maintenance/maintenance.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7302112736876851792" datatype="html">
+        <source>Nous travaillons activement dessus</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/maintenance/maintenance/maintenance.component.html</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
     </body>

@@ -74,15 +74,15 @@ export class CustomCountdownComponent {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if(this.isNotSeconds) {
-      setTimeout(() => {
-        this.lastValue = this.currentValue;
-        this.currentValue = this.value;
-      }, 1000);
-    } else {
+    // if(this.isNotSeconds) {
+    //   setTimeout(() => {
+    //     this.lastValue = this.currentValue;
+    //     this.currentValue = this.value;
+    //   }, 1000);
+    // } else {
       this.lastValue = this.currentValue;
       this.currentValue = this.value;
-    }
+    // }
   }
 
   public transformTime(time: number) : string {

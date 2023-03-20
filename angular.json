@@ -5,9 +5,12 @@
   "projects": {
     "wedForm": {
       "i18n": {
-        "sourceLocale": "fr",
+        "sourceLocale": "en",
         "locales": {
-          "en": "src/locale/messages.en.xlf",
+          "fr": "src/locale/messages.fr.xlf",
+          "fr-FR": "src/locale/messages.fr.xlf",
+          "fr-BE": "src/locale/messages.fr.xlf",
+          "fr-CA": "src/locale/messages.fr.xlf",
           "cs": "src/locale/messages.cs.xlf",
           "vi": "src/locale/messages.vi.xlf"
         }
@@ -28,7 +31,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["fr"],
             "outputPath": "dist/wed-form",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -78,6 +80,21 @@
               "outputPath": "dist/wed-form/fr",
               "i18nMissingTranslation": "error"
             },
+            "fr-FR": {
+              "localize": ["fr-FR"],
+              "outputPath": "dist/wed-form/fr",
+              "i18nMissingTranslation": "error"
+            },
+            "fr-BE": {
+              "localize": ["fr-BE"],
+              "outputPath": "dist/wed-form/fr",
+              "i18nMissingTranslation": "error"
+            },
+            "fr-CA": {
+              "localize": ["fr-CA"],
+              "outputPath": "dist/wed-form/fr",
+              "i18nMissingTranslation": "error"
+            },
             "en": {
               "localize": ["en"],
               "outputPath": "dist/wed-form/en",
@@ -114,6 +131,15 @@
               "browserTarget": "wedForm:build:development"
             },
             "fr": {
+              "browserTarget": "wedForm:build:fr"
+            },
+            "fr-FR": {
+              "browserTarget": "wedForm:build:fr"
+            },
+            "fr-BE": {
+              "browserTarget": "wedForm:build:fr"
+            },
+            "fr-CA": {
               "browserTarget": "wedForm:build:fr"
             },
             "en": {

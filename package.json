@@ -12,7 +12,9 @@
     "start:prod": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:fr": "ng build --configuration=fr",
+    "start:en": "ng build --configuration=en"
   },
   "private": true,
   "dependencies": {
@@ -56,6 +58,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ngx-deploy-npm": "^5.2.0",
     "typescript": "~4.8.4"
   }
 }
