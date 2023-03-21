@@ -1,5 +1,6 @@
 ### STAGE 1:BUILD ###
 FROM node:18.15.0-alpine as build-stage
+
 WORKDIR /app
 COPY package*.json ./
 # Copy files from local machine to virtual directory in docker image
@@ -7,8 +8,8 @@ COPY ./ .
 
 #ARG configuration=production
 RUN npm install
-RUN npm run build --configuration production
-
+#RUN npm run build -- --configuration=production
+RUN npm run build -- --configuration=production --localize=true
 
 ### STAGE 2:RUN ###
 FROM nginx:latest

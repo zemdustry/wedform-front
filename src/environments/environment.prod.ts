@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "${API_LINK}"
+  apiUrl: "https://wedform-back.herokuapp.com"
 };
