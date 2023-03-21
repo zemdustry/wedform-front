@@ -3,13 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedForm": {
+    "wedformfront": {
       "i18n": {
         "sourceLocale": "en",
         "locales": {
-          "fr": "src/locale/messages.fr.xlf",
-          "cs": "src/locale/messages.cs.xlf",
-          "vi": "src/locale/messages.vi.xlf"
+          "fr": "src/locale/messages.fr.xlf"
         }
       },
       "projectType": "application",
@@ -29,7 +27,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/wed-form",
+            "outputPath": "dist/wedformfront",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -80,36 +78,9 @@
               ],
               "outputHashing": "all"
             },
-            "fr": {
-              "localize": ["fr"],
-              "outputPath": "dist/wed-form/fr",
-              "i18nMissingTranslation": "error"
-            },
-            "en": {
-              "localize": ["en"],
-              "outputPath": "dist/wed-form/en",
-              "i18nMissingTranslation": "error"
-            },
-            "cs": {
-              "localize": ["cs"],
-              "outputPath": "dist/wed-form/cs",
-              "i18nMissingTranslation": "error"
-            },
-            "vi": {
-              "localize": ["vi"],
-              "outputPath": "dist/wed-form/vi",
-              "i18nMissingTranslation": "error"
-            },
             "development": {
               "buildOptimizer": false,
-              "optimization": {
-                "scripts": true,
-                "styles": {
-                  "minify": true,
-                  "inlineCritical": false
-                },
-                "fonts": true
-              },
+              "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
@@ -122,31 +93,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "wedForm:build:production"
+              "browserTarget": "wedformfront:build:production"
             },
             "development": {
-              "browserTarget": "wedForm:build:development"
+              "browserTarget": "wedformfront:build:development"
             },
             "fr": {
-              "browserTarget": "wedForm:build:fr"
-            },
-            "fr-FR": {
-              "browserTarget": "wedForm:build:fr"
-            },
-            "fr-BE": {
-              "browserTarget": "wedForm:build:fr"
-            },
-            "fr-CA": {
-              "browserTarget": "wedForm:build:fr"
+              "browserTarget": "wedformfront:build:fr"
             },
             "en": {
-              "browserTarget": "wedForm:build:en"
-            },
-            "cs": {
-              "browserTarget": "wedForm:build:cs"
-            },
-            "vi": {
-              "browserTarget": "wedForm:build:vi"
+              "browserTarget": "wedformfront:build:en"
             }
           },
           "defaultConfiguration": "development"
@@ -154,7 +110,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wedForm:build"
+            "browserTarget": "wedformfront:build"
           }
         },
         "test": {

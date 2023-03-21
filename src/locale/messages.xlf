@@ -260,35 +260,35 @@
         </context-group>
       </trans-unit>
       <trans-unit id="8072824855484846960" datatype="html">
-        <source> Days </source>
+        <source>Days</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">12,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="382638704914738895" datatype="html">
-        <source> Hours </source>
+        <source>Hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">20,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7952303717918806517" datatype="html">
-        <source> Minutes </source>
+        <source>Minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">28,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2666945421568002246" datatype="html">
-        <source> Seconds </source>
+        <source>Seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7504575185985899009" datatype="html">
-        <source> RSVP </source>
+        <source>RSVP</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/countdown-group/countdown-group.component.html</context>
           <context context-type="linenumber">42,44</context>
@@ -323,7 +323,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6808882333889218088" datatype="html">
-        <source>To help us with the final preparations,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> kindly please RSVP by <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>31st of march<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> to let us know if you will be able to attend.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Your response will be greatly appreciated. </source>
+        <source>To help us with the final preparations,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> kindly please RSVP by <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>31st of march<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> to let us know if you will be able to attend.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Your response will be greatly appreciated.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">6,9</context>
@@ -464,7 +464,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4395579362252331986" datatype="html">
-        <source>I am from the area</source>
+        <source></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">110</context>
@@ -706,7 +706,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3109760799138815965" datatype="html">
-        <source>Do you have any additional comments or suggestions ? <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>(Anything that you are worried about...) </source>
+        <source>Do you have any additional comments or suggestions ?<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>(Anything that you are worried about...) </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">257</context>
@@ -776,7 +776,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="9052607944529553001" datatype="html">
-        <source>image du logo</source>
+        <source>logo image</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
           <context context-type="linenumber">3</context>
