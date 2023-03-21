@@ -322,7 +322,7 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6846544474571646565" datatype="html">
+      <trans-unit id="6808882333889218088" datatype="html">
         <source>Pour nous aider dans les préparatifs finaux,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> veuillez s'il vous plaît confirmer votre présence avant le <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>31 mars 2023<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Votre réponse sera très appréciée. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="fr" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
@@ -294,6 +294,27 @@
           <context context-type="linenumber">42,44</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2179450090228383781" datatype="html">
+        <source>We would be honored if you could join us to celebrate our wedding day.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/hero/hero.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9889675731041766" datatype="html">
+        <source>Please save the date and RSVP through our wedding website.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/hero/hero.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5070013118319383058" datatype="html">
+        <source>We can&apos;t wait to share this special day with you.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/hero/hero.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8485092479320244252" datatype="html">
         <source>Dear Family and Friends</source>
         <context-group purpose="location">
@@ -301,7 +322,7 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6846544474571646565" datatype="html">
+      <trans-unit id="6808882333889218088" datatype="html">
         <source>To help us with the final preparations,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> kindly please RSVP by <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>31st of march<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> to let us know if you will be able to attend.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Your response will be greatly appreciated. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
@@ -766,6 +787,48 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
           <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="309021515737959804" datatype="html">
+        <source>HOME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1924346591461694285" datatype="html">
+        <source>DETAILS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8240785445135866655" datatype="html">
+        <source>RSVP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2648483735072923838" datatype="html">
+        <source>GALLERY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8057319775708531759" datatype="html">
+        <source>This page is under construction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/maintenance/maintenance/maintenance.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7302112736876851792" datatype="html">
+        <source>We are working on it</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/maintenance/maintenance/maintenance.component.html</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
     </body>

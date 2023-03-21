@@ -8,9 +8,6 @@
         "sourceLocale": "en",
         "locales": {
           "fr": "src/locale/messages.fr.xlf",
-          "fr-FR": "src/locale/messages.fr.xlf",
-          "fr-BE": "src/locale/messages.fr.xlf",
-          "fr-CA": "src/locale/messages.fr.xlf",
           "cs": "src/locale/messages.cs.xlf",
           "vi": "src/locale/messages.vi.xlf"
         }
@@ -31,6 +28,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/wed-form",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -47,14 +45,21 @@
               ]
             },
             "styles": [
-              "src/styles/styles.scss",
-              "src/styles/material.scss",
-              "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "optimization": {
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -80,21 +85,6 @@
               "outputPath": "dist/wed-form/fr",
               "i18nMissingTranslation": "error"
             },
-            "fr-FR": {
-              "localize": ["fr-FR"],
-              "outputPath": "dist/wed-form/fr",
-              "i18nMissingTranslation": "error"
-            },
-            "fr-BE": {
-              "localize": ["fr-BE"],
-              "outputPath": "dist/wed-form/fr",
-              "i18nMissingTranslation": "error"
-            },
-            "fr-CA": {
-              "localize": ["fr-CA"],
-              "outputPath": "dist/wed-form/fr",
-              "i18nMissingTranslation": "error"
-            },
             "en": {
               "localize": ["en"],
               "outputPath": "dist/wed-form/en",
@@ -112,7 +102,14 @@
             },
             "development": {
               "buildOptimizer": false,
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
@@ -172,9 +169,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
-              "src/styles/material.scss",
-              "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }

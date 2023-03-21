@@ -3,7 +3,7 @@
 
 .countdown {
   // background: #1db1e2;
-  // background: linear-gradient(0deg, #1db1e2 0%, #40c2cc 35%, #8ee3e9 100%);
+  // background: linear-gradient(0deg, #1db1e2 0%, #40c2cc 35%, #8ee3e9 100%;
 
   background: rgb(29,177,226);
   background: radial-gradient(circle, rgba(29,177,226,1) 0%, rgba(64,194,204,1) 50%, rgba(142,227,233,1) 85%, rgba(186,239,242,1) 100%);
@@ -43,19 +43,19 @@
 
 @media only screen and (min-width: 2560px) {
   .clock-unit {
-    @include font-size(3rem);
+    font-size:3rem;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .clock-unit {
-    @include font-size(2.8rem);
+    font-size:2.8rem;
   }
 }
 
 @media only screen and (max-width: 1440px) {
   .clock-unit {
-    @include font-size(2rem);
+    font-size:2rem;
   }
 
   .us {
@@ -71,17 +71,17 @@
   }
 
   .section-heading {
-    @include font-size(7vw);
+    font-size:7vw;
   }
 
   .clock-unit {
-    @include font-size(3vw);
+    font-size:3vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .clock-unit {
-    @include font-size(5vw);
+    font-size:5vw;
   }
 
   .countdown-text-stick {
@@ -98,6 +98,6 @@
     top: -17% !important;
   }
   .clock-unit {
-    @include font-size(1.2rem);
+    font-size:1.2rem;
   }
 }

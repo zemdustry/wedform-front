@@ -1,5 +1,4 @@
 @import 'variables.scss';
-@import 'bootstrap/scss/bootstrap';
 
 html,
 body {
@@ -22,12 +21,17 @@ h6 {
 }
 
 
+.main-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 label {
   margin-left: 12px;
 }
 .subtitle {
   font-family: $heading-font;
-  @include font-size(1.5vw);
+  font-size:1.5vw;
   color: $secondary-blue-color;
 }
 
@@ -37,7 +41,7 @@ label {
 
 .section-heading {
   width: 100%;
-  @include font-size(5.5vw);
+  font-size:5.5vw;
   color: $white-color;
   padding: 1rem 0 1rem 0;
 
@@ -157,7 +161,7 @@ label {
 
 @media only screen and (max-width: 768px) {
   .section-heading {
-    @include font-size(8vw);
+    font-size:8vw;
 
     &:before {
       margin-right: 1rem;
@@ -176,7 +180,7 @@ label {
 
 @media only screen and (max-width: 425px) {
   .section-heading {
-    @include font-size(8vw);
+    font-size:8vw;
 
     &:before {
       margin-right: 0.5rem;

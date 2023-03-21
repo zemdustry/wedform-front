@@ -8,7 +8,7 @@
     font-family: $stylish-font;
     letter-spacing: 1px;
     color: $primary-gold-color;
-    @include font-size(13rem);
+    font-size:13rem;
   }
 
   .navbar-subtitle {
@@ -26,7 +26,7 @@
   .link {
     text-decoration: none;
     font-family: $heading-font;
-    @include font-size(2vw);
+    font-size:2vw;
     color: $dark-color;
     letter-spacing: 2px;
 
@@ -68,30 +68,30 @@
 
 @media only screen and (min-width: 1440px) {
   .navbar-title .title {
-    @include font-size(12vw);
+    font-size:12vw;
   }
 }
 
 @media only screen and (max-width: 1440px) {
   .navbar-title .title {
-    @include font-size(12vw);
+    font-size:12vw;
   }
 
   .navbar-links {
     .link {
-      @include font-size(1.8vw);
+      font-size:1.8vw;
     }
   }
 }
 
 @media only screen and (max-width: 1280px) {
   .navbar-title .title {
-    @include font-size(12vw);
+    font-size:12vw;
   }
 
   .navbar-links {
     .link {
-      @include font-size(1.6vw);
+      font-size:1.6vw;
     }
   }
 }
@@ -99,11 +99,11 @@
 /* Tablette */
 @media only screen and (max-width: 1024px) {
   .navbar-title .title {
-    @include font-size(12.5vw);
+    font-size:12.5vw;
   }
   .navbar-links {
     .link {
-      @include font-size(2vw);
+      font-size:2vw;
     }
   }
 }
@@ -112,14 +112,14 @@
 @media only screen and (max-width: 768px) {
   .navbar-title {
     .title {
-      @include font-size(13vw);
+      font-size:13vw;
     }
     .navbar-subtitle {
       top: 66%;
       left: 62%;
       width: 30%;
       .subtitle {
-        @include font-size(2vw);
+        font-size:2vw;
       }
     }
     margin-bottom: 1rem;
@@ -139,7 +139,7 @@
 
   .navbar-links {
     .link {
-      @include font-size(3.5vw);
+      font-size:3.5vw;
     }
   }
 }
@@ -147,14 +147,14 @@
 @media only screen and (max-width: 425px) {
   .navbar-title {
     .title {
-      @include font-size(14vw);
+      font-size:14vw;
     }
     .navbar-subtitle {
       top: 60%;
       left: 63%;
       width: 30%;
       .subtitle {
-        @include font-size(2.4vw);
+        font-size:2.4vw;
       }
     }
     margin-bottom: 1rem;
@@ -174,7 +174,7 @@
 
   .navbar-links {
     .link {
-      @include font-size(3.5vw);
+      font-size:3.5vw;
     }
   }
 }
