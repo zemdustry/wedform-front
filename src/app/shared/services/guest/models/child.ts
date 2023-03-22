@@ -1,6 +1,6 @@
 export interface Child {
   id: number,
-  guestId: number,
+  childId: number,
   name: string,
   age: number
 }

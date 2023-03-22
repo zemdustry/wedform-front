@@ -85,7 +85,7 @@
   }
 
   .countdown-text-stick {
-    top: -14% !important;
+    top: -16% !important;
   }
 
   .us {
@@ -95,7 +95,11 @@
 
 @media only screen and (max-width: 425px) {
   .countdown-text-stick {
-    top: -17% !important;
+    top: -19% !important;
+  }
+
+  .section-heading {
+    font-size: 8vw;
   }
   .clock-unit {
     font-size:1.2rem;

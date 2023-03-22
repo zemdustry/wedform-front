@@ -210,10 +210,8 @@ export class RegisterComponent {
       this.guestService.addGuestCompletion(guest).subscribe({
         next: () => {
           this.notificationService.success('Success', 'Registration successful, thank you.', 6000);
-          this.isPosted = true;
-          this.isSubmitted = false;
+          this.resetForm();
           this.logger.info("Guests added successfully");
-          this.guestForm.reset();
       },
         error: () => {
           this.notificationService.error('Failed', 'Registration failed. Please try again later.', 6000);
@@ -303,5 +301,13 @@ export class RegisterComponent {
         map.set(controlName, this.guestForm.controls[controlName].value)
       });
     return Object.fromEntries(map);
+  }
+
+
+  resetForm() {
+    this.isPosted = true;
+    this.isSubmitted = false;
+    this.songs = [];
+    this.guestForm.reset();
   }
 }
