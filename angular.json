@@ -45,6 +45,8 @@
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css",
+              "src/styles/_font.scss",
+              "src/styles/variables.scss",
               "src/styles/styles.scss"
             ],
             "scripts": []
@@ -54,7 +56,7 @@
               "optimization": {
                 "styles": {
                   "minify": true,
-                  "inlineCritical": false
+                  "inlineCritical": true
                 },
                 "fonts": true
               },
@@ -127,6 +129,8 @@
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css",
+              "src/styles/_font.scss",
+              "src/styles/variables.scss",
               "src/styles/styles.scss"
             ],
             "scripts": []

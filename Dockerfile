@@ -13,10 +13,9 @@ RUN npm run build -- --configuration=production --localize=true
 
 ### STAGE 2:RUN ###
 FROM nginx:latest
-RUN mkdir /app
-COPY --from=build-stage /app/dist/wedformfront /app
+COPY --from=build-stage /app/dist/wedformfront /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Exposing a port, here it means that inside the container
- #EXPOSE 80
+ EXPOSE 80
  USER nginx
