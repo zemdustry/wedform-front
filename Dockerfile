@@ -16,6 +16,6 @@ FROM nginx:latest
 COPY --from=build-stage /app/dist/wedformfront /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 
+CMD /bin/sh -c "envsubst '\$PORT' < /etc/nginx/nginx.conf > /etc/nginx/nginx.conf" && nginx -g 'daemon off;'
 # Exposing a port, here it means that inside the container
- EXPOSE 80
  USER nginx
