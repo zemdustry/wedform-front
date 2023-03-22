@@ -211,6 +211,7 @@ export class RegisterComponent {
         next: () => {
           this.notificationService.success('Success', 'Registration successful, thank you.', 6000);
           this.isPosted = true;
+          this.isSubmitted = false;
           this.logger.info("Guests added successfully");
           this.guestForm.reset();
       },
