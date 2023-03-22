@@ -31,6 +31,7 @@
 .palette-back::after {
   display: block;
   height: $halfPaletteHeight;
+  // FIXME to fix with the countdown
   color: $primary-gold-color;
   font-family: $time-font;
   padding: 0.25em 0.25em;
@@ -40,11 +41,13 @@
   width: $paletteWidth;
   transform: translateZ(0);
   background: $white-color;
+  // FIXME to fix with the countdown
   box-shadow: inset 20px 20px 60px $white-color,
     inset -20px -20px 60px $third-secondary-blue-shadow-dark-2;
 }
 
 .palette-top {
+  // FIXME to fix with the countdown
   border-top: solid 0.5px $third-secondary-blue-color;
 }
 
@@ -53,13 +56,16 @@
   position: absolute;
   top: 50%;
   left: 0;
-  border-top: solid 1.8px $primary-blue-color;
+  // FIXME to fix with the countdown
+  // border-top: solid 1.8px $primary-blue-color;
   border-radius: 0 0 $borderRadius $borderRadius;
   pointer-events: none;
   overflow: hidden;
   background: $white-color;
-  box-shadow: inset 20px 20px 60px $mat-white-color,
-    inset -20px -20px 60px $secondary-blue-shadow-2;
+  // FIXME to fix with the countdown
+  // box-shadow: inset 20px 20px 60px $mat-white-color,
+  //   inset -20px -20px 60px $secondary-blue-shadow-2;
+  // FIXME to fix with the countdown
   border-bottom: solid 3px $third-secondary-blue-color;
 }
 
@@ -90,9 +96,11 @@
 .flip-element {
   border-radius: $borderRadius;
   background: $white-color;
+  // FIXME to fix with the countdown
   box-shadow: inset 20px 20px 60px $third-secondary-blue-shadow-clear-1,
   inset -20px -20px 60px $third-secondary-blue-shadow-clear-1;
   padding-bottom: 1px;
+  // FIXME to fix with the countdown
   border-bottom: solid 3px $third-secondary-blue-shadow-dark-1;
 }
 
@@ -191,7 +199,7 @@
   position: relative;
   height: 30px;
   width: 45px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card-inner {

@@ -23,10 +23,10 @@
   .middle {
     width: 55px;
     position: relative;
+
     .flower {
       position: absolute;
       z-index: 99;
-      margin-right: 22px;
     }
   }
 
@@ -207,7 +207,7 @@
 @media only screen and (max-width: 425px) {
 
   .couple-section {
-    height: 54rem;
+    height: 58rem;
   }
 
   .heart-background {
@@ -221,6 +221,8 @@
   .couple-section .middle .flower {
     top: 70%;
     width: 6rem;
+    right: -33px;
+    top: 132px;
   }
 
   .card {
@@ -248,5 +250,12 @@
   .welcome-text {
     padding: 20px;
     margin-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 292px) {
+
+  .couple-section {
+    height: 62rem;
   }
 }

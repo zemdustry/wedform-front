@@ -13,8 +13,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:fr": "ng build --configuration=fr",
-    "start:en": "ng build --configuration=en"
+    "start:fr": "ng serve --configuration=fr",
+    "start:en": "ng serve --configuration=en"
   },
   "private": true,
   "dependencies": {

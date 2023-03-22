@@ -44,7 +44,7 @@
 
       a {
         font-size: calc(14px + 2*(100vw - 420px) / 860);
-        color: $secondary-blue-shadow-1;
+        color: $third-secondary-blue-shadow-dark-2;
       }
     }
   }
@@ -58,13 +58,13 @@
   }
 
   .blue-link {
-    color: $secondary-blue-shadow-1;
+    color: $third-secondary-blue-shadow-dark-2;
 
     i {
       font-size: calc(24px + 2*(100vw - 420px) / 860);
 
       &:hover {
-        background-color: $secondary-blue-shadow-1;
+        background-color: $third-secondary-blue-shadow-dark-2;
         color: $white-color;
       }
     }
@@ -74,7 +74,7 @@
       padding: 4px;
 
       &:hover {
-        background-color: $secondary-blue-shadow-1;
+        background-color: $third-secondary-blue-shadow-dark-2;
         color: $white-color;
       }
     }

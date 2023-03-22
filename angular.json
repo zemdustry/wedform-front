@@ -87,6 +87,11 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/web-form/fr",
+              "i18nMissingTranslation": "error"
             }
           },
           "defaultConfiguration": "production"
@@ -102,9 +107,6 @@
             },
             "fr": {
               "browserTarget": "wedformfront:build:fr"
-            },
-            "en": {
-              "browserTarget": "wedformfront:build:en"
             }
           },
           "defaultConfiguration": "development"
