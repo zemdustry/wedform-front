@@ -341,7 +341,7 @@
       </trans-unit>
       <trans-unit id="7658402240953727096" datatype="html">
         <source>Name:</source>
-        <target>Nom:</target>
+        <target>Prénom:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/register/components/register/register.component.html</context>
           <context context-type="linenumber">16</context>
