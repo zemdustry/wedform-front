@@ -213,10 +213,12 @@ export class RegisterComponent {
           this.resetForm();
           this.logger.info("Guests added successfully");
       },
-        error: () => {
+        error: (error) => {
           this.notificationService.error('Failed', 'Registration failed. Please try again later.', 6000);
-          this.logger.info("Error while adding guests");
-        }
+          this.logger.error("Error while adding guests");
+          this.logger.error(error.message);
+        },
+        complete: () => this.logger.info("request done."),
       });
     } else {
       this.hasError = true;
