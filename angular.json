@@ -100,13 +100,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "wedformfront:build:production"
+              "buildTarget": "wedformfront:build:production"
             },
             "development": {
-              "browserTarget": "wedformfront:build:development"
+              "buildTarget": "wedformfront:build:development"
             },
             "fr": {
-              "browserTarget": "wedformfront:build:fr"
+              "buildTarget": "wedformfront:build:fr"
             }
           },
           "defaultConfiguration": "development"
@@ -114,7 +114,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wedformfront:build"
+            "buildTarget": "wedformfront:build"
           }
         },
         "test": {
@@ -140,5 +140,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
