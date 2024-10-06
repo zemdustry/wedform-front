@@ -9,6 +9,7 @@ import { interval, Subscription } from 'rxjs';
 export class CountdownGroupComponent implements OnDestroy {
   private subscription: Subscription;
   public timeDifference: number = 0;
+  private readonly today: Date = new Date();
   private readonly dDay: Date = new Date('Jun 17 2023 13:30:00');
   private readonly milliSecondsInASecond: number = 1000;
   private readonly hoursInADay: number = 24;
@@ -34,6 +35,10 @@ export class CountdownGroupComponent implements OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  public isBeforeDday() {
+    return this.dDay.getTime() > this.today.getTime();
   }
 
   private getTimeDifference() {

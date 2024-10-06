@@ -5,41 +5,45 @@
     </div>
     <img class="us" src="/assets/images/us.png" alt="us" />
   </div>
-  <div class="unselectable-content d-flex justify-content-center align-items-center">
-    <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [value]="daysToDday" [isNotSeconds]="true"></app-countdown-custom>
-      <div class="d-flex justify-content-center mt-2">
-        <span class="clock-unit mt-2" i18n>
-          Days
-        </span>
+  @if (this.isBeforeDday()) {
+    <div class="unselectable-content d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-column align-items-center">
+        <app-countdown-custom [value]="daysToDday" [isNotSeconds]="true"></app-countdown-custom>
+        <div class="d-flex justify-content-center mt-2">
+          <span class="clock-unit mt-2" i18n>
+            Days
+          </span>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <app-countdown-custom [value]="hoursToDday" [isNotSeconds]="true"></app-countdown-custom>
+        <div class="d-flex justify-content-center mt-2">
+          <span class="clock-unit mt-2" i18n>
+            Hours
+          </span>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <app-countdown-custom [value]="minutesToDday" [isNotSeconds]="true"></app-countdown-custom>
+        <div class="d-flex justify-content-center mt-2">
+          <span class="clock-unit mt-2" i18n>
+            Minutes
+          </span>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <app-countdown-custom [value]="secondsToDday" [isNotSeconds]="false"></app-countdown-custom>
+        <div class="d-flex justify-content-center mt-2">
+          <span class="clock-unit mt-2" i18n>
+            Seconds
+          </span>
+        </div>
       </div>
     </div>
-    <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [value]="hoursToDday" [isNotSeconds]="true"></app-countdown-custom>
-      <div class="d-flex justify-content-center mt-2">
-        <span class="clock-unit mt-2" i18n>
-          Hours
-        </span>
-      </div>
-    </div>
-    <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [value]="minutesToDday" [isNotSeconds]="true"></app-countdown-custom>
-      <div class="d-flex justify-content-center mt-2">
-        <span class="clock-unit mt-2" i18n>
-          Minutes
-        </span>
-      </div>
-    </div>
-    <div class="d-flex flex-column align-items-center">
-      <app-countdown-custom [value]="secondsToDday" [isNotSeconds]="false"></app-countdown-custom>
-      <div class="d-flex justify-content-center mt-2">
-        <span class="clock-unit mt-2" i18n>
-          Seconds
-        </span>
-      </div>
-    </div>
-  </div>
-  <button class="light-button" data-style="no-move" routerLink="/register" routerLinkActive="active-link" i18n>
-    RSVP
-  </button>
+    <button class="light-button" data-style="no-move" routerLink="/register" routerLinkActive="active-link" i18n>
+      RSVP
+    </button>
+  } @else {
+    <h2 class="section-heading gold text-center" i18n>Celebrating Our Love</h2>
+  }
 </div>
