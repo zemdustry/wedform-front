@@ -7,31 +7,24 @@
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
-    "module": "es2020",
+    "target": "ES2020",
+    "module": "CommonJS",
     "lib": [
-      "es2020",
-      "dom"
+      "ES2020",
+      "DOM"
     ],
-    "paths": {
-      "@angular/*": ["./node_modules/@angular/*"],
-      "@assets": ["assets/*"],
-      "@shared/*": ["app/shared/*"],
-      "@home": ["app/home/*"],
-      "@information": ["app/information/*"],
-      "@photo": ["app/photo/*"],
-      "@register": ["app/register/*"]
-    },
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "types": ["codeceptjs", "node"],
+    "skipLibCheck": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
